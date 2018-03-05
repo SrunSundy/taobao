@@ -127,7 +127,7 @@
 	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 	                        <i class="fa fa-bars"></i>
 	                    </button>
-	                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" class="logo logo-scrolled" alt=""></a>
+	                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo/logo.png" class="logo logo-scrolled" alt=""></a>
 	                </div>
 	                <!-- End Header Navigation -->
 
@@ -161,11 +161,27 @@
 	        <div class="clearfix"></div>
 		</header> <!-- end header -->
 	
-
+		<div class="homepage-slider slider-bg1" style='background: url("assets/img/slider-bg/4.jpg") no-repeat;'>
+			<div class="display-table">
+				<div class="display-table-cell">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-7">
+								<div class="slider-content">
+									<h1>Prepare for the future with our advisors</h1>
+									<p>Interactively simplify 24/7 markets through 24/7 best practices. Authoritatively foster cutting-edge manufactured products and distinctive.</p>
+									<a href="#">Meet Experts <i class="fa fa-long-arrow-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- ::::::::::::::::::::: start slider section:::::::::::::::::::::::::: -->
-		<section class="slider-area">
+		<!-- <section class="slider-area">
 		
-			<!-- slide item one -->
+			
 			<div class="homepage-slider slider-bg1">
 				<div class="display-table">
 					<div class="display-table-cell">
@@ -183,8 +199,6 @@
 					</div>
 				</div>
 			</div>
-			
-			<!-- slide item three -->
 			<div class="homepage-slider slider-bg3">
 				<div class="display-table">
 					<div class="display-table-cell">
@@ -202,7 +216,7 @@
 					</div>
 				</div>
 			</div>
-			
+			 -->
 		</section><!-- slider area end -->
 	
 	
