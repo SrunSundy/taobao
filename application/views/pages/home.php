@@ -1,43 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Neuron Finance is a finance, corporate and business HTML template">
-        <meta name="keywords" content="advisor, corporate accountant, finance, financial, insurance, investment, consultation">
-        <meta name="author" content="trendytheme.net">
 
-		<title>Neuron Finance</title>
-
-        <!--  favicon -->
-        <link rel="shortcut icon" href="assets/img/ico/favicon.png">
-        <!--  apple-touch-icon -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/img/ico/apple-touch-icon-57-precomposed.png">
-
-		<!-- animate CSS -->
-		<link rel="stylesheet" href="assets/css/animate.min.css" media="all" />
-		<!-- FontAwesome CSS -->
-		<link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css" media="all" />
-		<!-- Owl Carousel -->
-		<link rel="stylesheet" href="assets/css/owl.carousel.min.css" media="all" />
-		<!-- Bootsnav Menu -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" media="all" />
-		<!-- Bootstrap -->
-		<link rel="stylesheet"  href="assets/plugin/bootstrap/css/bootstrap.min.css" media="all" />
-		<!-- Style CSS -->
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
-
-
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		<title>Home | taobao outlet</title>
+        <?php include 'include/imstyle.php'?>
 	</head>
 
 
@@ -45,134 +11,31 @@
 	
 		<!-- ::::::::::::::::::::: Header Section:::::::::::::::::::::::::: -->
 		<header>
-			<!-- start top bar -->
-			<div class="header-top-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-8 hidden-xs">
-							<div class="contact">
-								<p>
-									<i class="fa fa-phone"></i>
-									+880 123 456 789
-								</p>
-								<p>
-									<i class="fa fa-envelope"></i>
-									<a href="#">24hrsuport@domain.com</a>
-								</p>
-							</div><!-- /.contact -->
-						</div><!-- /.col-sm-8 -->
-						
-						<div class="col-sm-4">
-							<div class="social-icon">
-								<ul>
-									<li><a href=""><i class="fa fa-facebook"></i></a></li>
-									<li><a href=""><i class="fa fa-twitter"></i></a></li>
-									<li><a href=""><i class="fa fa-linkedin"></i></a></li>
-									<li><a href=""><i class="fa fa-google-plus"></i></a></li>
-									<li><a href=""><i class="fa fa-tumblr"></i></a></li>
-								</ul>
-							</div><!-- /.social-icon -->
-						</div><!-- /.col-sm-4 -->
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- end top bar -->
-			
-	        <!-- Start Navigation -->
-	        <nav class="navbar navbar-default navbar-sticky bootsnav">
-	            <!-- Start Top Search -->
-	            <div class="top-search">
-	                <div class="container">
-	                    <div class="input-group">
-	                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-	                        <input type="text" class="form-control" placeholder="Search">
-	                        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-	                    </div>
-	                </div>
-	            </div>
-	            <!-- End Top Search -->
-
-	            <div class="container">
-	                <!-- Start Atribute Navigation -->
-	                <div class="attr-nav">
-	                    <ul>
-	                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-	                        <li class="dropdown">
-	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-	                                <i class="fa fa-shopping-bag"></i>
-	                                <span class="badge">2</span>
-	                            </a>
-	                            <ul class="dropdown-menu cart-list">
-	                                <li>
-	                                    <a href="#" class="photo"><img src="assets/img/cart-1.jpg" class="cart-thumb" alt="" /></a>
-	                                    <h2><a href="#">Denim SlimFit Shirt </a></h2>
-	                                    <p>2x - <span class="price">$19.99</span></p>
-	                                </li>
-	                                <li>
-	                                    <a href="#" class="photo"><img src="assets/img/cart-3.jpg" class="cart-thumb" alt="" /></a>
-	                                    <h2><a href="#">Denim Polo Shirt</a></h2>
-	                                    <p>2x - <span class="price">$12.99</span></p>
-	                                </li>
-	                                <li class="total">
-	                                    <span class="pull-right"><strong>Total</strong>: $320.00</span>
-	                                    <a href="#" class="btn btn-primary btn-sm btn-cart">Cart</a>
-	                                </li>
-	                            </ul>
-	                        </li>
-	                    </ul>
-	                </div>
-	                <!-- End Atribute Navigation -->
-
-	                <!-- Start Header Navigation -->
-	                <div class="navbar-header">
-	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-	                        <i class="fa fa-bars"></i>
-	                    </button>
-	                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo/logo.png" class="logo logo-scrolled" alt=""></a>
-	                </div>
-	                <!-- End Header Navigation -->
-
-	                <!-- Collect the nav links, forms, and other content for toggling -->
-	                <div class="collapse navbar-collapse" id="navbar-menu">
-	                    <ul class="nav navbar-nav navbar-right" data-in="" data-out="">
-	                        <li class="active"><a href="index.html">Home</a></li>
-	                        <li><a href="about.html">About Us</a></li>
-	                        <li><a href="services.html">Services</a></li>
-	                        <li class="dropdown">
-	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Works</a>
-	                            <ul class="dropdown-menu">
-	                                <li><a href="portfolio.html">Work Showcase</a></li>
-	                                <li><a href="portfolio-details.html">Work Details</a></li>
-	                            </ul>
-	                        </li>
-	                        <li class="dropdown">
-	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Press &amp; News</a>
-	                            <ul class="dropdown-menu">
-	                                <li><a href="blog.html">News Standard</a></li>
-	                                <li><a href="blog-details.html">News Details</a></li>
-	                                <li><a href="typography.html">Typography</a></li>
-	                            </ul>
-	                        </li>
-	                        <li><a href="contact.html">Contact</a></li>
-	                    </ul>
-	                </div><!-- /.navbar-collapse -->
-	            </div>
-	        </nav>
-	        <!-- End Navigation -->
-	        <div class="clearfix"></div>
+			<?php include 'include/headermenu.php' ?>
 		</header> <!-- end header -->
 	
-		<div class="homepage-slider slider-bg1" style='background: url("assets/img/slider-bg/4.jpg") no-repeat;'>
+		<div class="homepage-slider slider-bg1" style='background: url("assets/img/slider-bg/4.jpg") no-repeat ; max-height: 720px;background-size:cover '>
 			<div class="display-table">
 				<div class="display-table-cell">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-7">
+							<div class="col-sm-2"></div>
+							<div class="col-sm-8">
 								<div class="slider-content">
-									<h1>Prepare for the future with our advisors</h1>
-									<p>Interactively simplify 24/7 markets through 24/7 best practices. Authoritatively foster cutting-edge manufactured products and distinctive.</p>
-									<a href="#">Meet Experts <i class="fa fa-long-arrow-right"></i></a>
+									
+
+										<p style="margin-bottom: 15px;font-family:khmerFontFreeHand;">សូមបញ្ចូល URL ទំនិញរបស់លោកអ្នក</p>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Search for... (Ex: https://item.taobao.com/item.htm?id=541239586337)">
+                                          <span class="input-group-btn">
+                                            <button class="btn btn-secondary" style="background: #c23000;" type="button">Go!</button>
+                                          </span>
+                                        </div>
+                                    
+                                   
 								</div>
 							</div>
+							<div class="col-sm-2"></div>
 						</div>
 					</div>
 				</div>
