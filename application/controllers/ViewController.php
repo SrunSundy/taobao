@@ -23,13 +23,13 @@ class ViewController extends CI_Controller {
 	    $this->load->view('pages/home');
 	}
 	
-	public function test(){
+	public function home(){
 	    $this->load->view('pages/home');
 	    
 	}
 	
-	public function about(){
-	    $this->load->view('pages/about');
+	public function aboutus(){
+	    $this->load->view('pages/aboutus');
 	    
 	}
 	

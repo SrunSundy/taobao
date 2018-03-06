@@ -2,10 +2,10 @@
 <div class="header-top-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 hidden-xs">
+			<div class="col-sm-6 hidden-xs">
 				<div class="contact">
 					<p>
-						<i class="fa fa-phone"></i> +880 123 456 789
+						<i class="fa fa-phone"></i> <a href="tel:010 666 520">010 666 520</a> | <a href="tel:070 2013 85">070 2013 85</a>
 					</p>
 					<p>
 						<i class="fa fa-envelope"></i> <a href="#">24hrsuport@domain.com</a>
@@ -15,14 +15,28 @@
 			</div>
 			<!-- /.col-sm-8 -->
 
-			<div class="col-sm-4">
-				<div class="social-icon">
+			<div class="col-sm-6">
+				<!-- <div class="social-icon">
 					<ul>
 						<li><a href=""><i class="fa fa-facebook"></i></a></li>
 						<li><a href=""><i class="fa fa-twitter"></i></a></li>
 						<li><a href=""><i class="fa fa-linkedin"></i></a></li>
 						<li><a href=""><i class="fa fa-google-plus"></i></a></li>
 						<li><a href=""><i class="fa fa-tumblr"></i></a></li>
+						
+					</ul>
+				</div> -->
+				<div class="social-icon">
+					<ul>
+						<li>REGISTER</li>
+						<li>SIGN IN</li>
+						<li style="text-align: center">
+							<select id="pickLanguage" class="pick-language" style="width:100px;background:transparent;" >
+								
+							</select>
+						</li>
+						
+						
 						
 					</ul>
 				</div>
@@ -104,11 +118,11 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="navbar-menu">
 			<ul class="nav navbar-nav navbar-right" data-in="" data-out="">
-				<li class="active"><a href="home">Home</a></li>
-				<li><a href="about">About Us</a></li>
-				<li><a href="services.html">How to order</a></li>
-				<li><a href="services.html">Cost Calculator</a></li>
-				<li><a href="services.html">My Order</a></li>
+				<li class="active header-menu"><a href="home">Home</a></li>
+				<li class="header-menu"><a href="aboutus">About Us</a></li>
+				<li class="header-menu"><a href="services.html">How to order</a></li>
+				<li class="header-menu"><a href="services.html">Cost Calculator</a></li>
+				<li class="header-menu"><a href="services.html">My Order</a></li>
 				<!-- <li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Works</a>
 					<ul class="dropdown-menu">
@@ -122,7 +136,7 @@
 						<li><a href="blog-details.html">News Details</a></li>
 						<li><a href="typography.html">Typography</a></li>
 					</ul></li> -->
-				<li><a href="contact.html">Help</a></li>
+				<li class="header-menu"><a href="contact.html">Help</a></li>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->

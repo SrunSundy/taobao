@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css" media="all" />
 
 <!-- Owl Carousel -->
-<!--<link rel="stylesheet" href="assets/css/owl.carousel.min.css" media="all" />-->
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css" media="all" />
 
 <!-- Bootsnav Menu -->
 <link rel="stylesheet" href="assets/css/bootsnav.css" media="all" />
@@ -34,6 +34,8 @@
 
 <!-- Style CSS -->
 <link rel="stylesheet" type="text/css" href="assets/css/style-red.css" media="all" />
+
+ <link rel="stylesheet" href="assets/plugin/select2/select2.min.css">
 
  	
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

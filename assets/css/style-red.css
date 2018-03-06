@@ -55,7 +55,10 @@ body {
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased !important;
 }
-
+ @font-face {
+   font-family: khmerFontFreeHand;
+   src: url(../fonts/Freehand.ttf);
+ }
 /* Link style
 ------------------------------ */
 a{
@@ -131,7 +134,7 @@ h6{
     box-shadow: 0 8px 10px rgba(34, 34, 34, 0.2);
 }
 .btn-primary {
-	background-color: #3452ff;
+	background-color: #C23000;
 }
 .btn-primary,
 .btn-primary:hover,
@@ -139,8 +142,8 @@ h6{
 .btn-primary:focus,
 .btn-primary:active:focus, 
 .btn-primary:active:hover {
-    background-color: #3452ff;
-    border-color: #3452ff;
+    background-color: #C23000;
+    border-color: #C23000;
 }
 
 
@@ -198,6 +201,10 @@ img {
 		width: 115px !important;
 		margin-top: -2 !important;
 	}
+	
+	a.profile-photo{
+		padding: 11px 3px 0 20px !important;
+	}
 }
 
 
@@ -223,7 +230,7 @@ input:-webkit-autofill:focus {
 ------------------------*/
 .header-top-area{
 	height: 50px; 
-	background: #3452FF;
+	background: #C23000;
 	font-size: 14px; 
 	color: #FFFFFF;
 	font-family: "Titillium Web",sans-serif;
@@ -274,7 +281,7 @@ input:-webkit-autofill:focus {
 .social-icon ul li a:hover, 
 .social-icon ul li.active a{
 	background: #fff;
-	color: #3452FF;
+	color: #C23000;
 	border-radius: 3px;
 }
 
@@ -312,7 +319,7 @@ nav.navbar.bootsnav ul.nav > li>.dropdown-menu li > a:hover,
 nav.navbar.bootsnav ul.nav > li>.dropdown-menu li.active > a,
 nav.navbar.bootsnav ul.nav > li>.dropdown-menu.megamenu-content li > a:hover,
 nav.navbar.bootsnav ul.nav > li>.dropdown-menu.megamenu-content .menu-col li.active > a {
-    color: #3452ff;
+    color: #C23000;
 }
 .dropdown-menu.cart-list h2 {
 	font-size: 16px;
@@ -323,7 +330,7 @@ nav.navbar.bootsnav ul.nav > li>.dropdown-menu.megamenu-content .menu-col li.act
 	color: #3f4b5a;
 }
 .dropdown-menu.cart-list h2 a:hover {
-	color: #3452ff;
+	color: #C23000;
 } 
 
 @media (min-width: 993px) {
@@ -346,14 +353,14 @@ nav.navbar.bootsnav ul.nav > li>.dropdown-menu.megamenu-content .menu-col li.act
 }
 
 .attr-nav>ul>li>a span.badge{
-    background-color: #3452ff;
+    background-color: #C23000;
 }
 
 ul.cart-list>li.total>a.btn {
     color: #fff !important;
 }
 ul.cart-list>li.total>a.btn:hover {
-    background-color: #3452ff !important;
+    background-color: #C23000 !important;
 }
 
 
@@ -411,7 +418,7 @@ ul.cart-list>li.total>a.btn:hover {
 }
 .slider-content a{
 	border-radius: 5px;
-	background: #3452FF; 
+	background: #C23000; 
 	padding: 15px 25px;
 	border: none;
 	color: #fff;
@@ -457,7 +464,7 @@ ul.cart-list>li.total>a.btn:hover {
 	transition: all .3s;
 }
 .owl-nav i {
-	background: #3452ff none repeat scroll 0 0;
+	background: #C23000 none repeat scroll 0 0;
 	color: #fff;
 	font-size: 40px;
 	height: 50px;
@@ -589,7 +596,7 @@ ul.cart-list>li.total>a.btn:hover {
 }
 .single-intro:hover 
 .intro-details{
-	border-bottom: 4px solid #3452FF;
+	border-bottom: 4px solid #C23000;
 }
 .intro-details{
 	background: #fff none repeat scroll 0 0;
@@ -636,7 +643,7 @@ ul.cart-list>li.total>a.btn:hover {
 	transition: all .3s;
 }
 .services-tiem a:hover{
-	color: #3452FF;
+	color: #C23000;
 }
 
 /* ================= Client logo area ======================*/
@@ -812,19 +819,19 @@ ul.cart-list>li.total>a.btn:hover {
 	position: relative;
 }
 .panel-title > a[aria-expanded=true]{
-	background: #3452FF;
+	background: #C23000;
 	color: #fff;
 }
 .panel-title > a[aria-expanded=true]:after{
 	content: "-";
 	background: #fff;
-	color: #3452FF;
+	color: #C23000;
 }
 .panel-title > a:focus{
 	text-decoration: none;
 }
 .panel-title > a:after{
-	background: #3452ff none repeat scroll 0 0;
+	background: #C23000 none repeat scroll 0 0;
 	border-radius: 2px;
 	color: #fff;
 	content: "+";
@@ -904,7 +911,7 @@ ul.cart-list>li.total>a.btn:hover {
 }
 
 .single-portfolio-title a {
-	color: #3452ff;
+	color: #C23000;
 	font-size: 17px;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -940,7 +947,7 @@ ul.cart-list>li.total>a.btn:hover {
 	margin-right: 6px;
 }
 .portfolio-details-panel ul a:hover {
-	color: #3452ff;
+	color: #C23000;
 }
 
 .single-portfolio-images img {
@@ -1007,7 +1014,7 @@ a:focus{
 -------------------------------*/
 
 #loading{
-	background-color: #3452FF;
+	background-color: #C23000;
 	height: 100%;
 	width: 100%;
 	position: fixed;
@@ -1134,7 +1141,7 @@ a:focus{
 	transition: all .3s;
 }
 .entry-title a:hover{
-	color: #3452FF;
+	color: #C23000;
 }
 .blog-header ul{
 	margin: 0px;
@@ -1173,7 +1180,7 @@ a:focus{
 	transition: all .3s;
 }
 .entry-content a:hover{
-	color: #3452FF;
+	color: #C23000;
 }
 
 /* single blog 
@@ -1515,7 +1522,7 @@ li.rating ul i {
     right: 0;
     top: 0;
     border: 0;
-    color: #3452ff;
+    color: #C23000;
     font-size: 20px;
     background: transparent;
 }

@@ -349,13 +349,6 @@
 		</div>
 
 		<!-- main jQuery -->
-		<script src="assets/js/jquery-2.1.3.min.js"></script>
-		<script src="assets/plugin/bootstrap/js/bootstrap.min.js"></script>
-		<script src="assets/js/bootsnav.js"></script>
-		<script src="assets/js/owl.carousel.min.js"></script>
-		<script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/ajaxchimp.js"></script>
-        <script src="assets/js/ajaxchimp-config.js"></script> 
-		<script src="assets/js/script.js"></script>
+		<?php include 'include/imscript.php' ?>
 	</body>
 </html>

@@ -3,7 +3,7 @@
 	<head>
 		
 
-		<title>Neuron Finance</title>
+		<title>About Us | taobao outlet</title>
 		<?php include 'include/imstyle.php'?>
 	</head>
 
@@ -30,75 +30,6 @@
 			</div>
 		</section><!-- end breadcrumb -->
 	
-		<!-- ::::::::::::::::::::: Block Section:::::::::::::::::::::::::: -->
-		<section class="block about-us-block section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<!-- block text -->
-						<div class="block-text">
-							<h2>A Finance Agency Crafting Beautiful & Engaging Online Experiences</h2>
-							<p>Seamlessly communicate distinctive alignments and business models. Efficiently whiteboard robust meta-services whereas stand-alone synergy. Enthusiastically engage premier supply chains after intuitive testing procedures. Conveniently parallel task robust imperatives through corporate customer service.</p> 
-							
-							<p>Dynamically productivate tactical mindshare via business collaboration and idea-sharing. Credibly conceptualize extensive schemas for functionalized metrics. </p>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<!-- block image -->
-						<div class="block-img">
-							<img src="assets/img/about-us-block.jpg" alt="" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!-- block area end -->
-		
-		<!-- ::::::::::::::::::::: Intro Section:::::::::::::::::::::::::: -->
-		<section class="section-padding darker-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
-						<!-- intro title -->
-						<div class="intro-title text-center">
-							<h2>Welcome to the Neuron Finance</h2>
-							<p>Holisticly transform excellent systems rather than collaborative leadership. Credibly pursue compelling outside the box.</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<!-- single intro -->
-					<div class="col-md-4">
-						<div class="single-intro">
-							<div class="intro-img intro-bg1"></div>
-							<div class="intro-details text-center">
-								<h3>About Business</h3>
-								<p>Seamlessly envisioneer extensive interfaces and back wardcompatible applications. Proactively promote timely best.</p>
-							</div>
-						</div>
-					</div>
-					<!-- single intro -->
-					<div class="col-md-4">
-						<div class="single-intro">
-							<div class="intro-img intro-bg2"></div>
-							<div class="intro-details text-center">
-								<h3>Business Growth</h3>
-								<p>Seamlessly envisioneer extensive interfaces and back wardcompatible applications. Proactively promote timely best.</p>
-							</div>
-						</div>
-					</div>
-					<!-- single intro -->
-					<div class="col-md-4">
-						<div class="single-intro">
-							<div class="intro-img intro-bg3"></div>
-							<div class="intro-details text-center">
-								<h3>Sustainability</h3>
-								<p>Seamlessly envisioneer extensive interfaces and back wardcompatible applications. Proactively promote timely best.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!-- intro area end -->
 	
 		<!-- ::::::::::::::::::::: Accordian Section:::::::::::::::::::::::::: -->
 		<section class="accordian-section section-padding">
@@ -299,13 +230,6 @@
 		</div>
 
 		<!-- main jQuery -->
-		<script src="assets/js/jquery-2.1.3.min.js"></script>
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-		<script src="assets/js/bootsnav.js"></script>
-		<script src="assets/js/owl.carousel.min.js"></script>
-		<script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/ajaxchimp.js"></script>
-        <script src="assets/js/ajaxchimp-config.js"></script> 
-		<script src="assets/js/script.js"></script>
+		<?php include 'include/imscript.php' ?>
 	</body>
 </html>
