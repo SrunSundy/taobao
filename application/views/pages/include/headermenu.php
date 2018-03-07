@@ -1,3 +1,6 @@
+<style>
+
+</style>
 <!-- start top bar -->
 <div class="header-top-area">
 	<div class="container">
@@ -5,7 +8,7 @@
 			<div class="col-sm-6 hidden-xs">
 				<div class="contact">
 					<p>
-						<i class="fa fa-phone"></i> <a href="tel:010 666 520">010 666 520</a> | <a href="tel:070 2013 85">070 2013 85</a>
+						<i class="fa fa-phone"></i> <a style="margin-right: 8px" href="tel:010 666 520">010 666 520</a> | <a style="margin-left: 8px" href="tel:070 2013 85">070 201 385</a>
 					</p>
 					<p>
 						<i class="fa fa-envelope"></i> <a href="#">24hrsuport@domain.com</a>
@@ -28,11 +31,21 @@
 				</div> -->
 				<div class="social-icon">
 					<ul>
-						<li>REGISTER</li>
-						<li>SIGN IN</li>
-						<li style="text-align: center">
-							<select id="pickLanguage" class="pick-language" style="width:100px;background:transparent;" >
-								
+					    <li style="margin-right: 25px;display:none;" class="small-phone" >
+							<a class="" href="tel:010 666 520"  style="background:#790000; border: 0;border-radius: 5px;height: 29px; width: 29px;color:white;">
+								<i class="fa fa-phone"></i>
+							</a>
+						</li>
+						<li style="margin-top: 2px">
+							<span class="hover">REGISTER</span><span style="margin: 0 10px 0 10px">|</span><span class="hover" style="">SIGN IN </span>
+						
+						</li>
+						
+						<li style="text-align: center;    margin-top: 2px;">
+							
+							<select id="pickLanguage" class="pick-language" style="width:100px;background:transparent;" onchange="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/'+this.value;" >
+								<option value="english" <?php if($this->session->userdata('site_lang') == 'english') echo 'selected="selected"'; ?>>ENG</option>
+								<option value="khmer" <?php if($this->session->userdata('site_lang') == 'khmer') echo 'selected="selected"'; ?>>KHM</option>
 							</select>
 						</li>
 						
@@ -74,7 +87,7 @@
 					data-toggle="dropdown"> <i class="fa fa-shopping-bag"></i> <span
 						class="badge">2</span>
 				</a>
-					<ul class="dropdown-menu cart-list ">
+					<!-- <ul class="dropdown-menu cart-list ">
 						<li><a href="#" class="photo"><img src="assets/img/cart-1.jpg"
 								class="cart-thumb" alt="" /></a>
 							<h2>
@@ -94,7 +107,7 @@
 						<li class="total"><span class="pull-right"><strong>Total</strong>:
 								$320.00</span> <a href="#"
 							class="btn btn-primary btn-sm btn-cart">Cart</a></li>
-					</ul></li>
+					</ul> --></li>
 					
 					<li class=""><a class="profile-photo" href="#" style="padding: 23px 15px;"><img src="https://yt3.ggpht.com/-2xcCX3vpr7s/AAAAAAAAAAI/AAAAAAAAAAA/BkZog3sJFEY/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" style="width:35px;height:35px;border-radius:100%;" /></a></li>
 					
@@ -118,8 +131,8 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="navbar-menu">
 			<ul class="nav navbar-nav navbar-right" data-in="" data-out="">
-				<li class="active header-menu"><a href="home">Home</a></li>
-				<li class="header-menu"><a href="aboutus">About Us</a></li>
+				<li class="active header-menu"><a href="home" class="favorite-font"><?php echo $this->lang->line('menu_home'); ?></a></li>
+				<li class="header-menu" class="favorite-font"><a href="aboutus">About Us</a></li>
 				<li class="header-menu"><a href="services.html">How to order</a></li>
 				<li class="header-menu"><a href="services.html">Cost Calculator</a></li>
 				<li class="header-menu"><a href="services.html">My Order</a></li>

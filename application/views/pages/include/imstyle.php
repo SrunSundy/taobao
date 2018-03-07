@@ -36,6 +36,8 @@
 <link rel="stylesheet" type="text/css" href="assets/css/style-red.css" media="all" />
 
  <link rel="stylesheet" href="assets/plugin/select2/select2.min.css">
+ 
+<link rel="stylesheet" href="assets/css/<?php if($this->session->userdata('site_lang') == 'khmer') echo 'khmerfont.css'; else echo 'englishfont.css' ?>"  />
 
  	
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

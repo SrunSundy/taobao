@@ -39,6 +39,19 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,400i,600,600i,700,700i,900');
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i');
 
+/*
+my customized style
+*/
+ @font-face {
+   font-family: khmerFontFreeHand;
+   src: url(../fonts/Freehand.ttf);
+ }
+ 
+ .hover{
+ 	cursor: pointer;
+ }
+
+
 /* ================= General ==================== */
 html,
 body { 
@@ -55,10 +68,7 @@ body {
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased !important;
 }
- @font-face {
-   font-family: khmerFontFreeHand;
-   src: url(../fonts/Freehand.ttf);
- }
+
 /* Link style
 ------------------------------ */
 a{
@@ -245,6 +255,10 @@ input:-webkit-autofill:focus {
 @media (max-width: 768px) {
 	.contact p{
 		line-height: 35px;
+	}
+	
+	li.small-phone{
+		display: inline-block !important;
 	}
 }
 

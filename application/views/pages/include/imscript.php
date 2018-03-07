@@ -19,19 +19,18 @@ $("li.header-menu a[href='"+t+"']").parents("li").addClass("active");
 <!-- choose language -->
 <script>
 
-	var languageList = [{
-		id : "1",
+	/*var languageList = [{
+		id : "english",
 		text : "ENG",
 		icon : "en-flag.png"
 	},{
-		id : "2",
+		id : "khmer",
 		text : "KHM",
 		icon : "kh-flag.png"
-	}];
+	}];*/
 	
 	$("#pickLanguage").select2({
 		minimumResultsForSearch: -1,
-		data: languageList,
 		templateResult: formatState,
 		templateSelection: formatState,
 		theme: "themes-dark"
@@ -41,12 +40,17 @@ $("li.header-menu a[href='"+t+"']").parents("li").addClass("active");
 		  if (!state.id) {
 		    return state.text;
 		  }
-		  
+
+		  var icon = "";
+		  if(state.id == "english") icon= "en-flag.png"; 
+		  else if(state.id == "khmer") icon= "kh-flag.png";
 		  var $state = $(
-		    '<span><img src="assets/img/icon/'+state.icon+'" class="img-flag" style="width:20px;height:20px;margin-right:5px;padding:1px;margin-top: -3px;"/>' + state.text + '</span>'
+		    '<span><img src="assets/img/icon/'+icon+'" class="img-flag" style="width:20px;height:20px;margin-right:5px;padding:1px;margin-top: -3px;"/>' + state.text + '</span>'
 		  );
 		  return $state;
 	};
+
+	
 
 </script>
 
