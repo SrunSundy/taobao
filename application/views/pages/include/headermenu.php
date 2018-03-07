@@ -37,7 +37,7 @@
 							</a>
 						</li>
 						<li style="margin-top: 2px">
-							<span class="hover">REGISTER</span><span style="margin: 0 10px 0 10px">|</span><span class="hover" style="">SIGN IN </span>
+							<span class="hover favorite-font" ><?php echo $this->lang->line('home_register'); ?></span><span style="margin: 0 10px 0 10px">|</span><span class="hover favorite-font" style=""><?php echo $this->lang->line('home_signin'); ?> </span>
 						
 						</li>
 						
@@ -132,10 +132,10 @@
 		<div class="collapse navbar-collapse" id="navbar-menu">
 			<ul class="nav navbar-nav navbar-right" data-in="" data-out="">
 				<li class="active header-menu"><a href="home" class="favorite-font"><?php echo $this->lang->line('menu_home'); ?></a></li>
-				<li class="header-menu" class="favorite-font"><a href="aboutus">About Us</a></li>
-				<li class="header-menu"><a href="services.html">How to order</a></li>
-				<li class="header-menu"><a href="services.html">Cost Calculator</a></li>
-				<li class="header-menu"><a href="services.html">My Order</a></li>
+				<li class="header-menu" ><a href="aboutus" class="favorite-font"><?php echo $this->lang->line('menu_aboutus'); ?></a></li>
+				<li class="header-menu"><a href="services.html" class="favorite-font"><?php echo $this->lang->line('menu_howtoorder'); ?></a></li>
+				<li class="header-menu"><a href="services.html" class="favorite-font"><?php echo $this->lang->line('menu_costcalculator'); ?></a></li>
+				<li class="header-menu"><a href="services.html" class="favorite-font"><?php echo $this->lang->line('menu_myorder'); ?></a></li>
 				<!-- <li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Works</a>
 					<ul class="dropdown-menu">
@@ -149,7 +149,7 @@
 						<li><a href="blog-details.html">News Details</a></li>
 						<li><a href="typography.html">Typography</a></li>
 					</ul></li> -->
-				<li class="header-menu"><a href="contact.html">Help</a></li>
+				<li class="header-menu"><a href="contact.html" class="favorite-font"><?php echo $this->lang->line('menu_help'); ?></a></li>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->

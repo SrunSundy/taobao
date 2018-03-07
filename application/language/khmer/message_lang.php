@@ -1,4 +1,8 @@
 <?php 
+$lang['home_lan_en'] = "";
+$lang['home_lan_kh'] = "";
+$lang['home_register'] = "ចុះឈ្មោះ";
+$lang['home_signin'] = "ចូល";
  $lang['menu_home'] = 'ទំព័រដើម';
  $lang['menu_aboutus'] = "អំពីយើង";
  $lang['menu_howtoorder'] = "របៀបកម្មង់";
