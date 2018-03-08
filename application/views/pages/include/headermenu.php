@@ -2,17 +2,20 @@
 
 </style>
 <!-- start top bar -->
-<div class="header-top-area">
+
+<!-- Start Navigation -->
+<div class="header-top-fake">
+	<div class="header-top-area" style="position:fixed; width: 100%;z-index:101;">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 hidden-xs">
 				<div class="contact">
 					<p>
-						<i class="fa fa-phone"></i> <a style="margin-right: 8px" href="tel:010 666 520">010 666 520</a> | <a style="margin-left: 8px" href="tel:070 2013 85">070 201 385</a>
+						<i class="fa fa-phone"></i> <a style="margin-right: 8px;color:#3f4b5a" href="tel:010 666 520">010 666 520</a> | <a style="margin-left: 8px;color:#3f4b5a" href="tel:070 2013 85">070 201 385</a>
 					</p>
-					<p>
+					<!-- <p>
 						<i class="fa fa-envelope"></i> <a href="#">24hrsuport@domain.com</a>
-					</p>
+					</p> -->
 				</div>
 				<!-- /.contact -->
 			</div>
@@ -36,16 +39,16 @@
 								<i class="fa fa-phone"></i>
 							</a>
 						</li>
-						<li style="margin-top: 2px">
+						<li style="margin-top: 2px" class="register-login">
 							<span class="hover favorite-font" ><?php echo $this->lang->line('home_register'); ?></span><span style="margin: 0 10px 0 10px">|</span><span class="hover favorite-font" style=""><?php echo $this->lang->line('home_signin'); ?> </span>
 						
 						</li>
 						
 						<li style="text-align: center;    margin-top: 2px;">
 							
-							<select id="pickLanguage" class="pick-language" style="width:100px;background:transparent;" onchange="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/'+this.value;" >
-								<option value="english" <?php if($this->session->userdata('site_lang') == 'english') echo 'selected="selected"'; ?>>ENG</option>
-								<option value="khmer" <?php if($this->session->userdata('site_lang') == 'khmer') echo 'selected="selected"'; ?>>KHM</option>
+							<select  id="pickLanguage" class="pick-language favorite-font" style="width:100px;background:transparent;" onchange="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/'+this.value;" >
+								<option class="favorite-font"  value="english" <?php if($this->session->userdata('site_lang') == 'english') echo 'selected="selected"'; ?>><?php echo $this->lang->line('home_lan_en'); ?></option>
+								<option class="favorite-font" value="khmer" <?php if($this->session->userdata('site_lang') == 'khmer') echo 'selected="selected"'; ?>><?php echo $this->lang->line('home_lan_kh'); ?></option>
 							</select>
 						</li>
 						
@@ -62,9 +65,11 @@
 	<!-- /.container -->
 </div>
 <!-- end top bar -->
+</div>
+
 
 <!-- Start Navigation -->
-<nav class="navbar navbar-default navbar-sticky bootsnav">
+<nav class="navbar navbar-default navbar-sticky bootsnav" style="position:absolute;">
 	<!-- Start Top Search -->
 	<div class="top-search">
 		<div class="container">
@@ -109,8 +114,8 @@
 							class="btn btn-primary btn-sm btn-cart">Cart</a></li>
 					</ul> --></li>
 					
-					<li class=""><a class="profile-photo" href="#" style="padding: 23px 15px;"><img src="https://yt3.ggpht.com/-2xcCX3vpr7s/AAAAAAAAAAI/AAAAAAAAAAA/BkZog3sJFEY/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" style="width:35px;height:35px;border-radius:100%;" /></a></li>
-					
+					<!-- <li class=""><a class="profile-photo" href="#" style="padding: 23px 15px;"><img src="https://yt3.ggpht.com/-2xcCX3vpr7s/AAAAAAAAAAI/AAAAAAAAAAA/BkZog3sJFEY/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" style="width:35px;height:35px;border-radius:100%;" /></a></li>
+					 -->
 			</ul>
 		</div>
 		<!-- End Atribute Navigation -->

@@ -51,6 +51,9 @@ my customized style
  	cursor: pointer;
  }
 
+div.header-top-fake{
+	min-height: 50px;	
+}
 
 /* ================= General ==================== */
 html,
@@ -240,10 +243,11 @@ input:-webkit-autofill:focus {
 ------------------------*/
 .header-top-area{
 	height: 50px; 
-	background: #C23000;
+	background: #ffffff;
 	font-size: 14px; 
-	color: #FFFFFF;
+	color: #3f4b5a;
 	font-family: "Titillium Web",sans-serif;
+	border-bottom: 1px solid #3f4b5a;
 }
 .contact p{
 	float: left;
@@ -259,6 +263,10 @@ input:-webkit-autofill:focus {
 	
 	li.small-phone{
 		display: inline-block !important;
+	}
+	
+	div.header-top-fake{
+		min-height: 35px !important;	
 	}
 }
 
@@ -1436,6 +1444,10 @@ li.rating ul i {
 	}
 	.comment-section {
 	    margin-left: 0;
+	}
+	
+	li.register-login span{
+		font-size: 12px;
 	}
 }
 
