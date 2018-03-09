@@ -4,6 +4,8 @@
 
 		<title>Home | taobao outlet</title>
         <?php include 'include/imstyle.php'?>
+        
+       	<link rel="stylesheet" href="assets/css-customize/home.css" />
 	</head>
 
 
@@ -16,28 +18,33 @@
 	
 		<div class="homepage-slider slider-bg1" style='background: url("assets/img/slider-bg/4.jpg") no-repeat ; max-height: 720px;background-size:cover '>
 			<div class="display-table">
+				
 				<div class="display-table-cell">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-2"></div>
-							<div class="col-sm-8">
-								<div class="slider-content">
-									
-
-										<p style="margin-bottom: 15px; " class="favorite-font"><?php echo $this->lang->line('home_intro'); ?></p>
-                                        <div class="input-group">
-                                          <input type="text" class="form-control" placeholder="Search for... (Ex: https://item.taobao.com/item.htm?id=541239586337)">
-                                          <span class="input-group-btn">
-                                            <button class="btn btn-secondary" style="background: #c23000;" type="button">Go!</button>
-                                          </span>
-                                        </div>
-                                    
-                                   
-								</div>
-							</div>
-							<div class="col-sm-2"></div>
-						</div>
+					<div style="height:65%;"></div>
+					<div style="height:35%;" >
+    					<div class="container">
+    						<div class="row">
+    							<div class="col-sm-2"></div>
+    							<div class="col-sm-8">
+    								<div class="slider-content">
+    									
+    										<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Amaranth" />
+    										<p style="margin-bottom: 15px;font-family: Amaranth "   ><?php echo $this->lang->line('home_intro'); ?></p>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" placeholder="https://item.taobao.com/item.htm?id=541239586337" style="border-radius: 0; border-top: 3px solid #c23000;border-left: 3px solid #c23000;border-bottom: 3px solid #c23000;">
+                                              <span class="input-group-btn">
+                                                <button class="btn btn-secondary" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;" type="button">Search</button>
+                                              </span>
+                                            </div>
+                                        
+                                       
+    								</div>
+    							</div>
+    							<div class="col-sm-2"></div>
+    						</div>
+    					</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -84,21 +91,56 @@
 	
 	
 		<!-- ::::::::::::::::::::: start intro section:::::::::::::::::::::::::: -->
-		<section class="section-padding darker-bg">
-			<div class="container">
+		<section class="section-padding darker-bg" style="padding-top: 70px;background: #ffffff;" >
+			<div class="container" ">
 				<div class="row">
 					<div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
 						<div class="intro-title text-center">
-							<h2>Welcome to the Neuron Finance</h2>
-							<div class="hidden-xs">
-								<p>Interactively simplify 24/7 markets through 24/7 best practices. Authoritatively foster cutting-edge manufactured products and distinctive.</p>
-							</div>
+							<h2 class="favorite-font how-to-order" style="font-size: 50px;font-weight:bold;color:#313131;margin-bottom:10px">How to Order?</h2>
+							
+							<p class="favorite-font how-to-order-detail" style="font-size:22px;color:#7F7F7F">Processing so easily by following this easy step</p>
+							
 						</div>
 					</div>
 				</div>
 				<div class="row">
+					<div class="col-md-3">
+						<div class="box-wrapper">
+							<div class="box-image">
+								<img src="assets/img/icon/url.png" style="width:110px"/>
+							</div>
+							<p class="favorite-font  how-to-order-detail">1.Submit Order & Deposit</p>
+						</div>
+					</div>
+					
+					<div class="col-md-3">
+						<div class="box-wrapper">
+							<div class="box-image">
+								<img src="assets/img/icon/purchase.png" style="width:110px"/>
+							</div>
+							<p class="favorite-font  how-to-order-detail">2.Taobao Outlet Purchasing</p>
+						</div>
+					</div>
+					
+					<div class="col-md-3">
+						<div class="box-wrapper">
+							<div class="box-image">
+								<img src="assets/img/icon/delivery.png" style="width:110px"/>
+							</div>
+							<p class="favorite-font  how-to-order-detail">3.Taobao Outlet Delivery</p>
+						</div>
+					</div>
+					
+					<div class="col-md-3">
+						<div class="box-wrapper">
+							<div class="box-image">
+								<img src="assets/img/icon/payment.png" style="width:110px"/>
+							</div>
+							<p class="favorite-font  how-to-order-detail">4. Received Your Order and Payment</p>
+						</div>
+					</div>
 					<!-- single intro -->
-					<div class="col-md-4">
+					<!--<div class="col-md-4">
 						<div class="single-intro">
 							<div class="intro-img intro-bg1"></div>
 							<div class="intro-details text-center">
@@ -106,139 +148,249 @@
 								<p>Seamlessly envisioneer extensive interfaces and back wardcompatible applications. Proactively promote timely best.</p>
 							</div>
 						</div>
+					</div>-->
+					
+				</div>
+				
+				<div class="row" style="margin-top: 100px;">
+					<div class="button-wrapper" style="text-align:center;">
+						<button class="btn">How it work?</button>
 					</div>
-					<!-- single intro -->
-					<div class="col-md-4">
-						<div class="single-intro">
-							<div class="intro-img intro-bg2"></div>
-							<div class="intro-details text-center">
-								<h3>Business Growth</h3>
-								<p>Seamlessly envisioneer extensive interfaces and back wardcompatible applications. Proactively promote timely best.</p>
-							</div>
-						</div>
-					</div>
-					<!-- single intro -->
-					<div class="col-md-4">
-						<div class="single-intro">
-							<div class="intro-img intro-bg3"></div>
-							<div class="intro-details text-center">
-								<h3>Sustainability</h3>
-								<p>Seamlessly envisioneer extensive interfaces and back wardcompatible applications. Proactively promote timely best.</p>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</section><!-- intro area end -->
 	
 	
 		<!-- ::::::::::::::::::::: start block content area:::::::::::::::::::::::::: -->
-		<section class="section-padding">
+		<section class="section-padding"  style="padding-top: 0px;padding-bottom: 60px;">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
-						<div class="block-text">
-							<h2>A Finance Agency Crafting Beautiful & Engaging Online Experiences</h2>
-							<p>Seamlessly communicate distinctive alignments and business models. Efficiently whiteboard robust meta-services whereas stand-alone synergy. Enthusiastically engage premier supply chains after intuitive testing procedures. Conveniently parallel task robust imperatives through corporate customer service.</p> 
-							
-							<p>Dynamically productivate tactical mindshare via business collaboration and idea-sharing. Credibly conceptualize extensive schemas for functionalized metrics. </p>
+					<div class="my-box-header">
+						<div class="text-header-wrapper">
+							<p class="favorite-font" >Latest News</p>
+							<a class="see-more favorite-font" >See more</a>
+						</div>
+						
+						<div class="liner"></div>
+					</div>
+					
+					<div class="news-wrapper" style="margin-top: 35px;">
+						<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://media.newyorker.com/photos/59e8c9a104bcf6250436ce67/master/w_727,c_limit/171030_r30777.jpg" />
+        							</div>
+        							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
+        							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
+        							<a class="news-read-more favorite-font" href="#">read more...</a>
+								</div>								
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://media.newyorker.com/photos/59e8c9a104bcf6250436ce67/master/w_727,c_limit/171030_r30777.jpg" />
+        							</div>
+        							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
+        							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
+        							<a class="news-read-more favorite-font" href="#">read more...</a>
+								</div>								
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://ae01.alicdn.com/kf/HTB1MqNCKVXXXXa5XpXXq6xXFXXXY/Ice-silk-cloth-pearl-curtain-decoration-cloth-ice-thick-fabric-cloth-stage-background-wedding-gauze-curtain.jpg_640x640.jpg" />
+        							</div>
+        							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
+        							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
+        							<a class="news-read-more favorite-font" href="#">read more...</a>
+								</div>								
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://media.newyorker.com/photos/59e8c9a104bcf6250436ce67/master/w_727,c_limit/171030_r30777.jpg" />
+        							</div>
+        							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
+        							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
+        							<a class="news-read-more favorite-font" href="#">read more...</a>
+								</div>								
+							</div>
+						</div>
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+		</section><!-- block area end -->
+		
+		<section class="section-padding"  style="padding-top: 0px;padding-bottom: 60px;">
+			<div class="container">
+				<div class="row">
+					<div class="my-box-header">
+						<div class="text-header-wrapper">
+							<p class="favorite-font" >Our Portfolio</p>
+							<a class="see-more favorite-font" >See more</a>
+						</div>
+						
+						<div class="liner"></div>
+					</div>
+					
+					<div class="portfolio-wrapper" style="margin-top: 35px;">
+						
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+        							</div>
+								</div>								
+							</div>
+						</div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+        							</div>
+								</div>								
+							</div>
+						</div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+        							</div>
+								</div>								
+							</div>
+						</div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+        							</div>
+								</div>								
+							</div>
+						</div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://img.alicdn.com/imgextra/i1/2053662795/TB26LC3hGmgSKJjSsplXXaICpXa_!!2053662795.png_500x500.jpg"/>
+        							</div>
+								</div>								
+							</div>
+						</div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+        							</div>
+								</div>								
+							</div>
+						</div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20170710040319-642876.PNG"/>
+        							</div>
+								</div>								
+							</div>
+						</div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+							<div class="row">
+								<div class="gap-divider">
+									<div class="image-thumbnail">
+										<img src="https://myfashion2017.s3.amazonaws.com/thum/Thefashion_20170203020013-517781.JPG"/>
+        							</div>
+								</div>								
+							</div>
+						</div>
+						
+						
+						
+						
+						
+					</div>
+					
+					
+				</div>
+			</div>
+		</section><!-- block area end -->
+		
+		<section class="section-padding"  style="padding-top: 0px;padding-bottom: 60px;">
+			<div class="container">
+				<div class="row">
+					<div class="icon-wrapper" style="text-align:center;">
+						<a><i class="fa fa-instagram"></i></a>
+						<a><i class="fa fa-facebook"></i></a>
+						<a><i class="fa fa-twitter"></i></a>
+						<a><i class="fa fa-youtube"></i></a>
+						<a><i class="fa fa-whatsapp"></i></a>
+						<a><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
+			</div>
+		</section><!-- block area end -->
+		
+		<section class="section-padding"  style="padding-top: 0px;background:#7f7f7f;min-height: 500px" >
+			<div class="container">
+				<div class="row">
+					<div class="header-text">
+						<p class="favorite-font">Our Team Members</p>
+					</div>
+					
+					<div class="member-wrapper" style="margin-top: 55px;">
+						<div class="col-md-2 col-sm-4 col-xs-6 box-member">
+							<div class="member-image">
+								<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" />
+							</div>
+							<p class="member-name">Mr. Oeng Chhoun</p>
+							<p class="member-des">Founder of The Fashion</p>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<div class="block-img">
-							<img src="assets/img/homepageblock.jpg" alt="" />
-						</div>
-					</div>
+					
+					
 				</div>
 			</div>
 		</section><!-- block area end -->
 	
 	
-		<!-- ::::::::::::::::::::: start services section:::::::::::::::::::::::::: -->
-		<section class="section-padding darker-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-						<div class="template-title text-center">
-							<h2>We Provide Huge Range of Services</h2>
-							<p>Holisticly transform excellent systems rather than collaborative leadership. Credibly pursue compelling outside the box.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<!-- single service -->
-					<div class="col-sm-6 col-md-4">
-						<div class="services-tiem">
-							<img class="hvr-buzz-out" src="assets/img/services/1.png" alt="" />
-							<h3><a href="#">Performance</a></h3>
-							<p>Dynamically fabricate innovative products and distributed web services. Distinctively pontificate.</p>
-						</div>
-					</div>
-					<!-- single service -->
-					<div class="col-sm-6 col-md-4">
-						<div class="services-tiem">
-							<img src="assets/img/services/2.png" alt="" />
-							<h3><a href="#">Sustainability</a></h3>
-							<p>Dynamically fabricate innovative products and distributed web services. Distinctively pontificate.</p>
-						</div>
-					</div>
-					<!-- single service -->
-					<div class="col-sm-6 col-md-4">
-						<div class="services-tiem">
-							<img src="assets/img/services/3.png" alt="" />
-							<h3><a href="#">Web Design</a></h3>
-							<p>Dynamically fabricate innovative products and distributed web services. Distinctively pontificate.</p>
-						</div>
-					</div>
-					<!-- single service -->
-					<div class="col-sm-6 col-md-4">
-						<div class="services-tiem">
-							<img src="assets/img/services/4.png" alt="" />
-							<h3><a href="#">Web Development</a></h3>
-							<p>Dynamically fabricate innovative products and distributed web services. Distinctively pontificate.</p>
-						</div>
-					</div>
-					<!-- single service -->
-					<div class="col-sm-6 col-md-4">
-						<div class="services-tiem">
-							<img src="assets/img/services/5.png" alt="" />
-							<h3><a href="#">Branding Design</a></h3>
-							<p>Dynamically fabricate innovative products and distributed web services. Distinctively pontificate.</p>
-						</div>
-					</div>
-					<!-- single service -->
-					<div class="col-sm-6 col-md-4">
-						<div class="services-tiem">
-							<img src="assets/img/services/6.png" alt="" />
-							<h3><a href="#">Marketing </a></h3>
-							<p>Dynamically fabricate innovative products and distributed web services. Distinctively pontificate.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!-- end services section -->
 	
 
-		<!-- :::::::::::::::::::::  Client Section:::::::::::::::::::::::::: -->
-		<section class="client-logo">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="all-client-logo">
-							<a href="#"><img src="assets/img/cling-logo/1.jpg" alt="" /></a>
-							<a href="#"><img src="assets/img/cling-logo/2.jpg" alt="" /></a>
-							<a href="#"><img src="assets/img/cling-logo/3.jpg" alt="" /></a>
-							<a href="#"><img src="assets/img/cling-logo/4.jpg" alt="" /></a>
-							<a href="#"><img src="assets/img/cling-logo/5.jpg" alt="" /></a>
-						</div>
-					</div><!-- /.col-md-12 -->
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</section><!-- end client section -->
-		
 	
-		<!-- ::::::::::::::::::::: Footer Section:::::::::::::::::::::::::: -->
 		<footer>
 			<?php include 'include/footer.php' ?>
 		</footer>

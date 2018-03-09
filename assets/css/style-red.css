@@ -47,6 +47,12 @@ my customized style
    src: url(../fonts/Freehand.ttf);
  }
  
+  @font-face {
+   font-family: lucidasans;
+   src: url(../fonts/lucidasans.ttf);
+ }
+ 
+
  .hover{
  	cursor: pointer;
  }
@@ -55,6 +61,29 @@ div.header-top-fake{
 	min-height: 50px;	
 }
 
+ a span.badge-custom {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    right: 5px;
+    font-size: 10px;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    padding-top: 2px;
+    background-color: #C23000;
+}
+
+
+.social-icon ul li.padded{
+	padding: 0 10px 0 10px;
+	
+}
+
+.social-icon ul li.padded:first-child{
+	padding: 0 10px 0 0px !important;
+	
+}
 /* ================= General ==================== */
 html,
 body { 
@@ -218,6 +247,11 @@ img {
 	a.profile-photo{
 		padding: 11px 3px 0 20px !important;
 	}
+	
+	div.myheader{
+		padding-top:0 !important;
+		padding-bottom:0 !important;
+	}
 }
 
 
@@ -263,6 +297,10 @@ input:-webkit-autofill:focus {
 	
 	li.small-phone{
 		display: inline-block !important;
+	}
+	
+	li.big-phone{
+		display : none !important;
 	}
 	
 	div.header-top-fake{
@@ -333,6 +371,10 @@ input:-webkit-autofill:focus {
 nav.navbar.bootsnav ul.nav > li > a {
 	color: #3f4b5a;
 	font-family: 'Titillium Web', sans-serif;
+	 -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
 }
 
 nav.navbar.bootsnav ul.nav > li > a:hover,
@@ -342,6 +384,7 @@ nav.navbar.bootsnav ul.nav > li>.dropdown-menu li.active > a,
 nav.navbar.bootsnav ul.nav > li>.dropdown-menu.megamenu-content li > a:hover,
 nav.navbar.bootsnav ul.nav > li>.dropdown-menu.megamenu-content .menu-col li.active > a {
     color: #C23000;
+    border-bottom: 2px solid #C23000;
 }
 .dropdown-menu.cart-list h2 {
 	font-size: 16px;
@@ -362,6 +405,10 @@ nav.navbar.bootsnav ul.nav > li>.dropdown-menu.megamenu-content .menu-col li.act
 	    font-size: 16px;
 	    text-transform: uppercase;
 	    letter-spacing: 0.06em;
+	}
+	
+	li.my-menu a{
+		max-height: 50px;
 	}
 	
 }
@@ -1446,8 +1493,39 @@ li.rating ul i {
 	    margin-left: 0;
 	}
 	
-	li.register-login span{
-		font-size: 12px;
+	li.header-font{
+		font-size: 11px;
+	}
+	
+	li.header-font span.select2{
+		width: 80px !important;
+		line-height: 24px !important;
+	}
+	
+	li.select2-results__option span{
+		font-size: 11px !important;
+	}
+	
+	li.select2-results__option span img{
+		width: 15px !important;
+		height: 15px !important;
+	}
+	
+	.social-icon ul li.padded{
+		padding: 0 5px 0 5px !important;
+	
+	}
+	
+	.social-icon ul li{
+		line-height: 18px !important;
+	}
+	
+	.how-to-order{
+		font-size: 30px !important;
+	}
+	
+	.how-to-order-detail{
+		font-size: 15px !important;
 	}
 }
 
