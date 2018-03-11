@@ -40,13 +40,14 @@
     								<i class="fa fa-phone"></i>
     							</a>
     						</li>
+    						<li class="header-font padded" style="border-right: 1px solid grey;">
+    							<span class="hover favorite-font" style=""><?php echo $this->lang->line('home_signin'); ?> </span>
+    						</li>
     						<li  class="header-font padded" style="border-right: 1px solid grey;">
     							<span class="hover favorite-font" ><?php echo $this->lang->line('home_register'); ?></span>
     						
     						</li>
-    						<li class="header-font padded" style="border-right: 1px solid grey;">
-    							<span class="hover favorite-font" style=""><?php echo $this->lang->line('home_signin'); ?> </span>
-    						</li>
+    					
     						<li class=" header-font padded">
     							<span class="hover favorite-font">MY CART <span style="font-weight:bold;">(<span >0</span>)</span></span>
     						</li>

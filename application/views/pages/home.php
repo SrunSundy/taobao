@@ -365,20 +365,69 @@
 			</div>
 		</section><!-- block area end -->
 		
-		<section class="section-padding"  style="padding-top: 0px;background:#7f7f7f;min-height: 500px" >
+		<section class="section-padding"  style="padding-top: 0px;background:#7f7f7f;min-height: 450px" >
 			<div class="container">
 				<div class="row">
 					<div class="header-text">
-						<p class="favorite-font">Our Team Members</p>
+						<p class="favorite-font team-member">Our Team Members</p>
 					</div>
 					
 					<div class="member-wrapper" style="margin-top: 55px;">
-						<div class="col-md-2 col-sm-4 col-xs-6 box-member">
-							<div class="member-image">
-								<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" />
+						
+						
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<div class="box-wrapper-member">
+								<div class="box-member">
+									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+								</div>
+								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
+								<p class="favorite-font member-des">Founder of The Fashion</p>
 							</div>
-							<p class="member-name">Mr. Oeng Chhoun</p>
-							<p class="member-des">Founder of The Fashion</p>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<div class="box-wrapper-member">
+								<div class="box-member">
+									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+								</div>
+								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
+								<p class="favorite-font member-des">Founder of The Fashion</p>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<div class="box-wrapper-member">
+								<div class="box-member">
+									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+								</div>
+								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
+								<p class="favorite-font member-des">Founder of The Fashion</p>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<div class="box-wrapper-member">
+								<div class="box-member">
+									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+								</div>
+								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
+								<p class="favorite-font member-des">Founder of The Fashion</p>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<div class="box-wrapper-member">
+								<div class="box-member">
+									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+								</div>
+								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
+								<p class="favorite-font member-des">Founder of The Fashion</p>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<div class="box-wrapper-member">
+								<div class="box-member">
+									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+								</div>
+								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
+								<p class="favorite-font member-des">Founder of The Fashion</p>
+							</div>
 						</div>
 					</div>
 					

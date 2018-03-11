@@ -90,7 +90,7 @@ div.image-thumbnail img{
 
 p.news-title{
 	
-	font-size: 17px;
+	font-size: 18px;
 	margin-top: 10px;
 	color: #313131;
 }
@@ -144,7 +144,12 @@ div.icon-wrapper a:hover{
 }
 
 
-div.box-member{
+div.box-member img{
+	width: 120px;
+	height: 120px;
+}
+
+div.box-wrapper-member{
 	text-align: center;
 }
 
@@ -166,14 +171,15 @@ div.member-image img{
 }
 
 p.member-name{
-	margin-top: 10px;
-	font-size: 17px;
-	color: #ffffff;
+	margin-top: 20px;
+    font-size: 18px !important;
+    color: #ffffff !important;
+    margin-bottom: 0;
 }
 
 p.member-des{
-	font-size: 14px;
-	color: #ffffff;
+	font-size: 14px !important;
+	color: #ffffff !important;
 }
 
 

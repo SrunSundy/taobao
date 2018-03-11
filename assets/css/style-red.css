@@ -1484,6 +1484,28 @@ li.rating ul i {
 		margin-left: 60px;
 	}
 }
+
+@media (max-width: 350px) {
+	li.header-font span.select2{
+		width: 70px !important;
+		line-height: 24px !important;
+	}
+	
+	li.small-phone{
+		margin-right : 5px !important;
+	}
+	
+	.social-icon ul li.padded{
+		padding: 0 2px 0 2px !important;
+	
+	}
+	
+	li.header-font span.select2{
+		width: 60px !important;
+		line-height: 24px !important;
+	}
+}
+
 @media (max-width: 480px) {
 	.comment-avatar {
 	    float: none;
@@ -1498,7 +1520,7 @@ li.rating ul i {
 	}
 	
 	li.header-font span.select2{
-		width: 80px !important;
+		
 		line-height: 24px !important;
 	}
 	
@@ -1520,12 +1542,18 @@ li.rating ul i {
 		line-height: 18px !important;
 	}
 	
+
+	
 	.how-to-order{
 		font-size: 30px !important;
 	}
 	
 	.how-to-order-detail{
 		font-size: 15px !important;
+	}
+	
+	p.team-member{
+		font-size: 30px !important;
 	}
 }
 
