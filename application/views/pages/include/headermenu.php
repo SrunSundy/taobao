@@ -49,7 +49,7 @@
     						</li>
     					
     						<li class=" header-font padded">
-    							<span class="hover favorite-font">MY CART <span style="font-weight:bold;">(<span >0</span>)</span></span>
+    							<span class="hover favorite-font"> <?php echo $this->lang->line('home_cart'); ?><span style="font-weight:bold;">(<span >0</span>)</span></span>
     						</li>
     						
     						<li class="header-font" style="text-align: center;   ">
@@ -60,7 +60,7 @@
     							</select>
     						</li>
     						<li class="big-phone">
-    							 <p style="float:left" class="favorite-font">CALL US :</p>
+    							 <p style="float:left" class="favorite-font"><?php echo $this->lang->line('home_call_us'); ?> :</p>
     							 <a class="favorite-font" style="margin:0; padding: 0 10px 0 10px;color:#3f4b5a; width: auto;float:left;line-height:24px;border-right: 1px solid grey;" href="tel:010 666 520">010 666 520</a> 
     							 <a class="favorite-font" style="margin:0;padding: 0 10px 0 10px;color:#3f4b5a; width: auto;float:left;line-height: 24px;" href="tel:070 201 385">070 201 385</a> 
     							<div style="clear:both;"></div>

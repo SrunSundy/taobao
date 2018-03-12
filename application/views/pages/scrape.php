@@ -42,10 +42,10 @@
 					<div class="col-md-5">
 						<div id="for-small-title" style="padding-bottom: 30px;display:none;">
 							<div class="box-title div-main">
-    							<p class="favorite-font">新款户外沙滩鞋五指贴肤鞋涉水鞋男游泳鞋漂流鞋便携鞋沙滩鞋</p>
+    							<p class="favorite-font">韩版ulzzang2017年冬季时尚中长款连帽棉服简约修身显瘦外套女</p>
     						</div>
     						<div class="price-wrapper div-main" style="">
-    							<p class="product-price favorite-font"><span class="price_currency">CN ¥ </span><span class="price_amount">99.00</span></p>
+    							<p class="product-price favorite-font"><span class="price_currency">CN Â¥ </span><span class="price_amount">99.00</span></p>
     						</div>
 						</div>
 						<div class="box-image-display">
@@ -100,7 +100,7 @@
 					<div class="col-md-7 scrape-info" >
 						<div id="for-big-title">
 							<div class="box-title div-main">
-    							<p class="favorite-font">新款户外沙滩鞋五指贴肤鞋涉水鞋男游泳鞋漂流鞋便携鞋沙滩鞋</p>
+    							<p class="favorite-font">韩版ulzzang2017年冬季时尚中长款连帽棉服简约修身显瘦外套女</p>
     						</div>
     						<div class="price-wrapper div-main" style="">
     							<p class="product-price favorite-font"><span class="price_currency">CN ¥ </span><span class="price_amount">99.00</span></p>
@@ -110,7 +110,7 @@
 						
 						<div class="delivery-fee div-main">
 							<p class="favorite-font fee-title" style="color:#b5b5b5">Chinese Domestic Delivery Fee </p>
-							<input type="text"  value="CN ¥ 0" />
+							<input type="text"  value="CN Â¥ 0" />
 							<div class="text-info">
 								<p class="exclude favorite-font">Exclude International Delivery</p>
 								<p class="estimation favorite-font">Delivery Estimation</p>
@@ -121,7 +121,7 @@
 						
 						<div class="box-size div-main">
 							<div style="display:table;float:left">
-								<p class="favorite-font  text-title">Size</p>
+								<p class="favorite-font  text-title"><?php echo $this->lang->line('scrape_size'); ?></p>
 								<p class="favorite-font text-slider">:</p>
 								<div style="clear:both;"></div>
 							</div>
@@ -158,7 +158,7 @@
 							
 							
 							<div style="display:table;float:left">
-								<p class="favorite-font text-title">Color</p>
+								<p class="favorite-font text-title"><?php echo $this->lang->line('scrape_color'); ?></p>
 								<p class="favorite-font text-slider">:</p>
 								<div style="clear:both;"></div>
 							</div>
@@ -179,7 +179,7 @@
 						</div>
 						
 						<div  class="div-main">
-							<p class="favorite-font text-title" style="line-height: 35px">Message</p>
+							<p class="favorite-font text-title" style="line-height: 35px"><?php echo $this->lang->line('scrape_message'); ?></p>
 							<p class="favorite-font text-slider" style="margin-left: 10px;line-height: 35px">:</p>
 							<input type="text" class="customer-message"/>
 							
@@ -188,14 +188,14 @@
 						</div>
 						
 						<div  class="div-main">
-							<p class="favorite-font text-title" style="line-height: 35px">Quantity</p>
+							<p class="favorite-font text-title" style="line-height: 35px"><?php echo $this->lang->line('scrape_quantity'); ?></p>
 							<p class="favorite-font text-slider" style="margin-left: 10px;line-height: 35px">:</p>
 							
 							<div class="input-group spinner">
                                 <input type="text" class="item-quantity favorite-font spinner-input" value="1">
                                 <div class="input-group-btn-vertical">
-                                  <button class="btn btn-default" type="button"><i class="fa fa-caret-up" style="color:black"></i></button>
-                                  <button class="btn btn-default" type="button"><i class="fa fa-caret-down" style="color:black"></i></button>
+                                  <button class="btn btn-default" type="button" style="box-shadow:none;"><i class="fa fa-caret-up" style="color:black;"></i></button>
+                                  <button class="btn btn-default" type="button" style="box-shadow:none;"><i class="fa fa-caret-down" style="color:black;"></i></button>
                                 </div>
                               </div>
 							<div style="clear:both;"></div>
@@ -205,10 +205,12 @@
 						<div  class="button-action div-main" style="text-align: center">
 							
 							<button class="btn event-btn" type="button" style="letter-spacing: 0;">
-								<i class="fa fa-cart-plus"></i> Add To Cart
+								<img src="assets/img/icon/cart-1.png" style="width: 25px;height:25px;float:left;margin-right: 7px;" /> 
+								<p class="favorite-font" style="float:left"><?php echo $this->lang->line('scrape_cart_btn'); ?></p>
 							</button>
-							<button class="btn event-btn" type="button" style="letter-spacing: 0;">
-								<i class=""></i> Buy Now
+							<button class="btn event-btn " type="button" style="letter-spacing: 0;">
+								<img src="assets/img/icon/buy-now.png" style="width: 40px;height:40px;margin-top: -10px;float:left;margin-right: 7px;" />
+								<p class="favorite-font"  style="float:left"><?php echo $this->lang->line('scrape_buy_btn'); ?></p>
 							</button>
 						</div>
 						

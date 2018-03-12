@@ -176,11 +176,15 @@ div.color-item{
 	float: left;
 	margin-left: 10px;
 	margin-top: 10px;
-	min-width: 105px;
+	
 	height: 30px;
 	border: 1px solid #d0d0d0;
 	text-align:center;
 	cursor: pointer;
+}
+
+div.color-item span{
+	padding: 0 10px 0 10px;
 }
 
 div.color-item-active{

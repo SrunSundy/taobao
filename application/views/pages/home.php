@@ -33,7 +33,7 @@
                                             <div class="input-group">
                                               <input type="text" class="form-control" placeholder="https://item.taobao.com/item.htm?id=541239586337" style="border-radius: 0; border-top: 3px solid #c23000;border-left: 3px solid #c23000;border-bottom: 3px solid #c23000;">
                                               <span class="input-group-btn">
-                                                <button id="scrape_data" class="btn btn-secondary" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;" type="button">Search</button>
+                                                <button id="scrape_data" class="btn btn-secondary favorite-font" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;    letter-spacing: 0;" type="button"><?php echo $this->lang->line('home_search'); ?></button>
                                               </span>
                                             </div>
                                         
