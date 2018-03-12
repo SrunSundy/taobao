@@ -44,12 +44,17 @@ my customized style
 */
  @font-face {
    font-family: khmerFontFreeHand;
-   src: url(../fonts/Freehand.ttf);
+   src: url(../fonts/khmeros.ttf);
  }
  
   @font-face {
    font-family: lucidasans;
    src: url(../fonts/lucidasans.ttf);
+ }
+ 
+ @font-face{
+ 	font-family: Amaranth;
+ 	src: url(../fonts/Amaranth.ttf);
  }
  
 
@@ -83,6 +88,12 @@ div.header-top-fake{
 .social-icon ul li.padded:first-child{
 	padding: 0 10px 0 0px !important;
 	
+}
+
+div.ruler-style{
+	width: 100%;
+	height: 58px;
+    background-color: #a30900;
 }
 /* ================= General ==================== */
 html,
