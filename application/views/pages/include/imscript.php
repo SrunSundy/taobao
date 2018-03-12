@@ -11,8 +11,22 @@
 <!-- highlight selected menu item -->
 <script>
 var t = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-$("li.header-menu").removeClass("active");
-$("li.header-menu a[href='"+t+"']").parents("li").addClass("active");
+if(t){
+	if(t.trim() === "scrape"){
+		
+		$("li.header-menu").removeClass("active");
+		$("li.header-menu a[href='my_order']").parents("li").addClass("active");
+	}else{
+		$("li.header-menu").removeClass("active");
+		$("li.header-menu a[href='"+t+"']").parents("li").addClass("active");
+	}
+	
+}
+else{
+
+	$("li.header-menu").removeClass("active");
+	$("li.header-menu a[href='home']").parents("li").addClass("active");
+}
 </script>
 <!-- end highlight selected menu item -->
 

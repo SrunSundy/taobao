@@ -37,9 +37,31 @@ class ViewController extends CI_Controller {
 	    
 	}
 	
-	public function aboutus(){
+	public function about_us(){
 	    $this->load->view('pages/aboutus');
 	    
+	}
+	
+	public function how_to_order(){
+	    $this->load->view('pages/howtoorder');
+	}
+	
+	public function my_order(){
+	    
+	   // $param = $this->uri->segment(1);
+	    $this->load->view('pages/myorder');
+	   
+	 /*   if($param == "/"){
+	        $this->load->view('pages/myorder');
+	    }
+	    else if($param){
+	        $this->load->view('pages/'.$param);
+	    }*/
+	    
+	}
+	
+	public function scrape(){
+	    $this->load->view('pages/scrape');
 	}
 	
 	

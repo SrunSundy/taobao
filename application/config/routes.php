@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = "";
 
 $route['(:any)'] = 'viewcontroller/$1';
+//$route['my_order/(:any)'] = "viewcontroller/my_order/$1";
 
 /*sorten url*/
 /*$route["about"] = 'webpages/about'; 

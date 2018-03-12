@@ -28,12 +28,12 @@
     							<div class="col-sm-8">
     								<div class="slider-content">
     									
-    										<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Amaranth" />
-    										<p style="margin-bottom: 15px;font-family: Amaranth "   ><?php echo $this->lang->line('home_intro'); ?></p>
+    										
+    										<p class="favorite-font-amaranth" style="margin-bottom: 15px; "   ><?php echo $this->lang->line('home_intro'); ?></p>
                                             <div class="input-group">
                                               <input type="text" class="form-control" placeholder="https://item.taobao.com/item.htm?id=541239586337" style="border-radius: 0; border-top: 3px solid #c23000;border-left: 3px solid #c23000;border-bottom: 3px solid #c23000;">
                                               <span class="input-group-btn">
-                                                <button class="btn btn-secondary" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;" type="button">Search</button>
+                                                <button id="scrape_data" class="btn btn-secondary" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;" type="button">Search</button>
                                               </span>
                                             </div>
                                         
@@ -96,9 +96,9 @@
 				<div class="row">
 					<div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
 						<div class="intro-title text-center">
-							<h2 class="favorite-font how-to-order" style="font-size: 50px;font-weight:bold;color:#313131;margin-bottom:10px">How to Order?</h2>
+							<h2  class="favorite-font-amaranth how-to-order" style="font-size: 50px;font-weight:bold;color:#313131;margin-bottom:10px">How to Order?</h2>
 							
-							<p class="favorite-font how-to-order-detail" style="font-size:22px;color:#7F7F7F">Processing so easily by following this easy step</p>
+							<p class="favorite-font-amaranth how-to-order-detail" style="font-size:22px;color:#7F7F7F">Processing so easily by following this easy step</p>
 							
 						</div>
 					</div>
@@ -154,7 +154,7 @@
 				
 				<div class="row" style="margin-top: 100px;">
 					<div class="button-wrapper" style="text-align:center;">
-						<button class="btn">How it work?</button>
+						<button class="btn" ><p class="favorite-font-amaranth">How it work?</p></button>
 					</div>
 					
 				</div>
@@ -448,5 +448,6 @@
 
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
+		<script src="assets/js-view/home.js"></script>
 	</body>
 </html>
