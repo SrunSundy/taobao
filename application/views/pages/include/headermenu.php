@@ -48,8 +48,8 @@
     						
     						</li>
     					
-    						<li class=" header-font padded">
-    							<span class="hover favorite-font"> <?php echo $this->lang->line('home_cart'); ?><span style="font-weight:bold;">(<span >0</span>)</span></span>
+    						<li class=" header-font padded" id="goto_cart">
+    							<span class="hover favorite-font" style="text-transform: uppercase"> <?php echo $this->lang->line('home_cart'); ?><span style="font-weight:bold;">(<span >0</span>)</span></span>
     						</li>
     						
     						<li class="header-font" style="text-align: center;   ">

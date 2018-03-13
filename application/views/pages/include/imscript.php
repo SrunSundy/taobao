@@ -64,7 +64,10 @@ else{
 		  return $state;
 	};
 
-	
+	//go to cart
+	$("#goto_cart").on("click", function(){
+		location.href = "my_cart";
+	});
 
 </script>
 

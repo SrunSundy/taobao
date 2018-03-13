@@ -60,6 +60,10 @@ class ViewController extends CI_Controller {
 	    
 	}
 	
+	public function my_cart(){
+	    $this->load->view('pages/mycart');
+	}
+	
 	public function scrape(){
 	    $this->load->view('pages/scrape');
 	}
