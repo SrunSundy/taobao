@@ -15,7 +15,17 @@
 		$('.spinner input').val(val);
 	});
 	
-	$("input.spinner-input").on("keypress", function(event){
-		return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57;
+	$("input.spinner-input").on("keyup", function(event){
+		 
+		var myVal = $(this).val();
+		if(myVal.length >1 ){
+			myVal =myVal.replace(/\D+/, '');
+		}else{
+			var reg = new RegExp('/\D/g');
+			if(!reg.test(myVal)) myVal = 1;
+		}
+		$(this).val(myVal);
+		/*var reg = new RegExp('/^[0-9+]*$/');
+		if(reg.test($(this).val())) $(this).val(1);*/
 	});
 })(jQuery);
