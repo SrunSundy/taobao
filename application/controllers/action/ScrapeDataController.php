@@ -1,11 +1,15 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 require APPPATH . '/libraries/REST_Controller.php';
-class LanguageSwitcher extends REST_Controller
+class ScrapeDataController extends REST_Controller
 {
     public function __construct() {
         parent::__construct();     
     }
- 
+
+    public function index_get(){
+    	echo "234";
+    }
     function switchLang($language = "") {
         
         $language = ($language != "") ? $language : "english";
