@@ -1,6 +1,8 @@
 div.box-big-image, div.box-small-image{
 	text-align:center;
 }
+
+
 img.big-image{
 	width: 380px;
 	height: auto;
@@ -147,16 +149,22 @@ div.size-item{
 	float: left;
 	margin-left: 10px;
 	margin-top: 10px;
-	min-width: 45px;
-	height: 30px;
-	border: 1px solid #d0d0d0;
+	border: 1px solid transparent;
 	text-align:center;
 	cursor: pointer;
 	
 }
 
-div.active-size-item{
-	border: 2px solid #ff7829;
+div.size-item-cover{
+	border: 1px solid #d0d0d0;
+	height: 30px;
+	padding:0 8px 0 8px;
+}
+
+div.active-size-item, div.active-size-item div.size-item-cover{
+	border: 1px solid #ff7829;
+	 -webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
 }
 
 
@@ -177,6 +185,13 @@ div.color-item{
 	margin-left: 10px;
 	margin-top: 10px;
 	
+	border: 1px solid transparent;
+	text-align:center;
+	cursor: pointer;
+}
+
+div.color-item-cover{
+	
 	height: 30px;
 	border: 1px solid #d0d0d0;
 	text-align:center;
@@ -187,8 +202,10 @@ div.color-item span{
 	padding: 0 10px 0 10px;
 }
 
-div.color-item-active{
-	border: 2px solid #ff7829;
+div.color-item-active,div.color-item-active div.color-item-cover{
+	border: 1px solid #ff7829;
+	 -webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
 }
 
 input.customer-message{
@@ -230,3 +247,40 @@ button.event-btn{
 	margin-top: 8px;
 }
 
+div.box-small-color div.box-small-color-thumbnail{
+	border : 2px solid #dedede;
+	
+}
+
+img.small-color-image{
+	width: 100%;
+	
+	height: 100%;
+	object-fit: cover;
+	border-radius: 2px;
+	border: 3px solid white;
+}
+
+div.active-box-small-color div.box-small-color-thumbnail{
+	border: 2px solid #ff7829;
+	 position: relative;
+	 text-align:center;
+	 -webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	 
+}
+
+div.box-small-color:first-child{
+	margin-left: 10px;
+}
+
+div.box-small-color{
+	text-align:center;
+	margin-top: 10px;
+	
+	width: 50px;
+	height: 50px;
+	float: left;
+	padding: 3px;
+	cursor:pointer;
+}
