@@ -1,7 +1,37 @@
 
 
+function calculateImageWidth(){
+	
+	 var win = $(window);
+	 console.log();
+	 
+	 if(win.width() <= 450 ){
+   	  var myImage = 380 - (450 - win.width());
+   	  console.log(myImage);
+   	  $("div.box-big-image").width(myImage);
+   	  $("div.box-big-image").height(myImage);
+     }else{
+    	 var bigWrapper = $("div.box-image-display").width();
+    	 console.log(bigWrapper);
+    	 if(bigWrapper <= 380 ){
+    		 
+    		 $("div.box-big-image").width(bigWrapper);
+          	 $("div.box-big-image").height(bigWrapper);
+    	 }else{
+    		 $("div.box-big-image").width(376);
+          	 $("div.box-big-image").height(376);
+    	 }
+    	
+     }
+}
+
 $( document ).ready(function() {
-  
+	
+	calculateImageWidth();
+	
+	$(window).bind('resize', function(){
+		calculateImageWidth();
+	});
 	$(document).on("click","div.box-small", function(){
 		
 		
@@ -11,7 +41,7 @@ $( document ).ready(function() {
 		var showImg = $(this).find("img.small-image").data("real_src");
 		var image = new Image();
 		image.src = showImg;	
-		$("#big_image").attr("src", showImg+"_20x20.jpg");
+		$("#big_image").attr("src", showImg+"_80x80.jpg");
 		image.onload = function () {
 			$("#big_image").attr("src", showImg);
 		}
@@ -33,6 +63,8 @@ $( document ).ready(function() {
 		$("div.color-item").removeClass("color-item-active");
 		$(this).addClass("color-item-active");
 	});
+	
+	
 	
 	
 });
