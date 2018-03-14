@@ -1,13 +1,13 @@
 
-<script src="assets/js/jquery-2.1.3.min.js"></script>
-<script src="assets/plugin/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/plugin/select2/select2.full.min.js"></script>
-<script src="assets/js/bootsnav.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/ajaxchimp.js"></script>
-<script src="assets/js/ajaxchimp-config.js"></script> 
-<script src="assets/js/script.js"></script>
+<script src="<?php echo base_url();?>assets/js/jquery-2.1.3.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugin/select2/select2.full.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/bootsnav.js"></script>
+<script src="<?php echo base_url();?>assets/js/owl.carousel.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/wow.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/ajaxchimp.js"></script>
+<script src="<?php echo base_url();?>assets/js/ajaxchimp-config.js"></script> 
+<script src="<?php echo base_url();?>assets/js/script.js"></script>
 <!-- highlight selected menu item -->
 <script>
 var t = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);

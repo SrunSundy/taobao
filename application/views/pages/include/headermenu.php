@@ -116,7 +116,7 @@
 			</button>
 			<a class="navbar-brand display-logo" href="index.html"
 				style="margin-top: 0 !important; width: 150px"><img
-				src="assets/img/logo/logo.png" class="logo logo-scrolled"
+				src="<?php echo base_url();?>assets/img/logo/logo.png" class="logo logo-scrolled"
 				style="margin-top: -10px;" alt=""></a>
 		</div>
 		<!-- End Header Navigation -->

@@ -5,7 +5,7 @@
 
 		<title>My Cart | taobao outlet</title>
 		<?php include 'include/imstyle.php'?>
-		<link rel="stylesheet" href="assets/css-customize/mycart.css" />
+		<link rel="stylesheet" href="<?php echo base_url();?>assets/css-customize/mycart.css" />
 	</head>
 
 
@@ -49,7 +49,7 @@
     								<div class="col-md-4" align="center">
     									<div class="row">
         									<a style="background: #e8e8e8;display:inline-block;padding: 15px;border-radius: 100%;margin-right: 10px;">
-            									<img src="assets/img/icon/cart-1.png" style="width: 45px;height:45px;" /> 
+            									<img src="<?php echo base_url();?>assets/img/icon/cart-1.png" style="width: 45px;height:45px;" /> 
             								</a>
             								<p style="display:inline-block;" class="favorite-font">
             									Your cart is empty!

@@ -98,11 +98,11 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="all-client-logo">
-							<a href="#"><img src="assets/img/cling-logo/1.jpg" alt="" /></a>
-							<a href="#"><img src="assets/img/cling-logo/2.jpg" alt="" /></a>
-							<a href="#"><img src="assets/img/cling-logo/3.jpg" alt="" /></a>
-							<a href="#"><img src="assets/img/cling-logo/4.jpg" alt="" /></a>
-							<a href="#"><img src="assets/img/cling-logo/5.jpg" alt="" /></a>
+							<a href="#"><img src="<?php echo base_url();?>assets/img/cling-logo/1.jpg" alt="" /></a>
+							<a href="#"><img src="<?php echo base_url();?>assets/img/cling-logo/2.jpg" alt="" /></a>
+							<a href="#"><img src="<?php echo base_url();?>assets/img/cling-logo/3.jpg" alt="" /></a>
+							<a href="#"><img src="<?php echo base_url();?>assets/img/cling-logo/4.jpg" alt="" /></a>
+							<a href="#"><img src="<?php echo base_url();?>assets/img/cling-logo/5.jpg" alt="" /></a>
 						</div>
 					</div><!-- /.col-md-12 -->
 				</div><!-- /.row -->

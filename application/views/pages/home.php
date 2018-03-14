@@ -5,7 +5,7 @@
 		<title>Home | taobao outlet</title>
         <?php include 'include/imstyle.php'?>
         
-       	<link rel="stylesheet" href="assets/css-customize/home.css" />
+       	<link rel="stylesheet" href="<?php echo base_url();?>assets/css-customize/home.css" />
 	</head>
 
 
@@ -16,7 +16,7 @@
 			<?php include 'include/headermenu.php' ?>
 		</header> <!-- end header -->
 	
-		<div class="homepage-slider slider-bg1" style='background: url("assets/img/slider-bg/4.jpg") no-repeat ; max-height: 720px;background-size:cover '>
+		<div class="homepage-slider slider-bg1" style='background: url("<?php echo base_url();?>assets/img/slider-bg/4.jpg") no-repeat ; max-height: 720px;background-size:cover '>
 			<div class="display-table">
 				
 				<div class="display-table-cell">
@@ -30,13 +30,16 @@
     									
     										
     										<p class="favorite-font-amaranth" style="margin-bottom: 15px; "   ><?php echo $this->lang->line('home_intro'); ?></p>
-                                            <div class="input-group">
-                                              <input type="text" class="form-control" placeholder="https://item.taobao.com/item.htm?id=541239586337" style="border-radius: 0; border-top: 3px solid #c23000;border-left: 3px solid #c23000;border-bottom: 3px solid #c23000;">
-                                              <span class="input-group-btn">
-                                                <button id="scrape_data" class="btn btn-secondary favorite-font" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;    letter-spacing: 0;" type="button"><?php echo $this->lang->line('home_search'); ?></button>
-                                              </span>
-                                            </div>
-                                        
+    										<form style="display: hidden" action="scrape" method="GET" id="scrape_url">
+                                                <div class="input-group">
+                                                 
+                                                      <input type="text" name="input_url" id="input_url" class="form-control" placeholder="https://item.taobao.com/item.htm?id=541239586337" style="border-radius: 0; border-top: 3px solid #c23000;border-left: 3px solid #c23000;border-bottom: 3px solid #c23000;">
+                                                      <span class="input-group-btn">
+                                                        <button id="scrape_data" class="btn btn-secondary favorite-font" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;    letter-spacing: 0;" type="button"><?php echo $this->lang->line('home_search'); ?></button>
+                                                      </span>
+                                                
+                                                </div>
+                                            </form>
                                        
     								</div>
     							</div>
@@ -107,7 +110,7 @@
 					<div class="col-md-3">
 						<div class="box-wrapper">
 							<div class="box-image">
-								<img src="assets/img/icon/url.png" style="width:110px"/>
+								<img src="<?php echo base_url();?>assets/img/icon/url.png" style="width:110px"/>
 							</div>
 							<p class="favorite-font  how-to-order-detail">1.Submit Order & Deposit</p>
 						</div>
@@ -116,7 +119,7 @@
 					<div class="col-md-3">
 						<div class="box-wrapper">
 							<div class="box-image">
-								<img src="assets/img/icon/purchase.png" style="width:110px"/>
+								<img src="<?php echo base_url();?>assets/img/icon/purchase.png" style="width:110px"/>
 							</div>
 							<p class="favorite-font  how-to-order-detail">2.Taobao Outlet Purchasing</p>
 						</div>
@@ -125,7 +128,7 @@
 					<div class="col-md-3">
 						<div class="box-wrapper">
 							<div class="box-image">
-								<img src="assets/img/icon/delivery.png" style="width:110px"/>
+								<img src="<?php echo base_url();?>assets/img/icon/delivery.png" style="width:110px"/>
 							</div>
 							<p class="favorite-font  how-to-order-detail">3.Taobao Outlet Delivery</p>
 						</div>
@@ -134,7 +137,7 @@
 					<div class="col-md-3">
 						<div class="box-wrapper">
 							<div class="box-image">
-								<img src="assets/img/icon/payment.png" style="width:110px"/>
+								<img src="<?php echo base_url();?>assets/img/icon/payment.png" style="width:110px"/>
 							</div>
 							<p class="favorite-font  how-to-order-detail">4. Received Your Order and Payment</p>
 						</div>
@@ -448,6 +451,6 @@
 
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
-		<script src="assets/js-view/home.js"></script>
+		<script src="<?php echo base_url();?>assets/js-view/home.js"></script>
 	</body>
 </html>

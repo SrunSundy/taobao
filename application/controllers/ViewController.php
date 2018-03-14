@@ -65,7 +65,10 @@ class ViewController extends CI_Controller {
 	}
 	
 	public function scrape(){
-	    $this->load->view('pages/scrape');
+	    
+	    $url = $this->input->get('input_url');
+	    $resp["url"] = $url;
+	    $this->load->view('pages/scrape' , $resp);
 	}
 	
 	

@@ -5,14 +5,15 @@
 
 		<title>Scrape | taobao outlet</title>
 		<?php include 'include/imstyle.php'?>
-		<link rel="stylesheet" href="assets/css-customize/scrape.css"  />
-		<link rel="stylesheet" href="assets/css/input-spinner.css"  />
+		<link rel="stylesheet" href="<?php echo base_url();?>assets/css-customize/scrape.css"  />
+		<link rel="stylesheet" href="<?php echo base_url();?>assets/css/input-spinner.css"  />
 		
 	</head>
 
 
 	<body>
-	
+		<input type="hidden" value="<?php echo $url; ?>"  id="scrape_url" />
+		<input type="hidden" value="<?php echo base_url();  ?>" id="base_url" />
 		<!-- ::::::::::::::::::::: Header Section:::::::::::::::::::::::::: -->
 		<header>
 			<?php include 'include/headermenu.php' ?>
@@ -38,53 +39,55 @@
 		<!-- ::::::::::::::::::::: Accordian Section:::::::::::::::::::::::::: -->
 		<section class="accordian-section section-padding" style="padding-top: 55px;">
 			<div class="container">
+					
 				
 					<div class="col-md-5">
 						<div id="for-small-title" style="padding-bottom: 30px;display:none;">
 							<div class="box-title div-main">
-    							<p class="favorite-font">韩版ulzzang2017年冬季时尚中长款连帽棉服简约修身显瘦外套女</p>
+    							<p class="favorite-font product-title" ></p>
+    							
     						</div>
     						<div class="price-wrapper div-main" style="">
-    							<p class="product-price favorite-font"><span class="price_currency">CN Â¥ </span><span class="price_amount">99.00</span></p>
+    							<p class="product-price favorite-font"><span class="price_currency">CN Â¥ </span><span class="price_amount">0</span></p>
     						</div>
 						</div>
 						<div class="box-image-display">
 							<div class="box-big-image">
-								<img class="big-image"  
-									src="https://img.alicdn.com/imgextra/i2/TB1122SltrJ8KJjSspaYXFuKpXa_M2.SS2_500x500.jpg" />
+								<img class="big-image" id="big_image"  
+									src="<?php echo base_url();?>assets/img/default.jpg" />
 							</div>
 							
 							<div class="box-small-image">
-								<div class="small-image-wrapper">
+								<div class="small-image-wrapper" id="small_image_wrapper">
 									<div class="box-small active-box-small">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="https://img.alicdn.com/imgextra/i2/TB1122SltrJ8KJjSspaYXFuKpXa_M2.SS2_500x500.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
 										</div>
 																			
 									</div>
 									
 									<div class="box-small ">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="https://gd2.alicdn.com/bao/uploaded/i2/917312802/TB2K6zTelLN8KJjSZPhXXc.spXa_!!917312802.jpg_500x500.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
 										</div>
 																			
 									</div>
 									
 									<div class="box-small ">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="https://gd3.alicdn.com/bao/uploaded/i3/888817584/TB2t_B0lznD8KJjSspbXXbbEXXa_!!888817584.jpg_500x500.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
 										</div>
 																			
 									</div>
 									<div class="box-small ">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="https://gd3.alicdn.com/bao/uploaded/i3/888817584/TB2t_B0lznD8KJjSspbXXbbEXXa_!!888817584.jpg_500x500.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
 										</div>
 																			
 									</div>
 									<div class="box-small ">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="https://gd2.alicdn.com/bao/uploaded/i2/917312802/TB2K6zTelLN8KJjSZPhXXc.spXa_!!917312802.jpg_500x500.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
 										</div>
 																			
 									</div>
@@ -100,10 +103,10 @@
 					<div class="col-md-7 scrape-info" >
 						<div id="for-big-title">
 							<div class="box-title div-main">
-    							<p class="favorite-font">韩版ulzzang2017年冬季时尚中长款连帽棉服简约修身显瘦外套女</p>
+    							<p class="favorite-font product-title"></p>
     						</div>
     						<div class="price-wrapper div-main" style="">
-    							<p class="product-price favorite-font"><span class="price_currency">CN ¥ </span><span class="price_amount">99.00</span></p>
+    							<p class="product-price favorite-font"><span class="price_currency">CN ¥ </span><span class="price_amount">0</span></p>
     						</div>
 						</div>
 					
@@ -126,29 +129,7 @@
 								<div style="clear:both;"></div>
 							</div>
 						
-							<div style="display:table" class="size-wrapper">
-								<div class="size-item active-size-item">
-									<span class="favorite-font">39</span>
-								</div>
-								<div class="size-item">
-									<span class="favorite-font">40</span>
-								</div>
-								<div class="size-item">
-									<span class="favorite-font">41</span>
-								</div>
-								<div class="size-item">
-									<span class="favorite-font">42</span>
-								</div>
-								<div class="size-item">
-									<span class="favorite-font">43</span>
-								</div>
-								<div class="size-item">
-									<span class="favorite-font">44</span>
-								</div>
-								<div class="size-item">
-									<span class="favorite-font">44</span>
-								</div>
-					
+							<div style="display:table" class="size-wrapper" id="size_wrapper">
 								
 							</div>
 							<div style="clear:both;"></div>
@@ -163,16 +144,7 @@
 								<div style="clear:both;"></div>
 							</div>
 							
-							<div class="color-wrapper" style="display:table;" >
-								<div class="color-item color-item-active">
-									<span class="favorite-font">K05 black</span>
-								</div>
-								<div class="color-item">
-									<span class="favorite-font">K05 black</span>
-								</div>
-								<div class="color-item">
-									<span class="favorite-font">K05 black</span>
-								</div>
+							<div class="color-wrapper" style="display:table;" id="color_wrapper">
 								
 							</div>
 							<div style="clear:both;"></div>
@@ -205,11 +177,11 @@
 						<div  class="button-action div-main" style="text-align: center">
 							
 							<button class="btn event-btn" type="button" style="letter-spacing: 0;">
-								<img src="assets/img/icon/cart-1.png" style="width: 25px;height:25px;float:left;margin-right: 7px;" /> 
+								<img src="<?php echo base_url();?>assets/img/icon/cart-1.png" style="width: 25px;height:25px;float:left;margin-right: 7px;" /> 
 								<p class="favorite-font" style="float:left"><?php echo $this->lang->line('scrape_cart_btn'); ?></p>
 							</button>
 							<button class="btn event-btn " type="button" style="letter-spacing: 0;">
-								<img src="assets/img/icon/buy-now.png" style="width: 40px;height:40px;margin-top: -10px;float:left;margin-right: 7px;" />
+								<img src="<?php echo base_url();?>assets/img/icon/buy-now.png" style="width: 40px;height:40px;margin-top: -10px;float:left;margin-right: 7px;" />
 								<p class="favorite-font"  style="float:left"><?php echo $this->lang->line('scrape_buy_btn'); ?></p>
 							</button>
 						</div>
@@ -233,14 +205,7 @@
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
 		
-		<script src="assets/js/input-spinner.js"></script>
-		<script>
-			$("div.box-small").on("mouseover", function(){
-				$("div.box-small").removeClass("active-box-small");
-				$(this).addClass("active-box-small");
-			});
-
-			
-		</script>
+		<script src="<?php echo base_url();?>assets/js/input-spinner.js"></script>
+		<script src="<?php echo base_url();?>assets/js-view/scrape.js"></script>
 	</body>
 </html>

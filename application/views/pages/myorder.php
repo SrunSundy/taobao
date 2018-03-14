@@ -5,7 +5,7 @@
 
 		<title>My Order | taobao outlet</title>
 		<?php include 'include/imstyle.php'?>
-		<link rel="stylesheet" href="assets/css-customize/myorder.css" />
+		<link rel="stylesheet" href="<?php echo base_url();?>assets/css-customize/myorder.css" />
 	</head>
 
 
