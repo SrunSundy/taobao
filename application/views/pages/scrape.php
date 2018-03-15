@@ -181,13 +181,14 @@
 							<button class="btn event-btn" id="add_to_cart" type="button" style="letter-spacing: 0;">
 								<img src="<?php echo base_url();?>assets/img/icon/cart-1.png" style="width: 25px;height:25px;float:left;margin-right: 7px;" /> 
 								<p class="favorite-font" style="float:left;color:white;"><?php echo $this->lang->line('scrape_cart_btn'); ?>
-								 <i class="fa fa-spinner fa-spin" style="    font-size: 20px;visibility:hidden;"></i>
+								 
 								</p>
+								<i class="fa fa-spinner fa-spin" style="    font-size: 25px;visibility:hidden;color:white;"></i>
 							</button>
 							<button class="btn event-btn " type="button" style="letter-spacing: 0;">
 								<img src="<?php echo base_url();?>assets/img/icon/buy-now.png" style="width: 40px;height:40px;margin-top: -10px;float:left;margin-right: 7px;" />
 								<p class="favorite-font"  style="float:left;color:white;"><?php echo $this->lang->line('scrape_buy_btn'); ?></p>
-								 <i class="fa fa-spinner fa-spin" style="    font-size: 20px;visibility:hidden;"></i>
+								 <i class="fa fa-spinner fa-spin" style="    font-size: 35px;visibility:hidden;color:white;"></i>
 							</button>
 						</div>
 						
@@ -205,7 +206,7 @@
 			<?php include 'include/footer.php' ?>
 		</footer>
 		
-		<span id="messgage_text"  class="message_box favorite-font animated" style="display:none"><i></i> Item is added to your cart! </span>
+		<span id="messgage_text"  class="message_box favorite-font animated" style="display:none"><i class="fa fa-check" style="font-size: 30px;color: green;"></i> Item is added to your cart! </span>
 		<span id="error_messgage_text"  class="error-message_box favorite-font animated" style="display:none"></span>
 		
 
