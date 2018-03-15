@@ -1,4 +1,6 @@
 
+var hasSize = false;
+var hasColor = false;
 
 function calculateImageWidth(){
 	
@@ -139,7 +141,7 @@ var myTimer;
 function isValidation(resq_data){
 	
 	
-	if(!resq_data.item_size){
+	if(hasSize && !resq_data.item_size){
 		clearTimeout(myTimer);
 		
 		$("#error_messgage_text").html("Please select item's size!");
@@ -150,7 +152,7 @@ function isValidation(resq_data){
 			//$("#error_messgage_text").hide();
 		}, 2000);
 		return false;
-	}else if(!resq_data.item_color){
+	}else if(hasColor && !resq_data.item_color){
 		
 		clearTimeout(myTimer);
 		
@@ -180,10 +182,13 @@ function loadData(){
 		success : function(data){
 			
 			
+			
 			$(".product-title").html(data.title);
 			$(".price_amount").html(data.price);
 			
 			if(data.image.length > 0){
+				
+	
 				$("#big_image").attr("src", data.image[0]);
 				
 				var imageHtml = "";
@@ -227,6 +232,7 @@ function loadData(){
 			
 			if(data.size.length > 0){
 				
+				hasSize = true;
 				var sizeHtml = "";
 				var size = data.size;
 				for(var i=0; i<size.length; i++){
@@ -241,6 +247,7 @@ function loadData(){
 				
 				$("#size_wrapper").html(sizeHtml);
 			}else{
+				hasSize = false;
 				$("#size_wrapper").html("<p class='no-information favorite-font'>"+$("#no_size").val()+"</p>");
 			}
 			
@@ -248,6 +255,7 @@ function loadData(){
 			
 			if(data.colorImage.length > 0){
 				
+				hasColor = true;
 				var colorImg = data.colorImage;
 				for(var i=0; i <colorImg.length; i++){
 					
@@ -264,6 +272,7 @@ function loadData(){
 				
 			}else{
 				if(data.color.length > 0){
+					hasColor = true;
 					var color =  data.color;				
 					for(var i=0; i<color.length; i++){
 						
