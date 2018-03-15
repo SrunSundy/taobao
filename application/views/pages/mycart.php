@@ -6,6 +6,12 @@
 		<title>My Cart | taobao outlet</title>
 		<?php include 'include/imstyle.php'?>
 		<link rel="stylesheet" href="<?php echo base_url();?>assets/css-customize/mycart.css" />
+		
+		<style>
+		 #myNav li:not([disabled]){
+            cursor:pointer;
+        }
+		</style>
 	</head>
 
 
@@ -34,8 +40,11 @@
 							   <span class="path-2" style="color:#D72320"><?php echo $this->lang->line('home_cart'); ?></span>
 							</p>
 						</div>
+						
+						
+						
 						<!-- no records in cart -->
-						<div class="no-data col-md-12">
+						<div class="no-data col-md-12" style="display:none;">
 							<div class="row">
 							
     							<div class="no-data-title ">
@@ -51,8 +60,8 @@
         									<a style="background: #e8e8e8;display:inline-block;padding: 15px;border-radius: 100%;margin-right: 10px;">
             									<img src="<?php echo base_url();?>assets/img/icon/cart-1.png" style="width: 45px;height:45px;" /> 
             								</a>
-            								<p style="display:inline-block;" class="favorite-font">
-            									Your cart is empty!
+            								<p style="display:inline-block;font-weight:bold;" class="favorite-font">
+            									<?php echo $this->lang->line('my_cart_empty'); ?>
             								</p>
             								 
             								<div class="input-group" style="margin-top: 15px;">
@@ -75,22 +84,120 @@
                                               </span>
                                             </div>
                                             
-                                            <button class="btn event-btn" type="button" style="letter-spacing: 0; text-transform: none; background:#d72320;height:40px;margin-top: 15px; ">
-                								<span class="favorite-font">Go Home</span>
+                                            <button onclick="location.href='<?php echo base_url(); ?>/home'" class="btn event-btn" type="button" style="letter-spacing: 0; text-transform: none; background:#d72320;height:40px;margin-top: 15px; ">
+                								<p class="favorite-font" style="margin-top: -5px;font-weight:bold;"><?php echo $this->lang->line('my_cart_go_home'); ?></p>
                 							</button>
     									</div>
-    									
-            							
-    								</div>
-    								<div class="col-md-4">
-    								
-    								</div>
-    								
-    								
+								</div>
+    								<div class="col-md-4">   								
+    								</div>   								    								
     							</div>
-							</div>
-							
+							</div>							
 						</div>
+						<!-- no records in cart -->
+						
+						
+						<!-- have records in cart -->
+						<div class="col-md-12" style="margin-top: 12px;">
+							<div class="row">
+								<div class="form-group">
+                                    <div class="col-xs-12 row">
+                                        <ul class="nav nav-pills nav-justified thumbnail setup-panel my-ul" id="myNav" >
+                                            <li id="navStep1" class="li-nav active" step="#step-1">
+                                                <a>
+                                                	<span class="step-no favorite-font">1</span>
+                                                    <p class="list-group-item-text favorite-font">Search URL</p>
+                                                </a>
+                                            </li>
+                                            <li id="navStep2" class="li-nav disabled" step="#step-2">
+                                                <a>
+                                                	<span class="step-no favorite-font">2</span>
+                                                    <p class="list-group-item-text favorite-font">Submit Purchasing</p>
+                                                </a>
+                                            </li>
+                                            <li id="navStep3" class="li-nav disabled" step="#step-3">
+                                                <a>
+                                                	<span class="step-no favorite-font">3</span>
+                                                    <p class="list-group-item-text favorite-font">Shipping Address</p>
+                                                </a>
+                                            </li>
+                                            <li id="navStep4" class="li-nav disabled" step="#step-4">
+                                                <a>
+                                                	<span class="step-no favorite-font">4</span>
+                                                    <p class="list-group-item-text favorite-font">Confirm Reception</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class=" setup-content" id="step-1">
+                                    <div class="col-xs-12 row">
+                                        <div class="col-md-12 well text-center">
+                                            <h1> STEP 1</h1>
+                                            <!-- <form> -->
+                        
+                                            <div class="container col-xs-12">
+                                                <input />
+                                            </div>
+                                            <input onclick="step1Next()" class="btn btn-md btn-info" value="Next">
+                        
+                                            <!-- </form> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setup-content" id="step-2">
+                                    <div class="col-xs-12 row">
+                                        <div class="col-md-12 well text-center">
+                                            <h1 class="text-center"> STEP 2</h1>
+                        
+                                            <!--<form>-->
+                                            <div class="container col-xs-12">
+                                                <input />
+                                                <input />
+                                            </div>
+                                            <!--</form> -->
+                        
+                                            <input onclick="prevStep()" class="btn btn-md btn-info" value="Prev">
+                                            <input onclick="step2Next()" class="btn btn-md btn-info" value="Next">
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="setup-content" id="step-3">
+                                    <div class="col-xs-12 row">
+                                        <div class="col-md-12 well text-center">
+                                            <h1 class="text-center"> STEP 3</h1>
+                        
+                                            <!--<form></form> -->
+                        
+                                            <input onclick="prevStep()" class="btn btn-md btn-info" value="Prev">
+                                            <input onclick="step3Next()" class="btn btn-md btn-info" value="Next">
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                                <div class="setup-content" id="step-4">
+                                    <div class="col-xs-12 row">
+                                        <div class="col-md-12 well text-center">
+                                            <h1 class="text-center"> STEP 4</h1>
+                        
+                                            <!--<form></form> -->
+                                            <input onclick="prevStep()" class="btn btn-md btn-info" value="Prev">
+                                            <input class="btn btn-md btn-primary" value="Send">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+							</div>
+						</div>
+						
+						<!-- have records in cart -->
+						
 					</div>
 				</div>
 			</div>
@@ -105,5 +212,6 @@
 
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
+		<script src="<?php echo base_url();?>assets/js-view/mycart.js"></script>
 	</body>
 </html>

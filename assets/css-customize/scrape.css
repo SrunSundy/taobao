@@ -2,6 +2,14 @@ div.box-big-image, div.box-small-image{
 	text-align:center;
 }
 
+.cls-width{
+	width: 380px !important;
+}
+
+.cls-height{
+	height: 380px !important;
+}
+
 div.box-big-image{
 	border: 2px solid #e0e0e0;
 	width:380px;
@@ -11,8 +19,9 @@ div.box-big-image{
 }
 
 img.big-image{
-	 height: auto;  
-   width: 380px; 
+	max-width: 100%;
+    max-height: 100%;
+   
     position: absolute;  
     top: 0;  
     bottom: 0;  
@@ -20,6 +29,7 @@ img.big-image{
     right: 0;  
     margin: auto;
 	object-fit: cover;
+
 	
 }
 
@@ -32,9 +42,9 @@ div.small-image-wrapper{
 }
 
 img.small-image{
-	width: 76px;
-	
-	height: auto;
+	max-width: 100%;
+    max-height: 100%;
+   
 	object-fit: cover;
 	border-radius: 2px;
 	border: 3px solid white;
@@ -309,3 +319,39 @@ div.box-small-color{
 	padding: 3px;
 	cursor:pointer;
 }
+
+p.no-information {
+	font-style : italic;
+	color: #c1c1c1;
+    margin-top: 11px;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+span.message_box{
+	
+	padding:20px 30px 20px 30px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 20px gray;
+	background: #333;
+	text-align: center;
+	color: white;
+	z-index: 101;
+}
+
+span.error-message_box{
+	padding:20px 30px 20px 30px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 20px gray;
+	background: #b13030;
+	text-align: center;
+	color: white;
+	z-index: 100;
+}
+

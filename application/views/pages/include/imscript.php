@@ -11,8 +11,10 @@
 <!-- highlight selected menu item -->
 <script>
 var t = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+var t = t.split("?")[0];
 if(t){
-	if(t.trim() === "scrape"){
+	if(t.trim() === "scrape" || t.trim() == "my_cart"){
 		
 		$("li.header-menu").removeClass("active");
 		$("li.header-menu a[href='my_order']").parents("li").addClass("active");

@@ -14,6 +14,8 @@
 	<body>
 		<input type="hidden" value="<?php echo $url; ?>"  id="scrape_url" />
 		<input type="hidden" value="<?php echo base_url();  ?>" id="base_url" />
+		<input type="hidden" value="<?php echo $this->lang->line('scrape_no_size'); ?>" id="no_size" />
+		<input type="hidden" value="<?php echo $this->lang->line('scrape_no_color'); ?>" id="no_color" />
 		<!-- ::::::::::::::::::::: Header Section:::::::::::::::::::::::::: -->
 		<header>
 			<?php include 'include/headermenu.php' ?>
@@ -103,17 +105,17 @@
 					<div class="col-md-7 scrape-info" >
 						<div id="for-big-title">
 							<div class="box-title div-main">
-    							<p class="favorite-font product-title"></p>
+    							<p class="favorite-font product-title" id="item_title"></p>
     						</div>
     						<div class="price-wrapper div-main" style="">
-    							<p class="product-price favorite-font"><span class="price_currency">CN ¥ </span><span class="price_amount">0</span></p>
+    							<p class="product-price favorite-font"><span class="price_currency">CN ¥ </span><span class="price_amount" id="item_price">0</span></p>
     						</div>
 						</div>
 					
 						
 						<div class="delivery-fee div-main">
 							<p class="favorite-font fee-title" style="color:#b5b5b5">Chinese Domestic Delivery Fee </p>
-							<input type="text"  value="CN Â¥ 0" />
+							<input type="text" class="favorite-font"  value="CN ¥ 0" id="delivery_fee"/>
 							<div class="text-info">
 								<p class="exclude favorite-font">Exclude International Delivery</p>
 								<p class="estimation favorite-font">Delivery Estimation</p>
@@ -130,7 +132,7 @@
 							</div>
 						
 							<div style="display:table" class="size-wrapper" id="size_wrapper">
-								
+								<p class="no-information favorite-font" ><?php echo $this->lang->line('scrape_no_size'); ?></p>
 							</div>
 							<div style="clear:both;"></div>
 						</div>
@@ -145,7 +147,7 @@
 							</div>
 							
 							<div class="color-wrapper" style="display:table;" id="color_wrapper">
-								
+								<p class="no-information favorite-font" ><?php echo $this->lang->line('scrape_no_color'); ?></p>
 							</div>
 							<div style="clear:both;"></div>
 						</div>
@@ -153,7 +155,7 @@
 						<div  class="div-main">
 							<p class="favorite-font text-title" style="line-height: 35px"><?php echo $this->lang->line('scrape_message'); ?></p>
 							<p class="favorite-font text-slider" style="margin-left: 10px;line-height: 35px">:</p>
-							<input type="text" class="customer-message"/>
+							<input type="text" class="customer-message favorite-font" id="customer_message"/>
 							
 							<div style="clear:both;"></div>
 							
@@ -164,7 +166,7 @@
 							<p class="favorite-font text-slider" style="margin-left: 10px;line-height: 35px">:</p>
 							
 							<div class="input-group spinner">
-                                <input type="text" class="item-quantity favorite-font spinner-input" value="1">
+                                <input type="text" class="item-quantity favorite-font spinner-input" id="item_qty" value="1">
                                 <div class="input-group-btn-vertical">
                                   <button class="btn btn-default" type="button" style="box-shadow:none;"><i class="fa fa-caret-up" style="color:black;"></i></button>
                                   <button class="btn btn-default" type="button" style="box-shadow:none;"><i class="fa fa-caret-down" style="color:black;"></i></button>
@@ -176,13 +178,16 @@
 						
 						<div  class="button-action div-main" style="text-align: center">
 							
-							<button class="btn event-btn" type="button" style="letter-spacing: 0;">
+							<button class="btn event-btn" id="add_to_cart" type="button" style="letter-spacing: 0;">
 								<img src="<?php echo base_url();?>assets/img/icon/cart-1.png" style="width: 25px;height:25px;float:left;margin-right: 7px;" /> 
-								<p class="favorite-font" style="float:left"><?php echo $this->lang->line('scrape_cart_btn'); ?></p>
+								<p class="favorite-font" style="float:left;color:white;"><?php echo $this->lang->line('scrape_cart_btn'); ?>
+								 <i class="fa fa-spinner fa-spin" style="    font-size: 20px;visibility:hidden;"></i>
+								</p>
 							</button>
 							<button class="btn event-btn " type="button" style="letter-spacing: 0;">
 								<img src="<?php echo base_url();?>assets/img/icon/buy-now.png" style="width: 40px;height:40px;margin-top: -10px;float:left;margin-right: 7px;" />
-								<p class="favorite-font"  style="float:left"><?php echo $this->lang->line('scrape_buy_btn'); ?></p>
+								<p class="favorite-font"  style="float:left;color:white;"><?php echo $this->lang->line('scrape_buy_btn'); ?></p>
+								 <i class="fa fa-spinner fa-spin" style="    font-size: 20px;visibility:hidden;"></i>
 							</button>
 						</div>
 						
@@ -199,6 +204,10 @@
 	     <footer>
 			<?php include 'include/footer.php' ?>
 		</footer>
+		
+		<span id="messgage_text"  class="message_box favorite-font animated" style="display:none"><i></i> Item is added to your cart! </span>
+		<span id="error_messgage_text"  class="error-message_box favorite-font animated" style="display:none"></span>
+		
 
 		<?php include 'include/loader.php' ?>
 

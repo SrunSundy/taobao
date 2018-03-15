@@ -18,3 +18,43 @@ button.button-user{
 	position:absolute;
 	left: 0;
 }
+
+ul.my-ul{
+	
+	padding : 0 !important;
+	border-radius: 0 !important;
+	border-bottom: 1px solid #ddd;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.nav-pills>li.li-nav a{
+	border: 3px solid transparent;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #464646 !important;
+    background: transparent !important;
+    border-bottom: 3px solid #D72320;
+    border-radius: 0 !important;
+}
+
+.nav-pills>li.active>a span.step-no{
+	background: #D72320;
+}
+
+ span.step-no{
+	background: #a7a7a7;
+    padding: 4px 10px;
+    border-radius: 100%;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+p.list-group-item-text{
+	display: inline-block;
+	color: #464646 !important;
+}

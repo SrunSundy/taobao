@@ -49,7 +49,7 @@
     						</li>
     					
     						<li class=" header-font padded" id="goto_cart">
-    							<span class="hover favorite-font" style="text-transform: uppercase"> <?php echo $this->lang->line('home_cart'); ?><span style="font-weight:bold;">(<span >0</span>)</span></span>
+    							<span class="hover favorite-font" style="text-transform: uppercase"> <?php echo $this->lang->line('home_cart'); ?><span style="font-weight:bold;">(<span id="my_cart_num" ><?php if(isset($this->session->userdata['my_cart']))echo count($this->session->userdata['my_cart']); else echo "0";?></span>)</span></span>
     						</li>
     						
     						<li class="header-font" style="text-align: center;   ">

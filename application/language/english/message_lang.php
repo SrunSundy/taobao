@@ -20,4 +20,9 @@ $lang['home_call_us'] = "CALL US";
  $lang['scrape_color'] = "Color";
  $lang['scrape_message'] = "Message";
  $lang['scrape_quantity'] = "Quantity";
+ $lang['scrape_no_size'] = "No Size!";
+ $lang['scrape_no_color'] = "No Color!";
+ 
+ $lang['my_cart_go_home'] = 'Go Home';
+ $lang['my_cart_empty'] = 'Your cart is empty!';
 ?>

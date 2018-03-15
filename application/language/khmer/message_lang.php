@@ -20,4 +20,9 @@ $lang['home_call_us'] = "លេខទំនាក់ទំនង";
  $lang['scrape_color'] = "ពណ៌";
  $lang['scrape_message'] = "សារអតិថិជន";
  $lang['scrape_quantity'] = "បរិមាណ";
+ $lang['scrape_no_size'] = "មិនមានទំហំ!";
+ $lang['scrape_no_color'] = "មិនមានពណ៌!";
+ 
+ $lang['my_cart_go_home'] = 'ត្រឡប់ទៅទំព័រដើម';
+ $lang['my_cart_empty'] = 'កន្ត្រក់ទំនិញរបស់លោកអ្នកមិនមានអ្វីទេ!';
 ?>
