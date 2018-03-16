@@ -115,14 +115,38 @@
 								<!-- user content -->
 								<div class="col-md-9  " >
 									<div class="row">
-										<div class="col-md-12 ">
+										<div class="col-md-12 my-content-wrapper">
 											<div class="row">
     											
     											<div class="left-wrapper col-md-6">
     												<div class="row">
+    													 
+    													 
+    													 
+    													<div class="col-md-12 profile-wrapper">
+    														<div class="row" style="padding: 10px;">
+    															<div class="profile-photo"> 																
+    																<img src="<?php echo base_url();?>assets/img/default.jpg" class="item-photo" />															
+    															</div>
+    															
+    															<div class="profile-info">
+    																<p class="favorite-font user-name"><strong>Hi, Oeng Chhoun</strong></p>
+    																<span class="favorite-font profile-desc"><strong>VIP</strong></span>
+    																<p class="favorite-font profile-desc" > My Balance: <span>0 </span><span> USD</span></p>
+    																<p class="favorite-font profile-desc" > My Points: <span>0 </span><span> USD</span></p>
+    																<p class="favorite-font profile-desc" > My Privilleges: <span>0 </span><span> USD</span></p>
+    															</div>
+    															<div style="clear:both;"></div>
+    														</div>
+    														
+    													</div>
     													
-    												</div>
-    											</div>
+    													<div class="col-md-12 news-wrapper">
+    														<div class="row">
+    															
+    														</div>
+    													</div>
+    											
     											
     											<div class="right-wrapper col-md-6">
     												<div class="row">

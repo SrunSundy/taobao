@@ -42,9 +42,37 @@ div.item-title-child a.item-title-child-text:hover{
 }
 
 
-div.profile-wrapper{
+div.my-content-wrapper{
 	
 	min-height: 300px;
 	border: #e1e1e1 solid 1px;
 	border-radius: 2px;
+}
+
+div.profile-wrapper{
+	
+}
+
+div.profile-photo, div.profile-info{
+	float:left;
+}
+
+div.profile-photo{
+	margin-right: 8px;
+}
+
+img.item-photo{
+	width: 120px !important;
+	height: 120px !important;;
+	object-fit: cover;
+}
+
+.profile-desc{
+	font-size: 13px;
+	 color: #333;
+}
+
+p.user-name{
+	font-size: 18px;
+	 color: #333;
 }
