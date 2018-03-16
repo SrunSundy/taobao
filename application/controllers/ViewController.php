@@ -71,5 +71,9 @@ class ViewController extends CI_Controller {
 	    $this->load->view('pages/scrape' , $resp);
 	}
 	
+	public function dashboard(){
+	    $this->load->view('pages/dashboard');
+	}
+	
 	
 }

@@ -1,0 +1,50 @@
+div.menu-title p{
+	
+	line-height: 50px;
+	font-weight: bold;
+}
+
+div.menu-item{
+	padding: 0 15px 30px 15px;
+	background: #FAFAFA;
+	border-radius: 0 0 5px 5px;
+}
+
+
+div.item-title{
+	height: 40px;
+	border-bottom: 1px solid  #DFDFDF;
+}
+
+div.item-title a.item-title-text{
+    line-height: 40px;
+    color: #3a3a3a;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: text;
+    display: block;
+}
+
+div.item-title-child{
+	height: 40px;
+}
+
+div.item-title-child a.item-title-child-text{
+    line-height: 40px;
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    display: block;
+}
+
+div.item-title-child a.item-title-child-text:hover{
+	color:#E4282C; 
+}
+
+
+div.profile-wrapper{
+	
+	min-height: 300px;
+	border: #e1e1e1 solid 1px;
+	border-radius: 2px;
+}

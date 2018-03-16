@@ -30,7 +30,7 @@
 	
 	
 		<!-- ::::::::::::::::::::: Accordian Section:::::::::::::::::::::::::: -->
-		<section class="accordian-section section-padding" style="padding-top: 55px;">
+		<section class="accordian-section section-padding" style="padding-top: 30px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
