@@ -40,10 +40,10 @@
     								<i class="fa fa-phone"></i>
     							</a>
     						</li>
-    						<li class="header-font padded" style="border-right: 1px solid grey;">
+    						<li class="header-font padded" style="border-right: 1px solid #d8d8d8;">
     							<span class="hover favorite-font" style=""><?php echo $this->lang->line('home_signin'); ?> </span>
     						</li>
-    						<li  class="header-font padded" style="border-right: 1px solid grey;">
+    						<li  class="header-font padded" style="border-right: 1px solid #d8d8d8;">
     							<span class="hover favorite-font" ><?php echo $this->lang->line('home_register'); ?></span>
     						
     						</li>
@@ -61,7 +61,7 @@
     						</li>
     						<li class="big-phone">
     							 <p style="float:left" class="favorite-font"><?php echo $this->lang->line('home_call_us'); ?> :</p>
-    							 <a class="favorite-font" style="margin:0; padding: 0 10px 0 10px;color:#3f4b5a; width: auto;float:left;line-height:24px;border-right: 1px solid grey;" href="tel:010 666 520">010 666 520</a> 
+    							 <a class="favorite-font" style="margin:0; padding: 0 10px 0 10px;color:#3f4b5a; width: auto;float:left;line-height:24px;border-right: 1px solid #d8d8d8;" href="tel:010 666 520">010 666 520</a> 
     							 <a class="favorite-font" style="margin:0;padding: 0 10px 0 10px;color:#3f4b5a; width: auto;float:left;line-height: 24px;" href="tel:070 201 385">070 201 385</a> 
     							<div style="clear:both;"></div>
     						</li>

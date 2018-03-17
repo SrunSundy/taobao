@@ -75,5 +75,9 @@ class ViewController extends CI_Controller {
 	    $this->load->view('pages/dashboard');
 	}
 	
+	public function address_record(){
+		$this->load->view('pages/addressrecord');
+	}
+	
 	
 }
