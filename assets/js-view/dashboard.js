@@ -21,7 +21,7 @@ $( document ).ready(function() {
 			$(this).addClass("fa-minus");
 			$(this).removeClass("fa-plus");
 			$("#menu_item").removeClass("remove-display-menu");
-			$("#menu_item").animate({height:540},200);
+			$("#menu_item").animate({height:500},200);
 			$("#menu_item").addClass("display-menu");
 		}
 		

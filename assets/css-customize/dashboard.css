@@ -18,7 +18,7 @@
 
 @media (min-width: 992px) {
 	div#menu_item{
-		height: 540px !important;
+		height: 500px !important;
 	}
 
 }
@@ -35,7 +35,7 @@ div.menu-item{
 	background: #FAFAFA;
 	border-radius: 0 0 5px 5px;
 	overflow:hidden;
-	height: 540px;
+	height: 500px;
 }
 
 
@@ -56,11 +56,11 @@ div.item-title a.item-title-text{
 }
 
 div.item-title-child{
-	height: 40px;
+	height: 35px;
 }
 
 div.item-title-child a.item-title-child-text{
-    line-height: 40px;
+    line-height: 35px;
     color: #6d6d6d;
     font-size: 13px;
     text-decoration: none;
