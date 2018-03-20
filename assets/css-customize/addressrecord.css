@@ -5,6 +5,19 @@
 		
 }
 
+@media (max-width: 992px) {
+	div.add-address-left{
+		padding-right: 0 !important;
+	}
+	
+	div.add-address-right{
+		padding-left: 0 !important;
+	}
+		
+}
+
+
+
 p.ps-shipping-address{
 	font-weight: bold;
 	font-size: 14px;
@@ -91,5 +104,57 @@ span.add-data-desc{
 }
 
 p.add-address-text{
-	padding: 5px 0 5px 0;
+	padding: 10px 0 10px 0;
+}
+
+div.fill-in-form{
+	border: 1px solid #DFDEDE;
+    background-color: #F7F7F7;
+    padding: 10px 35px 27px 35px;
+}
+
+div.fill-in-form:before{
+	top: -13px;
+    border-left: 1px solid #DFDEDE;
+     border-top: 1px solid #DFDEDE;
+    content: " ";
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    background: #F7F7F7;
+    text-align:center;
+    left:30px;
+ 	
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari 3-8 */
+    transform: rotate(45deg);
+ 
+}
+
+.form-group{
+	margin-bottom: 15px !important;
+}
+
+div.form-wrapper-left, div.form-wrapper-right{
+	float: left;
+}
+
+div.add-address-wrapper{
+	margin-top: 20px;
+}
+
+label.title-input{
+	font-weight: normal !important;
+	font-size: 12px !important;
+	margin-top: 6px;
+	color: #333;
+}
+
+input.input-text-form{
+	height: 37px !important;
+}
+
+span.cls-pointer{
+	color: #cc0033;
+	margin-right: 3px;
 }

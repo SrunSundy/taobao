@@ -85,8 +85,77 @@
     															<a class="favorite-font text-action">Edit</a>
     															<span style="color: #333;">|</span>
     															<a class="favorite-font text-action">Delete</a>
-    														</div>
+    														</div>		
     													</div>
+    													
+    													<div class="fill-in-form col-md-12">
+	    														<div class="row">
+		    															<div class="section-title-wrapper" style="border-top:0;background: transparent;padding-left:0">
+					    													<p class="favorite-font section-title" style="font-size: 16px;" ><strong>Add new address</strong></p>   																
+						    											</div>
+						    											
+						    											<div class="col-md-12 add-address-wrapper">
+						    												<div class="row">
+						    													
+						    													<div class="col-md-6">
+						    														<div class="row add-address-left" style="padding-right: 15px;">
+						    															 <div class="form-group row">
+																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input" style="padding-right: 0"><span class="cls-pointer">*</span>Recipient's name:</label>
+																						    <div class="col-md-8">
+																						      <div class="row"> </div>
+																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																						    </div>
+																						  </div>
+																						  <div class="form-group row">
+																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Tel:</label>
+																						    <div class="col-md-8">
+																						      <input type="text" class="form-control favorite-font input-text-form"  >
+																						    </div>
+																						  </div>
+																						  <div class="form-group row">
+																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Country:</label>
+																						    <div class="col-md-8">
+																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																						    </div>
+																						  </div>
+																						  <div class="form-group row">
+																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer"> </span>Provinces/state</label>
+																						    <div class="col-md-8">
+																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																						    </div>
+																						  </div>
+																						  <div class="form-group row">
+																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>City:</label>
+																						    <div class="col-md-8">
+																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																						    </div>
+																						  </div>
+						    														</div>
+						    													</div>
+						    													
+						    													<div class="col-md-6">
+						    														<div class="row add-address-right" style="padding-left: 15px;">
+						    															  <div class="form-group row">
+																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Post code:</label>
+																						    <div class="col-md-8">
+																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																						    </div>
+																						  </div>
+																						  <div class="form-group row">
+																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Address:</label>
+																						    <div class="col-md-8">
+																						      <input type="text" class="form-control favorite-font input-text-form"  >
+																						    </div>
+																						  </div>
+						    														</div>
+						    													</div>
+						    													
+						    												</div>
+						    											</div>
+		    														</div> 															    											
+		    													</div>
+    													
+    													
     													<div class="address-item">
     														<div class="col-left">
     															<p class="recipient-name favorite-font">Sundy Srun</p>
@@ -114,15 +183,80 @@
     													
     												</div>
     												
-    												<div class="add-address-wrapper">
+    												<div class=" col-md-12">  												
+    													<div class="row">
     													<p class="add-address-text">
     														<span class="favorite-font add-data-btn">[+] Add New Address</span>
     														<span class="favorite-font add-data-desc">(You had created "2" delivery addresses. Pls notice a maximum of <span style="color:red">5</span> can be created.)</span>													
     													</p>
     													
-    													<div class="fill-in-form">
-    													
-    													</div>
+    													<div class="fill-in-form col-md-12">
+    														<div class="row">
+	    															<div class="section-title-wrapper" style="border-top:0;background: transparent;padding-left:0">
+				    													<p class="favorite-font section-title" style="font-size: 16px;" ><strong>Add new address</strong></p>   																
+					    											</div>
+					    											
+					    											<div class="col-md-12 add-address-wrapper">
+					    												<div class="row">
+					    													
+					    													<div class="col-md-6">
+					    														<div class="row add-address-left" style="padding-right: 15px;">
+					    															 <div class="form-group row">
+																					    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input" style="padding-right: 0"><span class="cls-pointer">*</span>Recipient's name:</label>
+																					    <div class="col-md-8">
+																					      <div class="row"> </div>
+																					      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																					    </div>
+																					  </div>
+																					  <div class="form-group row">
+																					    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Tel:</label>
+																					    <div class="col-md-8">
+																					      <input type="text" class="form-control favorite-font input-text-form"  >
+																					    </div>
+																					  </div>
+																					  <div class="form-group row">
+																					    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Country:</label>
+																					    <div class="col-md-8">
+																					      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																					    </div>
+																					  </div>
+																					  <div class="form-group row">
+																					    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer"> </span>Provinces/state</label>
+																					    <div class="col-md-8">
+																					      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																					    </div>
+																					  </div>
+																					  <div class="form-group row">
+																					    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>City:</label>
+																					    <div class="col-md-8">
+																					      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																					    </div>
+																					  </div>
+					    														</div>
+					    													</div>
+					    													
+					    													<div class="col-md-6">
+					    														<div class="row add-address-right" style="padding-left: 15px;">
+					    															  <div class="form-group row">
+																					    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Post code:</label>
+																					    <div class="col-md-8">
+																					      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+																					    </div>
+																					  </div>
+																					  <div class="form-group row">
+																					    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Address:</label>
+																					    <div class="col-md-8">
+																					      <input type="text" class="form-control favorite-font input-text-form"  >
+																					    </div>
+																					  </div>
+					    														</div>
+					    													</div>
+					    													
+					    												</div>
+					    											</div>
+	    														</div> 															    											
+	    													</div>
+    													</div>   													
     												</div>
     												
     												
