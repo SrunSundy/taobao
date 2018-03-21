@@ -264,7 +264,7 @@ function loadData(){
 					
 					var colorTitle = (data.color[i]) ? data.color[i] : "No title";
 					colorHtml += '	<div class="box-small-color-thumbnail">';
-					colorHtml += '		<img class="small-color-image" data-real_src="'+data.colorImage[i]+'" src="'+data.colorImage[i]+'_60x60.jpg" title="'+colorTitle+'" />';
+					colorHtml += '		<img class="small-color-image" data-real_src="'+data.colorImage[i]+'" src="'+data.colorImage[i]+'_80x80.jpg" title="'+colorTitle+'" />';
 					colorHtml += '  </div>';
 					colorHtml += '</div>';
 				}
