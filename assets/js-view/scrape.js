@@ -33,6 +33,43 @@ $( document ).ready(function() {
 	$(window).bind('resize', function(){
 		calculateImageWidth();
 	});
+	
+	$('.edit-input-price').on("click", function(){
+		
+		$(".input-price-wrapper").show();
+		$(".product-price").hide();
+	});
+	
+	$(".item_price_input").on("keyup", function(event){
+		 
+		var myVal = $(this).val();
+		myVal =myVal.replace(/[^\d\.]/g, "")
+		  .replace(/\./, "x")
+		  .replace(/\./g, "")
+		  .replace(/x/, ".");;
+		
+		$(".item_price_input").val(myVal);
+	});
+	
+	
+	$("#delivery_fee").on("keyup", function(event){
+		 
+		var myVal = $(this).val();
+		myVal =myVal.replace(/[^\d\.]/g, "")
+		  .replace(/\./, "x")
+		  .replace(/\./g, "")
+		  .replace(/x/, ".");;
+		
+		$(this).val(myVal);
+	});
+	
+	
+	$(".item_price_input").on("blur", function(){
+		
+		var toDollar = parseFloat($(this).val())/ 6.3;
+		$(".dollar-product-price").html(toDollar.toFixed(2));
+	});
+	
 	$(document).on("click","div.box-small", function(){
 		
 		
@@ -63,8 +100,25 @@ $( document ).ready(function() {
 	});
 	
 	$(document).on("click","div.box-small-color", function(){
+	
 		$("div.box-small-color").removeClass("active-box-small-color");
 		$(this).addClass("active-box-small-color");
+		
+		var showImg = $(this).find("img.small-color-image").data("real_src");
+		
+		var image = new Image();
+		image.src = showImg;
+		
+		if($(this).find("img.small-color-image").data("big_num") == "0"){
+			$("#big_image").removeClass("cls-height").addClass("cls-width").attr("src", showImg+"_80x80.jpg");
+		}else{
+			$("#big_image").removeClass("cls-width").addClass("cls-height").attr("src", showImg+"_80x80.jpg");
+		}
+		
+		
+		image.onload = function () {
+			$("#big_image").attr("src", showImg);
+		}
 	});
 	
 	$(document).on("click","div.color-item", function(){
@@ -87,10 +141,14 @@ $( document ).ready(function() {
 			itemColor = colorWithText;
 		}
 		
+		var itemPrice = $("span#item_price").text().replace(/[^0-9.]/g, '');
+		if($(".input-price-wrapper").is(":visible")){
+			itemPrice = $("input#item_price_input").val().replace(/[^0-9.]/g, '');
+		}
 		var resq_data = {
 			"item_photo" : $("div.box-small").eq(0).find("img.small-image").data("real_src"),
 			"item_title" : $("p#item_title").text(),
-			"item_price" : $("span#item_price").text().replace(/[^0-9.]/g, ''),
+			"item_price" : itemPrice,
 			"item_domestic": $("#delivery_fee").val().replace(/[^0-9.]/g, ''),
 			"item_size" : $("#size_wrapper").find("div.active-size-item").eq(0).find("span").text(),
 			"item_color" : itemColor,
@@ -173,6 +231,7 @@ loadData();
 function loadData(){
 	
 	$("button.event-btn").addClass("disabled");
+	$("#image-detail").html("<div class='col-md-12 row' style='text-align:center'><img src='"+$("#base_url").val()+"assets/img/loading.gif' /></div>");
 	$.ajax({
 		method : "GET",
 		url : $("#base_url").val()+"action/scrapedatacontroller/scrape_data_by_url",
@@ -185,6 +244,13 @@ function loadData(){
 			
 			$(".product-title").html(data.title);
 			$(".price_amount").html(data.price);
+			$(".item_price_input").val(data.price);
+			
+			if(data.price){
+				var toDollar = parseFloat(data.price)/ 6.3;
+				$(".dollar-product-price").html(toDollar.toFixed(2));
+			}
+			
 			
 			if(data.image.length > 0){
 				
@@ -262,9 +328,25 @@ function loadData(){
 				
 					colorHtml += '<div class="box-small-color ">';
 					
+					//0 mean width is bigger
+					//1 mean height is bigger
+					var bigNum = 0;
+					var img = new Image();
+					img.src = colorImg[i]+"_80x80.jpg";	
+					img.onload = function () {
+						console.log(this);
+						if( this.height > this.width){
+							bigNum = 1;
+						}
+						
+						$("img[src='"+$(this).attr("src")+"']").attr("data-big_num",bigNum);
+						
+						
+					}
+					
 					var colorTitle = (data.color[i]) ? data.color[i] : "No title";
 					colorHtml += '	<div class="box-small-color-thumbnail">';
-					colorHtml += '		<img class="small-color-image" data-real_src="'+data.colorImage[i]+'" src="'+data.colorImage[i]+'_80x80.jpg" title="'+colorTitle+'" />';
+					colorHtml += '		<img class="small-color-image" data-real_src="'+colorImg[i]+'" src="'+colorImg[i]+'_80x80.jpg" title="'+colorTitle+'" />';
 					colorHtml += '  </div>';
 					colorHtml += '</div>';
 				}
@@ -286,6 +368,19 @@ function loadData(){
 				}else{
 					colorHtml +='<p class="no-information favorite-font" >'+$("#no_color").val()+'</p>';
 				}
+			}
+			
+			
+			
+			if(data.image_detail){
+				
+				var myImage = "";
+				var d_image = data.image_detail;
+				for(var i=0; i<d_image.length; i++){
+					myImage += "<div class='col-md-12  row' style='text-align:center'><img src="+d_image[i]+" /></div>";
+				}
+				
+				$("#image-detail").html(myImage);
 			}
 			
 			$("#color_wrapper").html(colorHtml);

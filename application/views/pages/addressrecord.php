@@ -63,130 +63,263 @@
     												
     												<div class="address-wrapper">
     													
-    													<div class="address-item">
-    														<div class="col-left">
-    															<p class="recipient-name favorite-font">Sundy Srun</p>
-    															<div>
-    																<p  style="float:left;margin-right: 30px;" class="user-phone-no address-detail favorite-font">
-    																	<span class=" favorite-font span-title">Tel:</span>
-    																	<span class="favorite-font span-desc">012456589</span>
-    																</p>
-    																<p style="float:left" class="address-detail favorite-font">
-    																	<span class=" favorite-font span-title">Postcode:</span>
-    																	<span class="favorite-font span-desc">8555</span>
-    																</p>
-    																<div style="clear:both"></div>
-    															</div>
-    															<p class="address-detail favorite-font span-desc">Terk tla,phnom penh, Cambodia</p>
-    															
-    														</div>
-    														<div class="col-right">
-    															<a class="favorite-font text-action" style="padding-right:10px;">Set As Default Address</a>
-    															<a class="favorite-font text-action">Edit</a>
-    															<span style="color: #333;">|</span>
-    															<a class="favorite-font text-action">Delete</a>
-    														</div>		
+    													<div class="address-item-wrapper">
+        													<div class="address-item">
+        														<div class="col-left">
+        															<p class="recipient-name favorite-font">Sundy Srun</p>
+        															<div>
+        																<p  style="float:left;margin-right: 30px;" class="user-phone-no address-detail favorite-font">
+        																	<span class=" favorite-font span-title">Tel:</span>
+        																	<span class="favorite-font span-desc">012456589</span>
+        																</p>
+        																<p style="float:left" class="address-detail favorite-font">
+        																	<span class=" favorite-font span-title">Postcode:</span>
+        																	<span class="favorite-font span-desc">8555</span>
+        																</p>
+        																<div style="clear:both"></div>
+        															</div>
+        															<p class="address-detail favorite-font span-desc">Terk tla,phnom penh, Cambodia</p>
+        															
+        														</div>
+        														<div class="col-right">
+        															<a class="favorite-font text-action" style="padding-right:10px;">Set As Default Address</a>
+        															<a class="favorite-font text-action address-edit-btn">Edit</a>
+        															<span style="color: #333;">|</span>
+        															<a class="favorite-font text-action">Delete</a>
+        														</div>		
+        													</div>
+        													
+        													<div class="fill-in-form col-md-12 update-fill-in-form">
+    	    														<div class="row">
+    		    														<div class="section-title-wrapper" style="border-top:0;background: transparent;padding-left:0">
+    					    												<p class="favorite-font section-title" style="font-size: 16px;" ><strong>Edit address</strong></p>   																
+    						    										</div>
+    						    											
+    						    										<div class="col-md-12 add-address-wrapper">
+    						    												<div class="row">
+    						    													
+    						    													<div class="col-md-6">
+    						    														<div class="row add-address-left" style="padding-right: 15px;">
+    						    															 <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input" style="padding-right: 0"><span class="cls-pointer">*</span>Recipient's name:</label>
+    																						    <div class="col-md-8">
+    																						      <div class="row"> </div>
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Tel:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  >
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Country:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer"> </span>Provinces/state</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>City:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    						    														</div>
+    						    													</div>
+    						    													
+    						    													<div class="col-md-6">
+    						    														<div class="row add-address-right" style="padding-left: 15px;">
+    						    															  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Post code:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Address:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  >
+    																						    </div>
+    																						  </div>
+    						    														</div>
+    						    													</div>
+    						    													
+    						    												</div>
+    						    										</div>
+    						    											
+    						    										<div class="col-md-12">
+    					    												   <div class="col-md-6">
+    					    														<div class="row add-address-left" style="padding-right: 15px;">
+    					    															 <div class="form-group row">
+    																					    
+    																					    <div class="col-md-12 row">
+    																					       <label class="checkbox-inline title-input favorite-font"><input type="checkbox" value="">set as default address</label>
+    																					    </div>
+    																					   
+    																					  </div>
+    																					  <div class="form-group row">
+    																					    
+    																					    <div class="col-md-12 row">
+    																					        <button type="button" class="btn btn-save standard-btn favorite-font">Save</button>
+    																							<button type="button" class="btn btn-cancel  standard-btn favorite-font">Cancel</button>
+    																					      	
+    																					    </div>
+    																					  </div>
+    																					  
+    					    														</div>
+    					    													</div>
+    					    													
+    					    													<div class="col-md-6">
+    					    														<div class="row add-address-right" style="padding-left: 15px;">
+    					    															
+    					    														</div>
+    					    													</div>
+    					    											</div>
+    						    											
+    		    													</div> 															    											
+    		    												</div>
     													</div>
     													
-    													<div class="fill-in-form col-md-12">
-	    														<div class="row">
-		    															<div class="section-title-wrapper" style="border-top:0;background: transparent;padding-left:0">
-					    													<p class="favorite-font section-title" style="font-size: 16px;" ><strong>Add new address</strong></p>   																
-						    											</div>
-						    											
-						    											<div class="col-md-12 add-address-wrapper">
-						    												<div class="row">
-						    													
-						    													<div class="col-md-6">
-						    														<div class="row add-address-left" style="padding-right: 15px;">
-						    															 <div class="form-group row">
-																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input" style="padding-right: 0"><span class="cls-pointer">*</span>Recipient's name:</label>
-																						    <div class="col-md-8">
-																						      <div class="row"> </div>
-																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
-																						    </div>
-																						  </div>
-																						  <div class="form-group row">
-																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Tel:</label>
-																						    <div class="col-md-8">
-																						      <input type="text" class="form-control favorite-font input-text-form"  >
-																						    </div>
-																						  </div>
-																						  <div class="form-group row">
-																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Country:</label>
-																						    <div class="col-md-8">
-																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
-																						    </div>
-																						  </div>
-																						  <div class="form-group row">
-																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer"> </span>Provinces/state</label>
-																						    <div class="col-md-8">
-																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
-																						    </div>
-																						  </div>
-																						  <div class="form-group row">
-																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>City:</label>
-																						    <div class="col-md-8">
-																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
-																						    </div>
-																						  </div>
-						    														</div>
-						    													</div>
-						    													
-						    													<div class="col-md-6">
-						    														<div class="row add-address-right" style="padding-left: 15px;">
-						    															  <div class="form-group row">
-																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Post code:</label>
-																						    <div class="col-md-8">
-																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
-																						    </div>
-																						  </div>
-																						  <div class="form-group row">
-																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Address:</label>
-																						    <div class="col-md-8">
-																						      <input type="text" class="form-control favorite-font input-text-form"  >
-																						    </div>
-																						  </div>
-						    														</div>
-						    													</div>
-						    													
-						    												</div>
-						    											</div>
-		    														</div> 															    											
-		    													</div>
     													
     													
-    													<div class="address-item">
-    														<div class="col-left">
-    															<p class="recipient-name favorite-font">Sundy Srun</p>
-    															<div>
-    																<p  style="float:left;margin-right: 30px;" class="user-phone-no address-detail favorite-font">
-    																	<span class=" favorite-font span-title">Tel:</span>
-    																	<span class="favorite-font span-desc">012456589</span>
-    																</p>
-    																<p style="float:left" class="address-detail favorite-font">
-    																	<span class=" favorite-font span-title">Postcode:</span>
-    																	<span class="favorite-font span-desc">8555</span>
-    																</p>
-    																<div style="clear:both"></div>
-    															</div>
-    															<p class="address-detail favorite-font span-desc">Terk tla,phnom penh, Cambodia</p>
-    															
-    														</div>
-    														<div class="col-right">
-    															<a class="favorite-font text-action" style="padding-right:10px;">Set As Default Address</a>
-    															<a class="favorite-font text-action">Edit</a>
-    															<span style="color: #333;">|</span>
-    															<a class="favorite-font text-action">Delete</a>
-    														</div>
+    													<div class="address-item-wrapper">
+        													<div class="address-item">
+        														<div class="col-left">
+        															<p class="recipient-name favorite-font">Sundy Srun</p>
+        															<div>
+        																<p  style="float:left;margin-right: 30px;" class="user-phone-no address-detail favorite-font">
+        																	<span class=" favorite-font span-title">Tel:</span>
+        																	<span class="favorite-font span-desc">012456589</span>
+        																</p>
+        																<p style="float:left" class="address-detail favorite-font">
+        																	<span class=" favorite-font span-title">Postcode:</span>
+        																	<span class="favorite-font span-desc">8555</span>
+        																</p>
+        																<div style="clear:both"></div>
+        															</div>
+        															<p class="address-detail favorite-font span-desc">Terk tla,phnom penh, Cambodia</p>
+        															
+        														</div>
+        														<div class="col-right">
+        															<a class="favorite-font text-action" style="padding-right:10px;">Set As Default Address</a>
+        															<a class="favorite-font text-action address-edit-btn">Edit</a>
+        															<span style="color: #333;">|</span>
+        															<a class="favorite-font text-action">Delete</a>
+        														</div>		
+        													</div>
+        													
+        													<div class="fill-in-form col-md-12 update-fill-in-form">
+    	    														<div class="row">
+    		    														<div class="section-title-wrapper" style="border-top:0;background: transparent;padding-left:0">
+    					    												<p class="favorite-font section-title" style="font-size: 16px;" ><strong>Edit address</strong></p>   																
+    						    										</div>
+    						    											
+    						    										<div class="col-md-12 add-address-wrapper">
+    						    												<div class="row">
+    						    													
+    						    													<div class="col-md-6">
+    						    														<div class="row add-address-left" style="padding-right: 15px;">
+    						    															 <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input" style="padding-right: 0"><span class="cls-pointer">*</span>Recipient's name:</label>
+    																						    <div class="col-md-8">
+    																						      <div class="row"> </div>
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Tel:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  >
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Country:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer"> </span>Provinces/state</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>City:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    						    														</div>
+    						    													</div>
+    						    													
+    						    													<div class="col-md-6">
+    						    														<div class="row add-address-right" style="padding-left: 15px;">
+    						    															  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Post code:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
+    																						    </div>
+    																						  </div>
+    																						  <div class="form-group row">
+    																						    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input"><span class="cls-pointer">*</span>Address:</label>
+    																						    <div class="col-md-8">
+    																						      <input type="text" class="form-control favorite-font input-text-form"  >
+    																						    </div>
+    																						  </div>
+    						    														</div>
+    						    													</div>
+    						    													
+    						    												</div>
+    						    										</div>
+    						    											
+    						    										<div class="col-md-12">
+    					    												   <div class="col-md-6">
+    					    														<div class="row add-address-left" style="padding-right: 15px;">
+    					    															 <div class="form-group row">
+    																					    
+    																					    <div class="col-md-12 row">
+    																					       <label class="checkbox-inline title-input favorite-font"><input type="checkbox" value="">set as default address</label>
+    																					    </div>
+    																					   
+    																					  </div>
+    																					  <div class="form-group row">
+    																					    
+    																					    <div class="col-md-12 row">
+    																					        <button type="button" class="btn btn-save standard-btn favorite-font">Save</button>
+    																							<button type="button" class="btn btn-cancel  standard-btn favorite-font">Cancel</button>
+    																					      	
+    																					    </div>
+    																					  </div>
+    																					  
+    					    														</div>
+    					    													</div>
+    					    													
+    					    													<div class="col-md-6">
+    					    														<div class="row add-address-right" style="padding-left: 15px;">
+    					    															
+    					    														</div>
+    					    													</div>
+    					    											</div>
+    						    											
+    		    													</div> 															    											
+    		    												</div>
     													</div>
+    													
     													
     												</div>
     												
-    												<div class=" col-md-12">  												
+    												<div class=" col-md-12 address-item-wrapper">  												
     													<div class="row">
-    													<p class="add-address-text">
-    														<span class="favorite-font add-data-btn">[+] Add New Address</span>
+    													<p class="add-address-text address-item">
+    														<span class="favorite-font add-data-btn address-edit-btn">[+] Add New Address</span>
     														<span class="favorite-font add-data-desc">(You had created "2" delivery addresses. Pls notice a maximum of <span style="color:red">5</span> can be created.)</span>													
     													</p>
     													
@@ -204,7 +337,6 @@
 					    															 <div class="form-group row">
 																					    <label for="inputPassword" class="col-md-4 col-form-label favorite-font title-input" style="padding-right: 0"><span class="cls-pointer">*</span>Recipient's name:</label>
 																					    <div class="col-md-8">
-																					      <div class="row"> </div>
 																					      <input type="text" class="form-control favorite-font input-text-form"  placeholder="">
 																					    </div>
 																					  </div>
@@ -254,6 +386,36 @@
 					    													
 					    												</div>
 					    											</div>
+					    											
+					    											<div class="col-md-12">
+					    												<div class="col-md-6">
+					    														<div class="row add-address-left" style="padding-right: 15px;">
+					    															 <div class="form-group row">
+																					    
+																					    <div class="col-md-12 row">
+																					       <label class="checkbox-inline title-input favorite-font"><input type="checkbox" value="">set as default address</label>
+																					    </div>
+																					   
+																					  </div>
+																					  <div class="form-group row">
+																					    
+																					    <div class="col-md-12 row">
+																					        <button type="button" class="btn btn-save standard-btn favorite-font">Save</button>
+																							<button type="button" class="btn btn-cancel  standard-btn favorite-font">Cancel</button>
+																					      	
+																					    </div>
+																					  </div>
+																					  
+					    														</div>
+					    													</div>
+					    													
+					    													<div class="col-md-6">
+					    														<div class="row add-address-right" style="padding-left: 15px;">
+					    															
+					    														</div>
+					    													</div>
+					    											</div>
+					    											
 	    														</div> 															    											
 	    													</div>
     													</div>   													
@@ -286,5 +448,6 @@
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
 		<script src="<?php echo base_url();?>assets/js-view/dashboard.js"></script>
+		<script src="<?php echo base_url();?>assets/js-view/addressrecord.js"></script>
 	</body>
 </html>

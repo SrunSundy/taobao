@@ -6,6 +6,9 @@
         <?php include 'include/imstyle.php'?>
         
        	<link rel="stylesheet" href="<?php echo base_url();?>assets/css-customize/home.css" />
+       	
+  <link href="<?php echo base_url();?>assets/plugin/magnific-popup/magnific-popup.css" rel="stylesheet">
+       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"/> -->	
 	</head>
 
 
@@ -157,7 +160,7 @@
 				
 				<div class="row" style="margin-top: 100px;">
 					<div class="button-wrapper" style="text-align:center;">
-						<button class="btn" ><p class="favorite-font-amaranth">How it work?</p></button>
+						<button class="btn" onclick="location.href='how_to_order'" ><p class="favorite-font-amaranth" style="    margin-bottom: 0;">How it work?</p></button>
 					</div>
 					
 				</div>
@@ -258,8 +261,11 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
 							<div class="row">
 								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+									<div class="image-thumbnail" >
+										<a href="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
+											<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+										</a>
+										
         							</div>
 								</div>								
 							</div>
@@ -269,8 +275,11 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
 							<div class="row">
 								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+									<div class="image-thumbnail" >
+										<a href="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
+											<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+										</a>
+										
         							</div>
 								</div>								
 							</div>
@@ -280,8 +289,10 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
 							<div class="row">
 								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+									<div class="image-thumbnail" >
+										<a href="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
+											<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+										</a>
         							</div>
 								</div>								
 							</div>
@@ -291,8 +302,10 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
 							<div class="row">
 								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+									<div class="image-thumbnail" >
+										<a href="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
+											<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+										</a>
         							</div>
 								</div>								
 							</div>
@@ -302,8 +315,25 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
 							<div class="row">
 								<div class="gap-divider">
+									<div class="image-thumbnail" >
+										<a href="https://img.alicdn.com/imgextra/i1/2053662795/TB26LC3hGmgSKJjSsplXXaICpXa_!!2053662795.png_500x500.jpg" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
+											<img src="https://img.alicdn.com/imgextra/i1/2053662795/TB26LC3hGmgSKJjSsplXXaICpXa_!!2053662795.png_500x500.jpg"/>
+										</a>
+										
+        							</div>
+								</div>								
+							</div>
+						</div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+							<div class="row">
+								<div class="gap-divider">									
 									<div class="image-thumbnail">
-										<img src="https://img.alicdn.com/imgextra/i1/2053662795/TB26LC3hGmgSKJjSsplXXaICpXa_!!2053662795.png_500x500.jpg"/>
+										<a href="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
+											<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+										</a>	
+										
         							</div>
 								</div>								
 							</div>
@@ -313,8 +343,11 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
 							<div class="row">
 								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
+									<div class="image-thumbnail" >
+										<a href="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20170710040319-642876.PNG" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
+											<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20170710040319-642876.PNG"/>
+										</a>	
+										
         							</div>
 								</div>								
 							</div>
@@ -324,19 +357,10 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
 							<div class="row">
 								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20170710040319-642876.PNG"/>
-        							</div>
-								</div>								
-							</div>
-						</div>
-						
-						
-						<div class="col-md-3 col-sm-6 col-xs-12 box-item">
-							<div class="row">
-								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="https://myfashion2017.s3.amazonaws.com/thum/Thefashion_20170203020013-517781.JPG"/>
+									<div class="image-thumbnail" >
+										<a href="https://myfashion2017.s3.amazonaws.com/thum/Thefashion_20170203020013-517781.JPG" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
+											<img src="https://myfashion2017.s3.amazonaws.com/thum/Thefashion_20170203020013-517781.JPG"/>
+										</a>
         							</div>
 								</div>								
 							</div>
@@ -451,6 +475,35 @@
 
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
-		<script src="<?php echo base_url();?>assets/js-view/home.js"></script>
+		
+		  <script src="<?php echo base_url();?>assets/js-view/home.js"></script>
+          <script src="<?php echo base_url();?>assets/plugin/superfish/superfish.min.js"></script>
+          <script src="<?php echo base_url();?>assets/plugin/magnific-popup/magnific-popup.min.js"></script>
+          <script src="<?php echo base_url();?>assets/plugin/sticky/sticky.js"></script>
+		
+		
+		<script>
+		// Porfolio - uses the magnific popup jQuery plugin
+		  $('.portfolio-popup').magnificPopup({
+		    type: 'image',
+		    removalDelay: 300,
+		    mainClass: 'mfp-fade',
+		    gallery: {
+		      enabled: true
+		    },
+		    zoom: {
+		      enabled: true,
+		      duration: 300,
+		      easing: 'ease-in-out',
+		      opener: function(openerElement) {
+		        return openerElement.is('img') ? openerElement : openerElement.find('img');
+		      }
+		    }
+		  });
+		/*$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });*/
+		</script>
 	</body>
 </html>

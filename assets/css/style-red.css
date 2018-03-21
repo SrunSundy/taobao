@@ -98,7 +98,7 @@ div.ruler-style{
 /* ================= General ==================== */
 html,
 body { 
-	height: 100% 
+	/*height: 100%*/ 
 }
 body {
     font-family: 'PT Serif', serif;

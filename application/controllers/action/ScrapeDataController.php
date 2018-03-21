@@ -53,6 +53,19 @@ class ScrapeDataController extends REST_Controller
                 }
             }
         }
+        
+        $myDesc ="";
+        
+        if(isset($data['data']['descInfo']['briefDescUrl'])){
+            $descImage = urldecode ("http:".$data['data']['descInfo']['briefDescUrl']);
+            $getDescImage = file_get_contents($descImage);
+            $getDescImage=json_decode($getDescImage,true);
+            
+            
+            if($getDescImage['data']['images'])
+                $myDesc = $getDescImage['data']['images'];
+        }
+        
        
         $sizearryName = array();
         $colorImageArray = array();
@@ -98,6 +111,7 @@ class ScrapeDataController extends REST_Controller
         $myData['image'] = $image;
         $myData['size'] = (empty($sizearryName) ? '':$sizearryName);
         $myData['price'] = $itemPrice;
+        $myData["image_detail"] = $myDesc;
         
         $this->response($myData ,200);
         

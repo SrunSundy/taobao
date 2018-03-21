@@ -111,6 +111,7 @@ div.fill-in-form{
 	border: 1px solid #DFDEDE;
     background-color: #F7F7F7;
     padding: 10px 35px 27px 35px;
+    display:none;
 }
 
 div.fill-in-form:before{
@@ -157,4 +158,21 @@ input.input-text-form{
 span.cls-pointer{
 	color: #cc0033;
 	margin-right: 3px;
+}
+
+div.update-fill-in-form{
+	margin-top: 20px;
+
+}
+
+button.standard-btn{
+	min-width: 180px;
+	letter-spacing : 0 !important;
+}
+
+button.btn-cancel{
+	color: #333;
+}
+button.btn-save{
+	background: #E4282C;
 }

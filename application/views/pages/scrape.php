@@ -50,46 +50,54 @@
     							
     						</div>
     						<div class="price-wrapper div-main" style="">
-    							<p class="product-price favorite-font"><span class="price_currency">CN Â¥ </span><span class="price_amount">0</span></p>
+    							<p class="product-price favorite-font my-price-show"><span class="price_currency">CN ¥ </span><span class="price_amount" >0</span></p>
+    							<div style="position:relative;float: left;margin-top: 10px;display:none" class="input-price-wrapper">
+    								<label class="favorite-font" style="position:absolute;font-weight:normal;top:7px; left:5px; ">CN ¥ </label>
+    								<input style="padding-left: 45px;height: 40px;width: 120px;" type="text" class="favorite-font item_price_input"   value="0" />
+    							</div>
+    							<a class="favorite-font my-price-show edit-input-price" style="text-decoration:none;color:#337ab7;font-size:15px;margin-top: 18px; margin-left: 16px;">Edit</a>
+    							<img class="my-price-show" />
+    							<p class="favorite-font my-price-show " style="padding: 2px 10px 2px 10px;background:#f96c80;color:white;margin-top: 15px; margin-left: 16px;">$<span class="dollar-product-price">0.0</span></p>
+    							<div style="clear:both;"></div>
     						</div>
 						</div>
 						<div class="box-image-display">
 							<div class="box-big-image">
 								<img class="big-image" id="big_image"  
-									src="<?php echo base_url();?>assets/img/default.jpg" />
+									src="<?php echo base_url();?>assets/img/loading.gif" />
 							</div>
 							
 							<div class="box-small-image">
 								<div class="small-image-wrapper" id="small_image_wrapper">
 									<div class="box-small active-box-small">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/loading.gif" />	
 										</div>
 																			
 									</div>
 									
 									<div class="box-small ">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/loading.gif" />	
 										</div>
 																			
 									</div>
 									
 									<div class="box-small ">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/loading.gif" />	
 										</div>
 																			
 									</div>
 									<div class="box-small ">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/loading.gif" />	
 										</div>
 																			
 									</div>
 									<div class="box-small ">
 										<div class="small-image-thumbnail">
-											<img class="small-image" src="<?php echo base_url();?>assets/img/default.jpg" />	
+											<img class="small-image" src="<?php echo base_url();?>assets/img/loading.gif" />	
 										</div>
 																			
 									</div>
@@ -108,14 +116,27 @@
     							<p class="favorite-font product-title" id="item_title"></p>
     						</div>
     						<div class="price-wrapper div-main" style="">
-    							<p class="product-price favorite-font"><span class="price_currency">CN ¥ </span><span class="price_amount" id="item_price">0</span></p>
+    							<p class="product-price favorite-font my-price-show"><span class="price_currency">CN ¥ </span><span class="price_amount" id="item_price">0</span></p>
+    							<div style="position:relative;float: left;margin-top: 10px;display:none" class="input-price-wrapper">
+    								<label class="favorite-font" style="position:absolute;font-weight:normal;top:7px; left:5px; ">CN ¥ </label>
+    								<input style="padding-left: 45px;height: 40px;width: 120px;" type="text" class="favorite-font item_price_input" id="item_price_input"  value="0" />
+    							</div>
+    							<a class="favorite-font my-price-show edit-input-price" style="text-decoration:none;color:#337ab7;font-size:15px;margin-top: 18px; margin-left: 16px;">Edit</a>
+    							<img class="my-price-show" />
+    							<p class="favorite-font my-price-show " style="padding: 2px 10px 2px 10px;background:#f96c80;color:white;margin-top: 15px; margin-left: 16px;">$<span class="dollar-product-price">0.0</span></p>
+    							<div style="clear:both;"></div>
     						</div>
 						</div>
 					
 						
 						<div class="delivery-fee div-main">
 							<p class="favorite-font fee-title" style="color:#b5b5b5">Chinese Domestic Delivery Fee </p>
-							<input type="text" class="favorite-font"  value="CN ¥ 0" id="delivery_fee"/>
+							
+							<div style="position:relative;float: left;">
+								<label class="favorite-font" style="position:absolute;font-weight:normal;top:6px; left:5px; ">CN ¥ </label>
+								<input style="padding-left: 45px;" type="text" class="favorite-font"  value="0" id="delivery_fee"/>
+							</div>
+							
 							<div class="text-info">
 								<p class="exclude favorite-font">Exclude International Delivery</p>
 								<p class="estimation favorite-font">Delivery Estimation</p>
@@ -198,7 +219,13 @@
 				
 			</div>
 		</section><!-- end accordian section -->
-	
+		
+    	<section class="accordian-section section-padding" style="padding-top: 0px;">
+    		<div class="container">
+    			<div id="image-detail" ></div>
+    		</div>
+    		
+    	</section>
 	
 	
 		<!-- ::::::::::::::::::::: Footer Section:::::::::::::::::::::::::: -->

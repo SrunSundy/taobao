@@ -234,3 +234,7 @@ p.no-favorite{
 	text-align: center;
 	padding-top: 40px;
 }
+
+a.news-title:hover{
+	text-decoration: underline;
+}

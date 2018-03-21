@@ -355,3 +355,6 @@ span.error-message_box{
 	z-index: 100;
 }
 
+.my-price-show{
+	float:left;
+}
