@@ -44,10 +44,10 @@
 				</a>
 			</div>
 			<div class="item-title-child">
-				<a href="<?php echo base_url();?>address_record" class="item-title-child-text favorite-font"> Address Records</a>
+				<a href="<?php echo base_url();?>address_record" class="item-title-child-text favorite-font "> Address Records</a>
 			</div>
 			<div class="item-title-child">
-				<a href="<?php echo base_url();?>dashboard" class="item-title-child-text favorite-font"> Personal Profile</a>
+				<a href="<?php echo base_url();?>dashboard" class="item-title-child-text favorite-font active"> Personal Profile</a>
 			</div>
 			<div class="item-title-child">
 				<a  class="item-title-child-text favorite-font"> Recommend To Friends</a>
@@ -68,3 +68,4 @@
 	</div>
 
 </div>
+

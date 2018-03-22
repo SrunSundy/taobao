@@ -67,6 +67,10 @@ div.item-title-child a.item-title-child-text{
     display: block;
 }
 
+div.item-title-child a.active{
+	color:#E4282C; 
+}
+
 div.item-title-child a.item-title-child-text:hover{
 	color:#E4282C; 
 }

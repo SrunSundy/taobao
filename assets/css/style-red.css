@@ -415,11 +415,12 @@ nav.navbar.bootsnav ul.nav > li>.dropdown-menu.megamenu-content .menu-col li.act
 	    font-weight: 400;
 	    font-size: 16px;
 	    text-transform: uppercase;
-	    letter-spacing: 0.06em;
+	    letter-spacing: 0.00em;
 	}
 	
 	li.my-menu a{
 		max-height: 50px;
+		border-bottom: 2px solid transparent;
 	}
 	
 }

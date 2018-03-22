@@ -66,7 +66,9 @@ $( document ).ready(function() {
 	
 	$(".item_price_input").on("blur", function(){
 		
-		var toDollar = parseFloat($(this).val())/ 6.3;
+		var myPrice = $(this).val();
+		if(!myPrice)myPrice = 0;
+		var toDollar = parseFloat(myPrice)/ 6.3;
 		$(".dollar-product-price").html(toDollar.toFixed(2));
 	});
 	
@@ -145,10 +147,14 @@ $( document ).ready(function() {
 		if($(".input-price-wrapper").is(":visible")){
 			itemPrice = $("input#item_price_input").val().replace(/[^0-9.]/g, '');
 		}
+		
+		var itemPriceDollar = $("#dollar-product-price").text().replace(/[^0-9.]/g, '');
+		
 		var resq_data = {
 			"item_photo" : $("div.box-small").eq(0).find("img.small-image").data("real_src"),
 			"item_title" : $("p#item_title").text(),
 			"item_price" : itemPrice,
+			"item_price_dollar" : itemPriceDollar,
 			"item_domestic": $("#delivery_fee").val().replace(/[^0-9.]/g, ''),
 			"item_size" : $("#size_wrapper").find("div.active-size-item").eq(0).find("span").text(),
 			"item_color" : itemColor,
@@ -377,11 +383,13 @@ function loadData(){
 				var myImage = "";
 				var d_image = data.image_detail;
 				for(var i=0; i<d_image.length; i++){
-					myImage += "<div class='col-md-12  row' style='text-align:center'><img src="+d_image[i]+" /></div>";
+					myImage += "<div class='col-md-12  row' style='text-align:center'><img    src='"+d_image[i]+"' /></div>";
 				}
 				
 				$("#image-detail").html(myImage);
 			}
+			
+			
 			
 			$("#color_wrapper").html(colorHtml);
 			

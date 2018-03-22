@@ -13,6 +13,14 @@ $lang['home_call_us'] = "លេខទំនាក់ទំនង";
  $lang['menu_help'] = "ជំនួយ";
  $lang['home_intro'] = "សូមបញ្ចូល URL ទំនិញរបស់លោកអ្នក";
  $lang['home_search'] = "ស្វែងរក";
+ $lang['home_howtoorder'] = "របៀបកម្មង់?";
+ $lang['home_howtoorder_desc'] = "ជារឿងងាយបំផុតដោយគ្រាន់តែធ្វើតាមនូវជំហានស្រួលៗខាងក្រោម";
+ $lang['home_howitwork'] = "ដំណើរការនៃការកម្មង់?";
+ $lang['home_latestnews'] = "ពត៌មានថ្មីៗ";
+ $lang['home_seemore'] = "មើលបន្ថែម";
+ $lang['home_readmore'] = "អានបន្ថែម...";
+ $lang['home_ourportfolio'] = "កំរងរូបភាពឯកសាររបស់យើង";
+ $lang['home_teammember'] = "សមាជិកក្រុមរបស់យើង";
  
  $lang['scrape_cart_btn'] = "បន្ថែមចូលរទេះទំនិញ";
  $lang['scrape_buy_btn'] = "ទិញឥឡូវនេះ";

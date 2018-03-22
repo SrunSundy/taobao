@@ -123,7 +123,7 @@
     							</div>
     							<a class="favorite-font my-price-show edit-input-price" style="text-decoration:none;color:#337ab7;font-size:15px;margin-top: 18px; margin-left: 16px;">Edit</a>
     							<img class="my-price-show" />
-    							<p class="favorite-font my-price-show " style="padding: 2px 10px 2px 10px;background:#f96c80;color:white;margin-top: 15px; margin-left: 16px;">$<span class="dollar-product-price">0.0</span></p>
+    							<p class="favorite-font my-price-show " style="padding: 2px 10px 2px 10px;background:#f96c80;color:white;margin-top: 15px; margin-left: 16px;">$<span class="dollar-product-price" id="dollar-product-price">0.0</span></p>
     							<div style="clear:both;"></div>
     						</div>
 						</div>
@@ -244,5 +244,6 @@
 		
 		<script src="<?php echo base_url();?>assets/js/input-spinner.js"></script>
 		<script src="<?php echo base_url();?>assets/js-view/scrape.js"></script>
+		
 	</body>
 </html>

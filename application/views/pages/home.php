@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 
-		<title>Home | taobao outlet</title>
+		<title><?php echo $this->lang->line('menu_home'); ?> | taobao outlet</title>
         <?php include 'include/imstyle.php'?>
         
        	<link rel="stylesheet" href="<?php echo base_url();?>assets/css-customize/home.css" />
@@ -102,9 +102,9 @@
 				<div class="row">
 					<div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
 						<div class="intro-title text-center">
-							<h2  class="favorite-font-amaranth how-to-order" style="font-size: 50px;font-weight:bold;color:#313131;margin-bottom:10px">How to Order?</h2>
+							<h2  class="favorite-font-amaranth how-to-order" style="font-size: 50px;font-weight:bold;color:#313131;<?php if($this->session->userdata('site_lang') == 'english') echo 'margin-bottom:10px'; else echo 'margin-bottom:35px;';?>"><?php echo $this->lang->line('home_howtoorder'); ?></h2>
 							
-							<p class="favorite-font-amaranth how-to-order-detail" style="font-size:22px;color:#7F7F7F">Processing so easily by following this easy step</p>
+							<p class="favorite-font-amaranth how-to-order-detail" style="font-size:22px;color:#7F7F7F;line-height: 30px;"><?php echo $this->lang->line('home_howtoorder_desc'); ?></p>
 							
 						</div>
 					</div>
@@ -160,7 +160,7 @@
 				
 				<div class="row" style="margin-top: 100px;">
 					<div class="button-wrapper" style="text-align:center;">
-						<button class="btn" onclick="location.href='how_to_order'" ><p class="favorite-font-amaranth" style="    margin-bottom: 0;">How it work?</p></button>
+						<button class="btn" onclick="location.href='how_to_order'" ><p class="favorite-font-amaranth" style="    margin-bottom: 0;"><?php echo $this->lang->line('home_howitwork'); ?></p></button>
 					</div>
 					
 				</div>
@@ -174,8 +174,8 @@
 				<div class="row">
 					<div class="my-box-header">
 						<div class="text-header-wrapper">
-							<p class="favorite-font" >Latest News</p>
-							<a class="see-more favorite-font" >See more</a>
+							<p class="favorite-font" ><?php echo $this->lang->line('home_latestnews'); ?></p>
+							<a class="see-more favorite-font" ><?php echo $this->lang->line('home_seemore'); ?></a>
 						</div>
 						
 						<div class="liner"></div>
@@ -190,7 +190,7 @@
         							</div>
         							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
         							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
-        							<a class="news-read-more favorite-font" href="#">read more...</a>
+        							<a class="news-read-more favorite-font" href="#"><?php echo $this->lang->line('home_readmore'); ?></a>
 								</div>								
 							</div>
 						</div>
@@ -247,8 +247,8 @@
 				<div class="row">
 					<div class="my-box-header">
 						<div class="text-header-wrapper">
-							<p class="favorite-font" >Our Portfolio</p>
-							<a class="see-more favorite-font" >See more</a>
+							<p class="favorite-font" ><?php echo $this->lang->line('home_ourportfolio'); ?></p>
+							<a class="see-more favorite-font" ><?php echo $this->lang->line('home_seemore'); ?></a>
 						</div>
 						
 						<div class="liner"></div>
@@ -396,7 +396,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="header-text">
-						<p class="favorite-font team-member">Our Team Members</p>
+						<p class="favorite-font team-member"><?php echo $this->lang->line('home_teammember'); ?></p>
 					</div>
 					
 					<div class="member-wrapper" style="margin-top: 55px;">

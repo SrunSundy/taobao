@@ -73,3 +73,11 @@ else{
 
 </script>
 
+<!-- dashboard menu -->
+<script>
+	var mymenu = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+	mymenu = "<?php echo base_url();?>"+mymenu;
+	$("a.item-title-child-text").removeClass("active");
+	$("a.item-title-child-text[href='"+mymenu+"']").addClass("active");
+</script>
+

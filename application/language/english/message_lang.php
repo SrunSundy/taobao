@@ -13,6 +13,14 @@ $lang['home_call_us'] = "CALL US";
  $lang['menu_help'] = "Help";
  $lang['home_intro'] = "Please enter your product's URL";
  $lang['home_search'] = "Search";
+ $lang['home_howtoorder'] = "How to Order?";
+ $lang['home_howtoorder_desc'] = "Processing so easily by following this easy step";
+ $lang['home_howitwork'] = "How it works?";
+ $lang['home_latestnews'] = "Latest News";
+ $lang['home_seemore'] = "See more";
+ $lang['home_readmore'] = "read more...";
+ $lang['home_ourportfolio'] = "Our Portfolio";
+ $lang['home_teammember'] = "Our Team Members";
  
  $lang['scrape_cart_btn'] = "Add To Cart";
  $lang['scrape_buy_btn'] = "Buy Now";
