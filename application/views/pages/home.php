@@ -405,7 +405,7 @@
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+									<img src="assets/img/default.jpg" class="img-circle" />
 								</div>
 								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
 								<p class="favorite-font member-des">Founder of The Fashion</p>
@@ -414,7 +414,7 @@
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+									<img src="assets/img/default.jpg" class="img-circle" />
 								</div>
 								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
 								<p class="favorite-font member-des">Founder of The Fashion</p>
@@ -423,7 +423,7 @@
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+									<img src="assets/img/default.jpg" class="img-circle" />
 								</div>
 								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
 								<p class="favorite-font member-des">Founder of The Fashion</p>
@@ -432,7 +432,7 @@
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+									<img src="assets/img/default.jpg" class="img-circle" />
 								</div>
 								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
 								<p class="favorite-font member-des">Founder of The Fashion</p>
@@ -441,7 +441,7 @@
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+									<img src="assets/img/default.jpg" class="img-circle" />
 								</div>
 								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
 								<p class="favorite-font member-des">Founder of The Fashion</p>
@@ -450,7 +450,7 @@
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="http://www.thaiworldview.com/tv/jpg2/act137.jpg" class="img-circle" />
+									<img src="assets/img/default.jpg" class="img-circle" />
 								</div>
 								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
 								<p class="favorite-font member-des">Founder of The Fashion</p>
