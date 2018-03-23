@@ -42,6 +42,11 @@
 /*
 my customized style
 */
+
+nav.this-fix{
+	background: #fff;
+	border: 0;
+}
  @font-face {
    font-family: khmerFontFreeHand;
    src: url(../fonts/khmeros.ttf);

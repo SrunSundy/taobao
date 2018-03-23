@@ -240,7 +240,7 @@ function loadData(){
 	$("#image-detail").html("<div class='col-md-12 row' style='text-align:center'><img src='"+$("#base_url").val()+"assets/img/loading.gif' /></div>");
 	$.ajax({
 		method : "GET",
-		url : $("#base_url").val()+"action/scrapedatacontroller/scrape_data_by_url",
+		url : $("#base_url").val()+"action/ScrapeDataController/scrape_data_by_url",
 		data : {
 			url : $("#scrape_url").val()
 		},
@@ -249,12 +249,15 @@ function loadData(){
 			
 			
 			$(".product-title").html(data.title);
-			$(".price_amount").html(data.price);
+			
 			$(".item_price_input").val(data.price);
 			
 			if(data.price){
 				var toDollar = parseFloat(data.price)/ 6.3;
 				$(".dollar-product-price").html(toDollar.toFixed(2));
+				$(".price_amount").html(data.price);
+			}else{
+				$(".price_amount").html("0");
 			}
 			
 			
@@ -300,6 +303,9 @@ function loadData(){
 				}
 				
 				
+			}else{
+				$(".small-image-thumbnail img.small-image").attr("src",$("#base_url").val()+"assets/img/default.jpg");
+				$("#big_image").attr("src", $("#base_url").val()+"assets/img/default.jpg");
 			}
 			
 			if(data.size.length > 0){
@@ -387,6 +393,8 @@ function loadData(){
 				}
 				
 				$("#image-detail").html(myImage);
+			}else{
+				$("#image-detail").html("");
 			}
 			
 			

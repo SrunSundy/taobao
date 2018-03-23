@@ -84,7 +84,7 @@
 
 
 <!-- Start Navigation -->
-<nav class="navbar navbar-default navbar-sticky bootsnav" style="position:absolute;">
+<nav class="navbar navbar-default navbar-sticky bootsnav this-fix" style="position:absolute;width:100%">
 	<!-- Start Top Search -->
 	<div class="top-search">
 		<div class="container">

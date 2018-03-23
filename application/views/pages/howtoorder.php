@@ -9,7 +9,7 @@
 
 
 	<body>
-	
+		<?php include 'include/loader.php' ?>
 		<!-- ::::::::::::::::::::: Header Section:::::::::::::::::::::::::: -->
 		<header>
 			<?php include 'include/headermenu.php' ?>
@@ -50,7 +50,7 @@
 			<?php include 'include/footer.php' ?>
 		</footer>
 
-		<?php include 'include/loader.php' ?>
+		
 
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>

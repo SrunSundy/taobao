@@ -25,7 +25,7 @@ class ScrapeDataController extends REST_Controller
         $data['color'] = '';
         $data['colorImage'] = '';
         
-        $data = file_get_contents("https://hws.alicdn.com/cache/wdetail/5.0/?id=$id");
+        $data = file_get_contents("$id");
         $data1 = preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/', function ($match) {
             return mb_convert_encoding(pack('H*', $match[1]), 'UTF-8', 'UTF-16BE');
         }, $data);
@@ -101,11 +101,22 @@ class ScrapeDataController extends REST_Controller
         }
         
         
-        $image=$data['data']['itemInfoModel']['picsPath'];
+        $image= array();
         $title = '';
         
+        if(isset($data['data'])){
+            if(isset($data['data']['itemInfoModel']['picsPath'])){
+                $image = $data['data']['itemInfoModel']['picsPath'];
+            }
+            if(isset($data['data']['itemInfoModel']['title'])){
+                $title = $data['data']['itemInfoModel']['title'];
+            }
+        }
+       
         
-        $myData['title'] = $data['data']['itemInfoModel']['title'];
+        
+        
+        $myData['title'] = $title;
         $myData['color'] = $colorArray;
         $myData['colorImage'] = $colorImageArray;
         $myData['image'] = $image;

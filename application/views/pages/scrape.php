@@ -12,6 +12,7 @@
 
 
 	<body>
+		<?php include 'include/loader.php' ?>
 		<input type="hidden" value="<?php echo $url; ?>"  id="scrape_url" />
 		<input type="hidden" value="<?php echo base_url();  ?>" id="base_url" />
 		<input type="hidden" value="<?php echo $this->lang->line('scrape_no_size'); ?>" id="no_size" />
@@ -237,7 +238,7 @@
 		<span id="error_messgage_text"  class="error-message_box favorite-font animated" style="display:none"></span>
 		
 
-		<?php include 'include/loader.php' ?>
+		
 
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
