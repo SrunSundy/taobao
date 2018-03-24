@@ -25,7 +25,7 @@ class ScrapeDataController extends REST_Controller
         $data['color'] = '';
         $data['colorImage'] = '';
         
-        $data = file_get_contents("$id");
+        $data = file_get_contents("https://hws.alicdn.com/cache/wdetail/5.0/?id=$id");
         $data1 = preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/', function ($match) {
             return mb_convert_encoding(pack('H*', $match[1]), 'UTF-8', 'UTF-16BE');
         }, $data);
@@ -74,7 +74,7 @@ class ScrapeDataController extends REST_Controller
             foreach($data['data']['skuModel']['skuProps'] as $value){
                 
                 
-                if($value['propName']=='尺寸' || $value['propName']=='尺码'){
+                if($value['propName']=='å°ºå¯¸' || $value['propName']=='å°ºç �'){
                     
                    
                     foreach($value['values'] as $size){
@@ -86,7 +86,7 @@ class ScrapeDataController extends REST_Controller
                 }
                 
               
-                if($value['propName']=='颜色分类' || $value['propName']=='主要颜色' ||  $value['propName']=='颜色'){
+                if($value['propName']=='é¢œè‰²åˆ†ç±»' || $value['propName']=='ä¸»è¦�é¢œè‰²' ||  $value['propName']=='é¢œè‰²'){
                     foreach($value['values'] as $color){
                         
                         if(isset($color['name']))
