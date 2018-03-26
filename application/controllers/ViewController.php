@@ -79,5 +79,10 @@ class ViewController extends CI_Controller {
 		$this->load->view('pages/addressrecord');
 	}
 	
+	public function cost_calculator(){
+	    $this->load->view('pages/costcalculator');
+	}
+	
+	
 	
 }

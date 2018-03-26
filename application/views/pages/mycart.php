@@ -213,5 +213,6 @@
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
 		<script src="<?php echo base_url();?>assets/js-view/mycart.js"></script>
+		
 	</body>
 </html>

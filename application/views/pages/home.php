@@ -22,7 +22,7 @@
 		<div class="homepage-slider slider-bg1" style='background: url("<?php echo base_url();?>assets/img/slider-bg/4.jpg") no-repeat ; max-height: 720px;background-size:cover '>
 			<div class="display-table">
 				
-				<div class="display-table-cell">
+				<div class="display-table-cell" style="height: 100%;">
 					<div style="height:65%;"></div>
 					<div style="height:35%;" >
     					<div class="container">
@@ -158,7 +158,39 @@
 					
 				</div>
 				
-				<div class="row" style="margin-top: 100px;">
+				<div class="row">
+					<div class="col-md-12" style="margin-top:30px;padding-left: 20px;padding-right: 20px;">
+						<div style="width: 100%;text-align:center;height: 50px;border: 1px solid #E5E5E5;">
+							<p class="favorite-font" style="line-height: 50px;font-size: 24px;color: #333;">Service Fee</p>
+						</div>
+						<div class="box-body table-responsive no-padding" style="">
+                          	<table class="table table-hover">
+        	                  <thead>
+        	                    <tr class="service-fee">
+        	                      <th class="favorite-font cls-tbl">Membership Level</th>
+        	                      <th class="favorite-font cls-tbl" >Member</th>
+        	                      <th class="favorite-font cls-tbl">VIP</th>
+        	                      <th class="favorite-font cls-tbl" >SVIP</th>                                       
+        	                      <th class="favorite-font cls-tbl" style="color: #f60">Merchant</th>
+        	                    
+        	                    </tr>
+                           	   </thead>
+                           	   <tbody >
+                           	   	 <tr class="service-fee">
+        	                      <td class="favorite-font cls-tbl-detail">Service Fee</td>
+        	                      <td class="favorite-font cls-tbl-detail" >10%</td>
+        	                      <td class="favorite-font cls-tbl-detail">10%</td>
+        	                      <td class="favorite-font cls-tbl-detail" >8%</td>                                       
+        	                      <td class="favorite-font cls-tbl-detail" style="color: #f60">0%</td>
+        	                    
+        	                     </tr>
+                           	   </tbody>
+                              </table>
+                         </div>
+					</div>
+				</div>
+				
+				<div class="row" style="margin-top: 30px;">
 					<div class="button-wrapper" style="text-align:center;">
 						<button class="btn" onclick="location.href='how_to_order'" ><p class="favorite-font-amaranth" style="    margin-bottom: 0;"><?php echo $this->lang->line('home_howitwork'); ?></p></button>
 					</div>
