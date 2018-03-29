@@ -1,0 +1,46 @@
+p.desc-title{
+	font-weight: bold;
+	font-size: 18px;
+	color: #333;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+}
+
+p.desc-content{
+	font-size: 14px;
+	margin-top: 20px;
+	color: #616161;
+}
+
+p.desc-title-1{
+	margin-top: 20px;
+	color: #D72320;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+	font-size: 18px;
+	position:relative;
+	
+}
+
+p.desc-title-1:before{
+	bottom: 0;
+    content: " ";
+    height: 4px;
+    width: 30px;
+    position: absolute;
+    background: #D72320;
+    text-align:center;
+   
+ 	z-index:-1;
+	
+	
+}
+
+img.team-image{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+

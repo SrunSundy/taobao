@@ -83,6 +83,10 @@ class ViewController extends CI_Controller {
 	    $this->load->view('pages/costcalculator');
 	}
 	
+	public function help(){
+	    $this->load->view('pages/help');
+	}
+	
 	
 	
 }

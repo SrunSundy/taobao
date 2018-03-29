@@ -1,0 +1,53 @@
+p.title-desc{
+	color: #616161;
+	font-size: 14px;
+	text-align:center;
+}
+
+p.sectoin-title{
+	color: #333;
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+div.calculator-box{
+	padding: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background: #e2eff7;
+    border: #aec9da solid 1px;
+    border-radius: 4px;
+}
+
+.opt-service{
+	color: #333;
+	font-size: 14px;
+}
+
+div.my-liner{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-top: #c5c7c8 dashed 1px;
+}
+
+p.text-desc{
+	
+	font-size: 14px;
+	color: #333;
+	margin: 0;
+	margin-top: 15px;
+}
+
+p.text-desc span{
+	font-weight: bold;
+}
+
+.form-control{
+	height: 40px !important;
+	padding: 6px 10px;
+}
+.input-group-addon{
+	font-size: 12px !important;
+	padding : 6px 3px;
+}

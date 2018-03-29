@@ -127,7 +127,7 @@
 				<li class="active header-menu my-menu"><a href="home" class="favorite-font"><?php echo $this->lang->line('menu_home'); ?></a></li>
 				<li class="header-menu my-menu" ><a href="about_us" class="favorite-font"><?php echo $this->lang->line('menu_aboutus'); ?></a></li>
 				<li class="header-menu my-menu"><a href="how_to_order" class="favorite-font"><?php echo $this->lang->line('menu_howtoorder'); ?></a></li>
-				<li class="header-menu my-menu"><a href="services.html" class="favorite-font"><?php echo $this->lang->line('menu_costcalculator'); ?></a></li>
+				<li class="header-menu my-menu"><a href="cost_calculator" class="favorite-font"><?php echo $this->lang->line('menu_costcalculator'); ?></a></li>
 				<li class="header-menu my-menu"><a href="my_order" class="favorite-font"><?php echo $this->lang->line('menu_myorder'); ?></a></li>
 				<!-- <li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Works</a>
@@ -142,7 +142,7 @@
 						<li><a href="blog-details.html">News Details</a></li>
 						<li><a href="typography.html">Typography</a></li>
 					</ul></li> -->
-				<li class="header-menu my-menu"><a href="contact.html" class="favorite-font"><?php echo $this->lang->line('menu_help'); ?></a></li>
+				<li class="header-menu my-menu"><a href="help" class="favorite-font"><?php echo $this->lang->line('menu_help'); ?></a></li>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->

@@ -218,7 +218,7 @@
 							<div class="row">
 								<div class="gap-divider">
 									<div class="image-thumbnail">
-										<img src="https://media.newyorker.com/photos/59e8c9a104bcf6250436ce67/master/w_727,c_limit/171030_r30777.jpg" />
+										<img src="<?php echo base_url();?>assets/img/default.jpg" />
         							</div>
         							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
         							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
@@ -231,7 +231,7 @@
 							<div class="row">
 								<div class="gap-divider">
 									<div class="image-thumbnail">
-										<img src="https://media.newyorker.com/photos/59e8c9a104bcf6250436ce67/master/w_727,c_limit/171030_r30777.jpg" />
+										<img src="<?php echo base_url();?>assets/img/default.jpg" />
         							</div>
         							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
         							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
@@ -244,7 +244,7 @@
 							<div class="row">
 								<div class="gap-divider">
 									<div class="image-thumbnail">
-										<img src="https://ae01.alicdn.com/kf/HTB1MqNCKVXXXXa5XpXXq6xXFXXXY/Ice-silk-cloth-pearl-curtain-decoration-cloth-ice-thick-fabric-cloth-stage-background-wedding-gauze-curtain.jpg_640x640.jpg" />
+										<img src="<?php echo base_url();?>assets/img/default.jpg" />
         							</div>
         							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
         							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
@@ -257,7 +257,7 @@
 							<div class="row">
 								<div class="gap-divider">
 									<div class="image-thumbnail">
-										<img src="https://media.newyorker.com/photos/59e8c9a104bcf6250436ce67/master/w_727,c_limit/171030_r30777.jpg" />
+										<img src="<?php echo base_url();?>assets/img/default.jpg" />
         							</div>
         							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
         							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
