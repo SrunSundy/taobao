@@ -63,13 +63,13 @@
                                             <span class="input-group-addon favorite-font" style="min-width: 40px;">KG</span>
                                         </div>
                                         
-                                        <p class="favorite-font text-desc"><span class="">Shipping to:</span></p>
+                                       <!--  <p class="favorite-font text-desc"><span class="">Shipping to:</span></p>
                                          <select class="form-control" id="sel1">
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
                                             <option>4</option>
-                                          </select>
+                                          </select> -->
                                           
                                         <p class="favorite-font text-desc"><span class="">Package dimension: </span>(Optional)</p>
                                         <div class="col-md-12">
@@ -77,7 +77,7 @@
                                         		
                                         		<div class="col-md-4">
                                         			<div class="row" >
-                                        				 <div class="input-group">                                        
+                                        				 <div class="input-group" style="padding-top: 5px;">                                        
                                                             <input type="text" class="form-control favorite-font" placeholder="Length">
                                                             <span class="input-group-addon favorite-font">CM</span>
                                                         </div>
@@ -85,7 +85,7 @@
                                         		</div>
                                         		
                                         		<div class="col-md-4" >
-                                        			<div class="row" style="padding: 0 0 0px 5px">
+                                        			<div class="row input-measure" style="padding: 5px 0 0px 5px">
                                         				 <div class="input-group">                                        
                                                             <input type="text" class="form-control favorite-font" placeholder="Width">
                                                             <span class="input-group-addon favorite-font">CM</span>
@@ -94,7 +94,7 @@
                                         		</div>
                                         		
                                         		<div class="col-md-4" >
-                                        			<div class="row" style="padding: 0 0 0px 5px">
+                                        			<div class="row input-measure" style="padding: 5px 0 0px 5px">
                                         				 <div class="input-group">                                        
                                                             <input type="text" class="form-control favorite-font" placeholder="Height">
                                                             <span class="input-group-addon favorite-font">CM</span>
@@ -109,6 +109,7 @@
                                         
                                         <div class="my-liner"></div>
                                         
+                                        <button class="btn confirm-btn" style="text-transform: none;letter-spacing: 0px; background:#D72320;width: 100%;font-weight: bold;font-size: 18px; ">Confirm</button>
     									
     								</div>
     							</div>
@@ -116,7 +117,77 @@
     					</div>
     					
     					<div class="col-md-8">
-    						<div class="row"></div>
+    						<div class="row result-wrapper" >
+    							
+    							<!-- loading -->
+    							<div class="display-loading col-md-12" style="display:none;">
+    								<div class="row" style="text-align:center;padding-top: 80px; padding-bottom: 50px;">
+    									<p class="waiting-text favorite-font">Please wait. Caculating...</p>
+    									<img src="<?php echo base_url()?>assets/img/loading.gif" style="" />
+    								</div>
+    							</div>
+    							<!-- loading -->
+    							
+    							
+    							<!-- display result of service -->
+    							<div class="display-result col-md-12" style="display:none;">
+    								<div class="row" >
+    								
+    									<div class="title-header col-md-12">
+    										<div class="row">
+    											<p class="favorite-font">Cost estimate</p>
+    										</div>
+    									</div>
+    									
+    									<div class="display-content col-md-12">
+    										<div class="row" style="padding: 15px 0 15px 0">
+    											
+    											<div class="display-left col-md-7">
+    												<div class="row" style="padding: 0px 0 0px 20px;">
+    													
+    													<p class="favorite-font my-desc">
+    														<span>Items price : </span>
+    														$<span>12</span>
+    													</p>
+    													
+    													<p class="favorite-font my-desc">
+    														<span>Serivce Fee:</span>
+    														$<span>0</span>
+    													</p>
+    													<p class="favorite-font my-desc">
+    														<span>Customs Charge:</span>
+    														$<span>0</span>
+    													</p>
+    												</div>
+    											</div>
+    											
+    											<div class="display-right col-md-5">
+    												<div class="row" style="text-align:center;">
+    													<p class="inside-title favorite-font">Total Amount</p>
+    													
+    													<p class="result-of-estimate favorite-font">
+    														$<span>100</span>
+    													</p>
+    												</div>
+    											</div>
+    											
+    										
+    										</div>
+    									</div>
+    									
+    								</div>
+    							</div>
+    							<!-- display result of service -->
+    							
+    							<!-- display image -->
+    							<div class="image-wrapper col-md-12" style="display:none;">
+    								<div class="row" >
+    									
+    								</div>
+    							</div>
+    							<!-- display image -->
+    							
+    						</div>
     					</div>
     					
 					</div>

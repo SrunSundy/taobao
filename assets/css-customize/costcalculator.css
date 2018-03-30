@@ -1,3 +1,90 @@
+@media (max-width: 992px) {
+	
+	.input-measure{
+		padding-left: 0 !important;
+	}
+	
+	div.result-wrapper{
+		padding-left: 0px !important;
+	}
+	
+	div.display-left{
+	
+		padding-bottom: 10px;
+	}
+	div.display-right{
+		border-left: 0 !important;
+		border-top:  #ccc solid 1px;
+		padding-top: 10px;
+	}
+	
+	div.display-result{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	
+}
+
+p.waiting-text{
+	color: #616161;
+	font-size: 14px;
+}
+
+div.title-header{
+	
+    background: #f1f5f6;
+  	height: 30px;
+}
+
+p.result-of-estimate{
+	
+	color: #D72320;
+	font-size: 18px;
+	font-weight: bold;
+	text-align:center;
+	display:inline-block;
+	min-width: 200px;
+	padding: 15px;
+	background: #f1f5f6;
+}
+
+p.my-desc{
+	color: #333;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+
+div.display-right{
+	border-left:  #ccc solid 1px;
+}
+
+p.inside-title{
+	font-weight: bold;
+	text-align:center;
+	font-size: 14px;
+	color: #333;
+	
+}
+
+div.title-header p{
+	line-height: 30px;
+	 padding: 0 10px;
+    font-weight: bold;
+    font-size: 14px; 
+    color: #333;
+}
+
+div.image-wrapper{
+	background: #f1f5f6;
+	min-height: 500px;
+	border-radius: 4px;
+}
+
+div.result-wrapper{
+	padding-left: 15px;
+}
+
 p.title-desc{
 	color: #616161;
 	font-size: 14px;
