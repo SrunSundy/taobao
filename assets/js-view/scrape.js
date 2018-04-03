@@ -247,13 +247,18 @@ function loadData(){
 		success : function(data){
 			
 			
+			if(data.status == "410"){
+				
+				alert("Data isn't available at the moment!");
+				//return;
+			}
 			
 			$(".product-title").html(data.title);
 			
 			$(".item_price_input").val(data.price);
 			
 			if(data.price){
-				var toDollar = parseFloat(data.price)/ 6.3;
+				var toDollar = parseFloat(data.price)/ 6;
 				$(".dollar-product-price").html(toDollar.toFixed(2));
 				$(".price_amount").html(data.price);
 			}else{

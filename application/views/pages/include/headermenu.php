@@ -36,7 +36,7 @@
 					<div class="row">
     					<ul>
     					    <li style="margin-right: 15px;display:none; " class="small-phone" >
-    							<a class="" href="tel:010 666 520"  style="background:#790000; border: 0;border-radius: 5px;height: 20px; width: 20px;color:white;">
+    							<a class="" href="tel:010 666 520"  style="background:#790000; border: 0;border-radius: 5px;height: auto; width: auto;line-height: 18px;padding: 2px 6px;color:white;margin-left:0;">
     								<i class="fa fa-phone"></i>
     							</a>
     						</li>

@@ -14,6 +14,7 @@
 
 	<body>
 		<?php include 'include/loader.php' ?>
+		<input type="hidden" value="<?php echo base_url();  ?>" id="base_url" />
 		<!-- ::::::::::::::::::::: Header Section:::::::::::::::::::::::::: -->
 		<header>
 			<?php include 'include/headermenu.php' ?>
@@ -192,7 +193,7 @@
 				
 				<div class="row" style="margin-top: 30px;">
 					<div class="button-wrapper" style="text-align:center;">
-						<button class="btn" onclick="location.href='how_to_order'" ><p class="favorite-font-amaranth" style="    margin-bottom: 0;"><?php echo $this->lang->line('home_howitwork'); ?></p></button>
+						<button class="btn" onclick="location.href='how_to_order'" ><p class="favorite-font-amaranth how-it-work" style="    margin-bottom: 0;"><?php echo $this->lang->line('home_howitwork'); ?></p></button>
 					</div>
 					
 				</div>

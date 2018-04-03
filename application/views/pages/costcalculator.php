@@ -43,7 +43,7 @@
     								<div class="row">
     								
     									<p class="sectoin-title favorite-font"> Select Service</p>
-    									<label class="radio-inline favorite-font opt-service" style="padding-right: 15px;"><input type="radio" name="optradio">BuyForMe</label>
+    									<label class="radio-inline favorite-font opt-service" style="padding-right: 15px;"><input checked="checked" type="radio" name="optradio">BuyForMe</label>
 										<label class="radio-inline favorite-font opt-service"><input type="radio" name="optradio">ShipForMe</label>
     									<div class="my-liner"></div>
     									
@@ -51,17 +51,20 @@
                                         <p class="favorite-font text-desc"><span class="">Items price:</span>(Including domestic shipping fee)</p>
                                         <div class="input-group">
                                            
-                                            <input type="text" class="form-control" placeholder="Amount">
+                                            <input type="text" id="item_price" class="form-control favorite-font" placeholder="">
                                             <span class="input-group-addon favorite-font" style="min-width: 40px;">CNY</span>
+                                            
                                         </div>
-                                        
+                                        <p class="dis-error favorite-font item_price_lbl">Please enter the items price!</p>
                                         
                                         <p class="favorite-font text-desc"><span class="" >Estimate shipping weight:</span></p>
                                         <div class="input-group">
                                            
-                                            <input type="text" class="form-control" placeholder="Amount">
+                                            <input type="text" class="form-control favorite-font" placeholder="" id="item_weight">
                                             <span class="input-group-addon favorite-font" style="min-width: 40px;">KG</span>
+                                             
                                         </div>
+                                        <p class="dis-error favorite-font item_weight_lbl">Please enter the estimate shipping weight!</p>
                                         
                                        <!--  <p class="favorite-font text-desc"><span class="">Shipping to:</span></p>
                                          <select class="form-control" id="sel1">
@@ -78,8 +81,9 @@
                                         		<div class="col-md-4">
                                         			<div class="row" >
                                         				 <div class="input-group" style="padding-top: 5px;">                                        
-                                                            <input type="text" class="form-control favorite-font" placeholder="Length">
-                                                            <span class="input-group-addon favorite-font">CM</span>
+                                                            <input type="text" class="form-control favorite-font" placeholder="Length" id="item_length">
+                                                            <span class="input-group-addon favorite-font">M</span>
+                                                            
                                                         </div>
                                         			</div>
                                         		</div>
@@ -87,8 +91,8 @@
                                         		<div class="col-md-4" >
                                         			<div class="row input-measure" style="padding: 5px 0 0px 5px">
                                         				 <div class="input-group">                                        
-                                                            <input type="text" class="form-control favorite-font" placeholder="Width">
-                                                            <span class="input-group-addon favorite-font">CM</span>
+                                                            <input type="text" class="form-control favorite-font" placeholder="Width" id="item_width">
+                                                            <span class="input-group-addon favorite-font">M</span>
                                                         </div>
                                         			</div>
                                         		</div>
@@ -96,8 +100,8 @@
                                         		<div class="col-md-4" >
                                         			<div class="row input-measure" style="padding: 5px 0 0px 5px">
                                         				 <div class="input-group">                                        
-                                                            <input type="text" class="form-control favorite-font" placeholder="Height">
-                                                            <span class="input-group-addon favorite-font">CM</span>
+                                                            <input type="text" class="form-control favorite-font" placeholder="Height" id="item_height">
+                                                            <span class="input-group-addon favorite-font">M</span>
                                                         </div>
                                         			</div>
                                         		</div>
@@ -109,7 +113,7 @@
                                         
                                         <div class="my-liner"></div>
                                         
-                                        <button class="btn confirm-btn" style="text-transform: none;letter-spacing: 0px; background:#D72320;width: 100%;font-weight: bold;font-size: 18px; ">Confirm</button>
+                                        <button id="calculate_cost" class="btn confirm-btn" style="text-transform: none;letter-spacing: 0px; background:#D72320;width: 100%;font-weight: bold;font-size: 18px; ">Confirm</button>
     									
     								</div>
     							</div>
@@ -147,17 +151,14 @@
     													
     													<p class="favorite-font my-desc">
     														<span>Items price : </span>
-    														$<span>12</span>
+    														$<span id="item_price_result">0</span>
     													</p>
     													
     													<p class="favorite-font my-desc">
     														<span>Serivce Fee:</span>
-    														$<span>0</span>
+    														$<span id="item_service_result">0</span>
     													</p>
-    													<p class="favorite-font my-desc">
-    														<span>Customs Charge:</span>
-    														$<span>0</span>
-    													</p>
+    													
     												</div>
     											</div>
     											
@@ -166,7 +167,7 @@
     													<p class="inside-title favorite-font">Total Amount</p>
     													
     													<p class="result-of-estimate favorite-font">
-    														$<span>100</span>
+    														$<span id="total_price_result">100</span>
     													</p>
     												</div>
     											</div>
@@ -180,9 +181,9 @@
     							<!-- display result of service -->
     							
     							<!-- display image -->
-    							<div class="image-wrapper col-md-12" style="display:none;">
+    							<div class="image-wrapper col-md-12">
     								<div class="row" >
-    									
+    									<img src="https://myfashion2017.s3.amazonaws.com/other/Thefashion_20161129153847-819564.JPG" style="width: 100%;object-fit:cover;height:470px;"/>
     								</div>
     							</div>
     							<!-- display image -->
@@ -204,5 +205,6 @@
 
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
+		<script src="<?php echo base_url();?>assets/js-view/costcalculator.js"></script>
 	</body>
 </html>

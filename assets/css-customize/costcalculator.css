@@ -77,7 +77,7 @@ div.title-header p{
 
 div.image-wrapper{
 	background: #f1f5f6;
-	min-height: 500px;
+	min-height: 470px;
 	border-radius: 4px;
 }
 
@@ -123,7 +123,7 @@ p.text-desc{
 	font-size: 14px;
 	color: #333;
 	margin: 0;
-	margin-top: 15px;
+	
 }
 
 p.text-desc span{
@@ -137,4 +137,12 @@ p.text-desc span{
 .input-group-addon{
 	font-size: 12px !important;
 	padding : 6px 3px;
+}
+
+p.dis-error{
+	color: #cc0033;
+	font-size: 13px;
+	visibility: hidden;
+	margin: 0;
+	margin-top: -2px;
 }

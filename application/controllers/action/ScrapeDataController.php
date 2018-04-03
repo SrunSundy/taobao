@@ -15,117 +15,171 @@ class ScrapeDataController extends REST_Controller
 
     public function scrape_data_by_url_get(){
         
-        $url = $this->input->get('url');
-        $query_str = parse_url($url, PHP_URL_QUERY);
-        parse_str($query_str, $query_params);
-        $id= $query_params['id'];
-        $data = [];
-        $data['size'] = '';
-        $data['img'] = '';
-        $data['color'] = '';
-        $data['colorImage'] = '';
+    	$url = urldecode($this->input->get('url'));
+    	$query_str = parse_url($url, PHP_URL_QUERY);
+    	parse_str($query_str, $query_params);
+    	$id= $query_params['id'];
+    	$api_server = 'http://api.onebound.cn/taobao/api_call.php';
+    	$url = $api_server.'?api_name=item_get&key=cambodg.com&is_promotion=1&num_iid='.$id;
+    	
+    	$data['size'] = '';
+    	$data['img'] = '';
+    	$data['color'] = '';
+    	$data['colorImage'] = '';
+    	
+    	$data = file_get_contents($url);
+    	$obj = json_decode($data,true);
+    	
+    	$price = "";
+    	$data_title = "";
+    	$imagedetail = array();
+    	$colorArray = array();
+    	$colorImageArray = array();
+    	$sizearryName = array();
+    	
+    	$myDesc = array();
+
+    	if(isset($obj['item'])){
+    		
+    		$itemInfo = $obj['item'];
+    		
+    		if(isset($obj['item']['price']))
+    			$price= $obj['item']['price'];
+    		
+    		if(isset($obj['item']['title']))
+    			$data_title = $obj['item']['title'];
+    		
+    		if(isset($itemInfo['item_imgs'])){
+    			foreach($itemInfo['item_imgs'] as $key=>$value){
+    				$imagedetail[]=$value['url'];
+    			
+    			}
+    		}
+    		
+    		
+    		if(isset($itemInfo["desc"])){
+    			$doc = new DOMDocument();
+    			$doc->loadHTML($itemInfo["desc"]);
+    			$imageTags = $doc->getElementsByTagName('img');
+    			
+    			foreach($imageTags as $tag) {
+    			
+    				$myDesc[]=$tag->getAttribute('src');
+    			}
+    			 
+    			
+    		}
+    		
+    		
+    		 
+    		/*$skus = json_decode(json_encode($itemInfo['skus']),true);
+    		$skus_arr = array();
+    		
+    		if($skus['sku']){
+    			$qs = 0;
+    			foreach($skus['sku'] as $sku){
+    				$qs+=$sku['quantity'];
+    			}
+    			foreach($skus['sku'] as $sku){
+    				if(!$sku['quantity'] && !$qs)$sku['quantity']=999;
+    				$sku['price'] = $this->taobao_price($sku['price'],$itemInfo['num_iid'],$itemInfo['cid']);
+    				$sku['orginal_price'] = $this->taobao_price($sku['orginal_price'],$itemInfo['num_iid'],$itemInfo['cid']);
+    				$skus_arr[] = array(
+    						$sku['sku_id'],
+    						$sku['properties'],
+    						$sku['price'],
+    						(int)$sku['quantity'],
+    						$sku['orginal_price']
+    				);
+    			}
+    			 
+    			 
+    		}
+    		
+    		$skus_json = json_encode($skus_arr);*/
+    		 
+    		$prop_imgs_arr = array();
+    		
+    		if(isset($itemInfo['prop_imgs'])){
+    			
+    			$prop_imgs = json_decode(json_encode($itemInfo['prop_imgs']),true);
+    			if($prop_imgs['prop_img']){
+    				foreach($prop_imgs['prop_img'] as $prop_img){
+    					$prop_imgs_arr[$prop_img['properties']] = $prop_img['url'];
+    				}
+    			}
+    		}
+    	
+    			
+    		
+    		
+    		$prop_array=array();
+    		
+    		if(isset($itemInfo['props_list'])){
+    			foreach($itemInfo['props_list'] as $dk=>$val){
+    				$dks=explode(':',$dk);
+    				$vals=explode(':',$val);
+    				$prop_img = !empty($prop_imgs_arr[$dks[0].':'.$dks[1]])?$prop_imgs_arr[$dks[0].':'.$dks[1]]:'';
+    			
+    				$prop_array[$dks[0]][$dks[1]]=array(
+    						'prop_key'=>$dks[0],
+    						'prop_val'=>$dks[1],
+    						'name'=>$vals[0],
+    						'value'=>$vals[1],
+    						'pic_url'=>$prop_img,
+    				);
+    			}
+    		}
+    		
+    		 
+    		 
+    		############################ 	feacg color and collor image ######################################
+    		 
+    		foreach($prop_array as $dk=>$dv){
+    		 $dvv = current($dv);
+    		
+    		 foreach($dv as $dkk=>$value){
+    		
+	    			if($dvv['name']=='尺寸' || $dvv['name']=='尺码'){
+	    				$sizearryName[]=$value['value'];
+	    			}
+	    			if($dvv['name']=='颜色分类' || $dvv['name']=='主要颜色' ||  $dvv['name']=='颜色'){
+	    			   $colorArray[]=$value['value'];
+	    			   $colorImageArray[]=$value['pic_url'];
+	    			 }
+    		   }
+    		
+    		
+    		}
+    		
+    		
+    		
+    	}
+
+    	
+    	
+		
+		if(isset($obj["item"]["error"]) && $obj["item"]["error"] != ""){
+			$myData["status"] = "410";
+		}else
+		{
+			$myData["status"] = "200";
+		}
         
-        $data = file_get_contents("https://hws.alicdn.com/cache/wdetail/5.0/?id=$id");
-        $data1 = preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/', function ($match) {
-            return mb_convert_encoding(pack('H*', $match[1]), 'UTF-8', 'UTF-16BE');
-        }, $data);
-            
-            
-        $data=json_decode($data1,true) ;
-        
-       
-        $itemPrice = "";
-        if(isset($data['data']['apiStack'])){
-            $priceDom = $data['data']['apiStack'];
-            if(count($priceDom) > 0){
-                $priceInnerDom = $priceDom[0];
-                if(isset($priceInnerDom["value"])){
-                    $itemPrice = json_decode($priceInnerDom["value"]);
-                    
-                    $aliasDom = $itemPrice->data->itemInfoModel->priceUnits;
-                    if(isset($aliasDom)){
-                        if(count($aliasDom) > 0){
-                            $priceTag = $aliasDom[0];
-                            $itemPrice = $priceTag->price;
-                        }
-                    }
-                        
-                }
-            }
-        }
-        
-        $myDesc ="";
-        
-        if(isset($data['data']['descInfo']['briefDescUrl'])){
-            $descImage = urldecode ("http:".$data['data']['descInfo']['briefDescUrl']);
-            $getDescImage = file_get_contents($descImage);
-            $getDescImage=json_decode($getDescImage,true);
-            
-            
-            if($getDescImage['data']['images'])
-                $myDesc = $getDescImage['data']['images'];
-        }
-        
-       
-        $sizearryName = array();
-        $colorImageArray = array();
-        $colorArray = array();
-        if(isset($data['data']['skuModel']['skuProps'])){
-            foreach($data['data']['skuModel']['skuProps'] as $value){
-                
-                
-                if($value['propName']=='å°ºå¯¸' || $value['propName']=='å°ºç �'){
-                    
-                   
-                    foreach($value['values'] as $size){
-                        
-                        if(isset($size['name']))
-                            $sizearryName[]=$size['name'];
-                            
-                    }
-                }
-                
-              
-                if($value['propName']=='é¢œè‰²åˆ†ç±»' || $value['propName']=='ä¸»è¦�é¢œè‰²' ||  $value['propName']=='é¢œè‰²'){
-                    foreach($value['values'] as $color){
-                        
-                        if(isset($color['name']))
-                            $colorArray[]=$color['name'];
-                            if(isset($color['imgUrl']))
-                                $colorImageArray[]=$color['imgUrl'];
-                                
-                    }
-                }
-                
-            }
-        }
-        
-        
-        $image= array();
-        $title = '';
-        
-        if(isset($data['data'])){
-            if(isset($data['data']['itemInfoModel']['picsPath'])){
-                $image = $data['data']['itemInfoModel']['picsPath'];
-            }
-            if(isset($data['data']['itemInfoModel']['title'])){
-                $title = $data['data']['itemInfoModel']['title'];
-            }
-        }
-       
-        
-        
-        
-        $myData['title'] = $title;
+        $myData['title'] = $data_title;
         $myData['color'] = $colorArray;
         $myData['colorImage'] = $colorImageArray;
-        $myData['image'] = $image;
+        $myData['image'] = @$imagedetail;
         $myData['size'] = (empty($sizearryName) ? '':$sizearryName);
-        $myData['price'] = $itemPrice;
+        $myData['price'] = $price;
         $myData["image_detail"] = $myDesc;
+    	
+        $this->response( $myData ,200);
         
-        $this->response($myData ,200);
         
-        
+    }
+    
+    function taobao_price($price,$id,$cid){
+    	return $price*1;
     }
 }

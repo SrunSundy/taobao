@@ -1,4 +1,13 @@
 
+
+
+
+@media( max-width:480px){
+.how-it-work{
+	font-size: 22px;
+}
+}
+
 tr.service-fee{
 	height: 50px;
 	border-right: 1px solid #E5E5E5;
