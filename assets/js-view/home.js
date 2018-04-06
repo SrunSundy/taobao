@@ -10,12 +10,24 @@ $( document ).ready(function() {
 
 function loadData(){
 	
+	var data = {
+		"row" : "8",
+		"page" : "1",
+		"sort_type": "0"
+	};
+	
 	$.ajax({
 		method : "GET",
+		data : data,
 		url :  $("#base_url").val()+"action/PortFolioController/list_portfolio",
 		success : function(data){
 			
-			console.log(data);
+			
+			if(data.response_code == "200"){
+				console.log(data.response_data);
+				$("#portfolio_result").tmpl(data.response_data).appendTo("#portfolio_display");
+			}
+		
 		}
 	});
 }
