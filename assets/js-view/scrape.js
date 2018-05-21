@@ -46,7 +46,8 @@ $( document ).ready(function() {
 		myVal =myVal.replace(/[^\d\.]/g, "")
 		  .replace(/\./, "x")
 		  .replace(/\./g, "")
-		  .replace(/x/, ".");;
+		  .replace(/x/, ".")
+		  .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		
 		$(".item_price_input").val(myVal);
 	});
@@ -58,7 +59,8 @@ $( document ).ready(function() {
 		myVal =myVal.replace(/[^\d\.]/g, "")
 		  .replace(/\./, "x")
 		  .replace(/\./g, "")
-		  .replace(/x/, ".");;
+		  .replace(/x/, ".")
+		  .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		
 		$(this).val(myVal);
 	});
@@ -68,8 +70,8 @@ $( document ).ready(function() {
 		
 		var myPrice = $(this).val();
 		if(!myPrice)myPrice = 0;
-		var toDollar = parseFloat(myPrice)/ 6.3;
-		$(".dollar-product-price").html(toDollar.toFixed(2));
+		var toDollar = parseFloat(myPrice.replace(/,/g, ''))/ 6.3;
+		$(".dollar-product-price").html(toDollar.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 	});
 	
 	$(document).on("click","div.box-small", function(){
@@ -150,17 +152,39 @@ $( document ).ready(function() {
 		
 		var itemPriceDollar = $("#dollar-product-price").text().replace(/[^0-9.]/g, '');
 		
+		var url = new URL($("#scrape_url").val());
+		var itemId = url.searchParams.get("id");
+		
+		
+		var itemQty = parseInt($("#item_qty").val().replace(/[^0-9.]/g, ''));
+		/*var itemInfo = [];
+		
+		for(var i=0; i<itemQty; i++){
+			itemInfo.push({
+				"size" : $("#size_wrapper").find("div.active-size-item").eq(0).find("span").text(),
+				"color" : itemColor
+			});
+		}*/
+		
+		
 		var resq_data = {
+			"item_id" : itemId,
+			"item_url" : $("#scrape_url").val(),
 			"item_photo" : $("div.box-small").eq(0).find("img.small-image").data("real_src"),
 			"item_title" : $("p#item_title").text(),
 			"item_price" : itemPrice,
 			"item_price_dollar" : itemPriceDollar,
-			"item_domestic": $("#delivery_fee").val().replace(/[^0-9.]/g, ''),
-			"item_size" : $("#size_wrapper").find("div.active-size-item").eq(0).find("span").text(),
-			"item_color" : itemColor,
+			"item_domestic": $("#delivery_fee").val().replace(/[^0-9.]/g, ''),		
 			"item_qty" : $("#item_qty").val().replace(/[^0-9.]/g, ''),
+			"item_size" :  $("#size_wrapper").find("div.active-size-item").eq(0).find("span").text(),
+			"item_color" : itemColor,
 			"item_message" : $("#customer_message").val()
 		};
+		
+		/*var validateData = {
+			"item_size" : $("#size_wrapper").find("div.active-size-item").eq(0).find("span").text(),
+			"item_color" : itemColor
+		}*/
 		
 		if(!isValidation(resq_data)){
 			return;
@@ -175,7 +199,7 @@ $( document ).ready(function() {
 		
 		$.ajax({
 			method : "POST",
-			url :  $("#base_url").val()+"action/addtocartcontroller/add_to_cart",
+			url :  $("#base_url").val()+"action/AddToCartController/add_to_cart",
 			data : data,
 			success : function(data){
 				clearTimeout(myTimerSuccess);
@@ -236,6 +260,8 @@ function isValidation(resq_data){
 loadData();
 function loadData(){
 	
+	$("#my_loader").show();
+	$("#all_content").css("visibility", "hidden");
 	$("button.event-btn").addClass("disabled");
 	$("#image-detail").html("<div class='col-md-12 row' style='text-align:center'><img src='"+$("#base_url").val()+"assets/img/loading.gif' /></div>");
 	$.ajax({
@@ -255,12 +281,13 @@ function loadData(){
 			
 			$(".product-title").html(data.title);
 			
-			$(".item_price_input").val(data.price);
+			
 			
 			if(data.price){
+				$(".item_price_input").val(data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 				var toDollar = parseFloat(data.price)/ 6;
-				$(".dollar-product-price").html(toDollar.toFixed(2));
-				$(".price_amount").html(data.price);
+				$(".dollar-product-price").html(toDollar.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+				$(".price_amount").html(data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 			}else{
 				$(".price_amount").html("0");
 			}
@@ -268,8 +295,14 @@ function loadData(){
 			
 			if(data.image.length > 0){
 				
-	
-				$("#big_image").attr("src", data.image[0]);
+				var bigImage = new Image();
+				bigImage.src = data.image[0];
+				
+				bigImage.onload = function () {					
+					$("#big_image").attr("src", data.image[0]);
+					$("#my_loader").hide();
+					$("#all_content").css("visibility", "visible");
+				}
 				
 				var imageHtml = "";
 				var myImage = data.image;
@@ -282,7 +315,7 @@ function loadData(){
 					var img = new Image();
 					img.src = myImage[i]+"_80x80.jpg";	
 					img.onload = function () {
-						console.log(this);
+						
 						if( this.height > this.width){
 							bigNum = 1;
 						}

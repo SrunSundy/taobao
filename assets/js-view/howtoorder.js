@@ -57,7 +57,7 @@ function findActiveIndex(type){
 			index = index+1;
 	}else{
 		if(index <= 0)
-			index = 4;
+			index = 2;
 		else
 			index = index-1;
 	}

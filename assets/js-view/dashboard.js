@@ -43,3 +43,4 @@ function calculateImageWidth(){
     	$("#btn_set_menu").addClass("fa-plus");
     }
 }
+
