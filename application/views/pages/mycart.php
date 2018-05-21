@@ -11,6 +11,26 @@
 		 #myNav li:not([disabled]){
             cursor:pointer;
         }
+		input[type=checkbox]{
+		  /* Double-sized Checkboxes */
+		  -ms-transform: scale(1.5); /* IE */
+		  -moz-transform: scale(1.5); /* FF */
+		  -webkit-transform: scale(1.5); /* Safari and Chrome */
+		  -o-transform: scale(1.5); /* Opera */
+		  padding: 2px;
+		  margin-right: 3px;
+		}
+		.spin-control {
+			font-size: 0.7em;
+		}
+
+		#spinner-input {
+		  
+		   height: 100%;
+
+		   text-align:center;
+		}
+
 		</style>
 	</head>
 
@@ -42,9 +62,12 @@
 						</div>
 						
 						
-						
+						<?php 
+						$cart= @$this->session->userdata['my_cart'];
+						if(empty($cart)){
+						?>
 						<!-- no records in cart -->
-						<div class="no-data col-md-12" style="display:none;">
+						<div class="no-data col-md-12" style="display:block;">
 							<div class="row">
 							
     							<div class="no-data-title ">
@@ -63,9 +86,10 @@
             								<p style="display:inline-block;font-weight:bold;" class="favorite-font">
             									<?php echo $this->lang->line('my_cart_empty'); ?>
             								</p>
-            								 
+											<form action="scrape" method="GET" id="scrape_url">
             								<div class="input-group" style="margin-top: 15px;">
-                                              <input type="text" class="form-control" placeholder="Please enter product's name" style="height:35px;border-radius: 30px 0 0 30px; border-top: 1px solid #a0a0a0;border-left: 1px solid #a0a0a0;border-bottom: 1px solid #a0a0a0;">
+											 
+                                              <input type="text" name="input_url" class="form-control" placeholder="Please enter product's name" style="height:35px;border-radius: 30px 0 0 30px; border-top: 1px solid #a0a0a0;border-left: 1px solid #a0a0a0;border-bottom: 1px solid #a0a0a0;">
                                               <span class="input-group-btn">
                                                 <button id="scrape_data" class="btn btn-secondary favorite-font" style="    height: 35px;
                                                                                                                             padding-left: 14px;
@@ -82,8 +106,9 @@
                                                 	<i class="fa fa-search" style="font-size: 18px;"></i>
                                                 </button>
                                               </span>
+											  
                                             </div>
-                                            
+                                            </form>
                                             <button onclick="location.href='<?php echo base_url(); ?>/home'" class="btn event-btn" type="button" style="letter-spacing: 0; text-transform: none; background:#d72320;height:40px;margin-top: 15px; ">
                 								<p class="favorite-font" style="margin-top: -5px;font-weight:bold;"><?php echo $this->lang->line('my_cart_go_home'); ?></p>
                 							</button>
@@ -95,7 +120,8 @@
 							</div>							
 						</div>
 						<!-- no records in cart -->
-						
+						<?php }
+						else{?>
 						
 						<!-- have records in cart -->
 						<div class="col-md-12" style="margin-top: 12px;">
@@ -134,18 +160,87 @@
                                 
                                 <div class=" setup-content" id="step-1">
                                     <div class="col-xs-12 row">
-                                        <div class="col-md-12 well text-center">
-                                            <h1> STEP 1</h1>
-                                            <!-- <form> -->
-                        
-                                            <div class="container col-xs-12">
-                                                <input />
-                                            </div>
-                                            <input onclick="step1Next()" class="btn btn-md btn-info" value="Next">
-                        
-                                            <!-- </form> -->
+                                        <div class="col-md-12">
+                                        <table width="100%">
+                                         
+											
+                                            
+                                        </table>
                                         </div>
-                                    </div>
+										<div style="padding:7px" class="col-md-12 text-center">
+                                        <table width="100%">
+										   <thead>
+												<tr style="  background-color: #f5f5f5; padding:7px" class= "text-center">
+													<td width="10%" class="text-left"> &nbsp;&nbsp;&nbsp;<input class="select_all" type="checkbox" /> All</td>
+													<td width="10%"></td>
+													<td width="30%">Items</td>
+													<td class="text-left" width="10%">Unit Price</td>
+													<td width="10%">Qty</td>
+													<td width="10%">Domestic Express</td>
+													<td width="10%">Total</td>
+													<td width="10%">Message</td>
+												</tr>
+											</thead>
+											<tbody>
+											<?php 
+											
+											foreach($cart as $carts){?>
+												<tr >
+													<td width="10%">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<input type="checkbox" class="checkbox"/></td>
+													
+													<td width="10%"><img src="<?=$carts['item_photo']?>_90x90.jpg"></img></td>
+													<td width="30%"><small><?=$carts['item_title']?></small></br><small style="color:#E91E63">(<?=$carts['item_color']?>,<?=$carts['item_size']?>)</small></td>
+													<td class="price_tb text-center" width="10%"><?=$carts['item_price_dollar']?></td>
+													<td class=" text-center" width="10%">
+													
+													<div class="input-append spinner col-lg-8 col-md-8 col-xs-8" data-trigger="spinner">
+														<div class="input-group" style="width:150px;">
+															<span class="input-group-addon">
+															<a href="javascript:;" class="spin-down spin-control qtyminus" field='quantity'><i class="glyphicon glyphicon-minus"></i></a>
+															</span>
+															<input type="text" readonly style="background-color:white" name="product_qty" id="spinner-input" class="form-control qty-input qty_tb" value="<?=$carts['item_qty']?>" /> 
+
+															<span class="input-group-addon">
+															
+															<a href="javascript:;" class="spin-up spin-control qtyplus" field='quantity'><i class="glyphicon glyphicon-plus"></i></a>
+															</span>
+
+														</div>
+													</div> 
+													</td>
+													
+													<td width="10%"><?=$carts['item_domestic']?></td>
+													<td style="color:#E91E63" class="cart_total_price" width="10%"><?=$carts['item_qty'] * $carts['item_price_dollar']?></td>
+													<td width="10%"><input type="text" value="<?=$carts['item_message'] ?>" /></td>
+												</tr>
+											<?php }
+																						
+											?>
+											</tbody>
+                                            
+                                        </table>
+                                        </div>
+										<div style="  background-color: #f5f5f5; padding:7px" class="col-md-12 text-center">
+										   <table width="100%">
+												<tr>
+												 <td width="12%" class="text-left"> <a href="<?php echo base_url();?>/empty_cart">Delete</a>
+												 
+												 </td>
+												 <td width="12%"></td>
+												 <td width="12%" class="text-right">Total <b class="total-qty">0</b> qty</td>
+												 <td width="12%" class="text-right">My balance <b style="color:#E91E63">$0</b></td>
+												 <td width="15%" class="text-center">Awaiting Payment <b style="color:#E91E63">$0</b></td>
+												 <td width="14%" class="text-right">Total Panyment <b style="color:#E91E63" class="total-pay" >$0</b></td>
+												 <td width="6%"><input onclick="step1Next()" class="btn  btn-danger btn-sm pull-right " value="Pay"></td>
+												</tr>
+										   </table>
+												
+										</div>
+										
+                                          
+                                           
+                                        </div>
+                                    
                                 </div>
                                 <div class="setup-content" id="step-2">
                                     <div class="col-xs-12 row">
@@ -197,7 +292,7 @@
 						</div>
 						
 						<!-- have records in cart -->
-						
+					<?php }?>
 					</div>
 				</div>
 			</div>

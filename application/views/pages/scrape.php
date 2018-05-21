@@ -42,9 +42,14 @@
 		<!-- ::::::::::::::::::::: Accordian Section:::::::::::::::::::::::::: -->
 		<section class="accordian-section section-padding" style="padding-top: 55px;">
 			<div class="container">
-					
 				
-					<div class="col-md-5">
+				<div class="col-md-12" style="text-align:center;display:none" id="my_loader">
+					<p class="favorite-font" style="z-index:10">Please wait. Loading...</p>
+					<img src="<?php echo base_url()?>assets/img/loading.gif" style="    margin-top: -25px;" />
+				</div>
+									
+				 <div id="all_content">
+				 	<div class="col-md-5">
 						<div id="for-small-title" style="padding-bottom: 30px;display:none;">
 							<div class="box-title div-main">
     							<p class="favorite-font product-title" ></p>
@@ -215,8 +220,11 @@
 						</div>
 						
 					</div>
+				 </div>
 					
 					
+					
+				
 				
 			</div>
 		</section><!-- end accordian section -->

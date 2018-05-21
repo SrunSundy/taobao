@@ -9,6 +9,8 @@
 <script src="<?php echo base_url();?>assets/js/ajaxchimp-config.js"></script> 
 <script src="<?php echo base_url();?>assets/js/script.js"></script>
 <script src="<?php echo base_url();?>assets/plugin/jquery-tmpl/jquery.tmpl.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugin/bootpag/jquery.bootpag.min.js"></script>
+
 <!-- highlight selected menu item -->
 <script>
 var t = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);

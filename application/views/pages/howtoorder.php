@@ -44,11 +44,11 @@
 					<div class="col-md-12">
 						
 						<ul class="order-menu-bar">
-							<li class="to-next active"><a class="favorite-font">Place Order</a></li>
-							<li class="to-next"><a class="favorite-font">Purchasing</a></li>
-							<li class="to-next"><a class="favorite-font">Submit Delivery</a></li>
-							<li class="to-next"><a class="favorite-font">Distribution</a></li>
-							<li ><a class="favorite-font">Parcel Confirmation</a></li>						
+							<li class="to-next active"><a class="favorite-font">Copy URL</a></li>
+							<li class="to-next"><a class="favorite-font">Paste URL</a></li>
+							<li><a class="favorite-font">Purchasing</a></li>
+							<!-- <li class="to-next"><a class="favorite-font">Distribution</a></li>
+							<li ><a class="favorite-font">Parcel Confirmation</a></li>	 -->					
 						</ul>
 						
 					</div>
@@ -60,31 +60,24 @@
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide-to="1"></li>
                             <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                            
                           </ol>
                         
                           <!-- Wrapper for slides -->
                           <div class="carousel-inner" id="all-img-wrapper">
                             <div class="item active img-slide-wrapper">
-                              <img src="http://img.yoybuy.com/V6/BuyForMe/work2_1en.jpg" alt="Los Angeles">
+                              <img src="assets/img/slide/slide_1.jpg" alt="Los Angeles">
                             </div>
                         
                             <div class="item img-slide-wrapper">
-                              <img src="http://img.yoybuy.com/V6/BuyForMe/work1_1en.jpg" alt="Chicago">
+                              <img src="assets/img/slide/slide_2.jpg" alt="Chicago">
                             </div>
                         
                             <div class="item img-slide-wrapper">
-                              <img src="http://img.yoybuy.com/V6/BuyForMe/work4_1en.jpg" alt="New York">
+                              <img src="assets/img/slide/slide_3.jpg" alt="New York">
                             </div>
                             
-                            <div class="item img-slide-wrapper">
-                              <img src="http://img.yoybuy.com/V6/BuyForMe/work4_1en.jpg" alt="New York">
-                            </div>
-                            
-                            <div class="item img-slide-wrapper">
-                              <img src="http://img.yoybuy.com/V6/BuyForMe/work4_1en.jpg" alt="New York">
-                            </div>
+                           
                             
                           </div>
                         

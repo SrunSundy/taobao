@@ -19,7 +19,7 @@ $lang['home_call_us'] = "លេខទំនាក់ទំនង";
  $lang['home_latestnews'] = "ពត៌មានថ្មីៗ";
  $lang['home_seemore'] = "មើលបន្ថែម";
  $lang['home_readmore'] = "អានបន្ថែម...";
- $lang['home_ourportfolio'] = "កំរងរូបភាពឯកសាររបស់យើង";
+ $lang['home_ourportfolio'] = "កំរងរូបភាពរបស់យើង";
  $lang['home_teammember'] = "សមាជិកក្រុមរបស់យើង";
  
  $lang['scrape_cart_btn'] = "បន្ថែមចូលរទេះទំនិញ";

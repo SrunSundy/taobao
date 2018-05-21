@@ -16,6 +16,8 @@
 
 
 	<body>
+		<input type="hidden" value="<?php echo base_url();  ?>" id="base_url" />
+		
 		<?php include 'include/loader.php' ?>
 		<!-- ::::::::::::::::::::: Header Section:::::::::::::::::::::::::: -->
 		<header>
@@ -64,7 +66,10 @@
 														<div class="left-wrapper col-md-6">
 															<div class="row">
 																<div class="col-md-12 profile-wrapper">
-		    														<div class="row" style="padding: 13px 15px 15px 13px;">
+		    														<div class="row" style="margin-top: 13px;
+																						    padding-left: 13px;
+																						    padding-right: 15px;
+																						    padding-bottom: 15px;border-right: 1px solid #e1e1e1;">
 		    																															
 		    															<img src="<?php echo base_url();?>assets/img/default.jpg" class="item-photo profile-photo" />															
 		    															
@@ -110,34 +115,10 @@
 														<div class="col-md-6">
 															<div class="row">
 																<div class="col-md-12 news-wrapper">
-		    														<div class="row" style="    margin: 13px -15px 10px -15px;border-left: 1px solid #e1e1e1;padding: 0 8px 0px 15px;">
+		    														<div class="row" style="    margin: 13px -15px 10px -15px;padding: 0 8px 0px 15px;">
 			    														<p class="favorite-font section-title"><strong>News</strong></p>
-				    													<div class="news-list">
-				    														<div class="news-row">
-				    															<a class="news-title favorite-font">2018 Spring special holiday promotion</a>
-				    															<a class="news-date favorite-font">2018-02-02</a>
-				    															<div style="clear:both;"></div>
-				    														</div>
-				    														<div class="news-row">
-				    															<a class="news-title favorite-font">2018 Spring special holiday promotion</a>
-				    															<a class="news-date favorite-font">2018-02-02</a>
-				    															<div style="clear:both;"></div>
-				    														</div>
-				    														<div class="news-row">
-				    															<a class="news-title favorite-font">2018 Spring special holiday promotion</a>
-				    															<a class="news-date favorite-font">2018-02-02</a>
-				    															<div style="clear:both;"></div>
-				    														</div>
-				    														<div class="news-row">
-				    															<a class="news-title favorite-font">2018 Spring special holiday promotion</a>
-				    															<a class="news-date favorite-font">2018-02-02</a>
-				    															<div style="clear:both;"></div>
-				    														</div>
-				    														<div class="news-row">
-				    															<a class="news-title favorite-font">2018 Spring special holiday promotion</a>
-				    															<a class="news-date favorite-font">2018-02-02</a>
-				    															<div style="clear:both;"></div>
-				    														</div>
+				    													<div class="news-list" id="news_display">
+				    														
 				    														
 				    													</div>
 		    														</div>
@@ -275,5 +256,14 @@
 		<!-- main jQuery -->
 		<?php include 'include/imscript.php' ?>
 		<script src="<?php echo base_url();?>assets/js-view/dashboard.js"></script>
+		<script src="<?php echo base_url();?>assets/js-view/userdashboard.js"></script>
+		
+		<script id="news_result" type="text/x-jQuery-tmpl">
+			<div class="news-row" onclick="location.href='news_detail?news_id={{= news_id}}'">
+				<a class="news-title favorite-font">{{= title }}</a>
+				<a class="news-date favorite-font">{{= formatDate(created_date) }}</a>
+				<div style="clear:both;"></div>
+			</div>
+   		</script>
 	</body>
 </html>

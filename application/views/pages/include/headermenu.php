@@ -36,7 +36,8 @@
 					<div class="row">
     					<ul>
     					    <li style="margin-right: 15px;display:none; " class="small-phone" >
-    							<a class="" href="tel:010 666 520"  style="background:#790000; border: 0;border-radius: 5px;height: auto; width: auto;line-height: 18px;padding: 2px 6px;color:white;margin-left:0;">
+    							<a class="" href="tel:010 666 520"  style="background:#790000; border: 0;border-radius: 5px;height: auto; width: auto;line-height: 18px;padding: 2px 6px;color:white;margin-left:0;margin-top: 3px;
+    font-size: 11px;">
     								<i class="fa fa-phone"></i>
     							</a>
     						</li>
@@ -114,7 +115,7 @@
 				data-target="#navbar-menu">
 				<i class="fa fa-bars"></i>
 			</button>
-			<a class="navbar-brand display-logo" href="index.html"
+			<a class="navbar-brand display-logo" href="home"
 				style="margin-top: 0 !important; width: 150px"><img
 				src="<?php echo base_url();?>assets/img/logo/logo.png" class="logo logo-scrolled"
 				style="margin-top: -10px;" alt=""></a>

@@ -38,7 +38,7 @@
                                                 <div class="input-group">
                                                  
                                                       <input type="text" name="input_url" id="input_url" class="form-control" placeholder="https://item.taobao.com/item.htm?id=541239586337" style="border-radius: 0; border-top: 3px solid #c23000;border-left: 3px solid #c23000;border-bottom: 3px solid #c23000;">
-                                                      <span class="input-group-btn">
+                                                      <span class="input-group-btn" style="z-index:10">
                                                         <button id="scrape_data" class="btn btn-secondary favorite-font" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;    letter-spacing: 0;" type="button"><?php echo $this->lang->line('home_search'); ?></button>
                                                       </span>
                                                 
@@ -103,15 +103,15 @@
 				<div class="row">
 					<div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
 						<div class="intro-title text-center">
-							<h2  class="favorite-font-amaranth how-to-order" style="font-size: 50px;font-weight:bold;color:#313131;<?php if($this->session->userdata('site_lang') == 'english') echo 'margin-bottom:10px'; else echo 'margin-bottom:35px;';?>"><?php echo $this->lang->line('home_howtoorder'); ?></h2>
+							<h2  class="favorite-font how-to-order" style="font-size: 50px;font-weight:bold;color:#313131;<?php if($this->session->userdata('site_lang') == 'english') echo 'margin-bottom:10px'; else echo 'margin-bottom:35px;';?>"><?php echo $this->lang->line('home_howtoorder'); ?></h2>
 							
-							<p class="favorite-font-amaranth how-to-order-detail" style="font-size:22px;color:#7F7F7F;line-height: 30px;"><?php echo $this->lang->line('home_howtoorder_desc'); ?></p>
+							<p class="favorite-font how-to-order-detail" style="font-size:22px;color:#7F7F7F;line-height: 30px;"><?php echo $this->lang->line('home_howtoorder_desc'); ?></p>
 							
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-3 col-xs-6">
 						<div class="box-wrapper">
 							<div class="box-image">
 								<img src="<?php echo base_url();?>assets/img/icon/url.png" style="width:110px"/>
@@ -120,7 +120,7 @@
 						</div>
 					</div>
 					
-					<div class="col-md-3">
+					<div class="col-md-3 col-xs-6">
 						<div class="box-wrapper">
 							<div class="box-image">
 								<img src="<?php echo base_url();?>assets/img/icon/purchase.png" style="width:110px"/>
@@ -129,7 +129,7 @@
 						</div>
 					</div>
 					
-					<div class="col-md-3">
+					<div class="col-md-3 col-xs-6">
 						<div class="box-wrapper">
 							<div class="box-image">
 								<img src="<?php echo base_url();?>assets/img/icon/delivery.png" style="width:110px"/>
@@ -138,7 +138,7 @@
 						</div>
 					</div>
 					
-					<div class="col-md-3">
+					<div class="col-md-3 col-xs-6">
 						<div class="box-wrapper">
 							<div class="box-image">
 								<img src="<?php echo base_url();?>assets/img/icon/payment.png" style="width:110px"/>
@@ -182,7 +182,7 @@
         	                      <td class="favorite-font cls-tbl-detail" >10%</td>
         	                      <td class="favorite-font cls-tbl-detail">10%</td>
         	                      <td class="favorite-font cls-tbl-detail" >8%</td>                                       
-        	                      <td class="favorite-font cls-tbl-detail" style="color: #f60">0%</td>
+        	                      <td class="favorite-font cls-tbl-detail" style="color: #f60">coming soon</td>
         	                    
         	                     </tr>
                            	   </tbody>
@@ -193,7 +193,7 @@
 				
 				<div class="row" style="margin-top: 30px;">
 					<div class="button-wrapper" style="text-align:center;">
-						<button class="btn" onclick="location.href='how_to_order'" ><p class="favorite-font-amaranth how-it-work" style="    margin-bottom: 0;"><?php echo $this->lang->line('home_howitwork'); ?></p></button>
+						<button class="btn" onclick="location.href='how_to_order'" ><p class="favorite-font how-it-work" style="    margin-bottom: 0;"><?php echo $this->lang->line('home_howitwork'); ?></p></button>
 					</div>
 					
 				</div>
@@ -207,67 +207,59 @@
 				<div class="row">
 					<div class="my-box-header">
 						<div class="text-header-wrapper">
-							<p class="favorite-font" ><?php echo $this->lang->line('home_latestnews'); ?></p>
-							<a class="see-more favorite-font" ><?php echo $this->lang->line('home_seemore'); ?></a>
+							<p class="favorite-font"  style="font-size: 18px;"  ><?php echo $this->lang->line('home_latestnews'); ?></p>
+							<a href="<?php echo base_url(); ?>list_news" class="see-more favorite-font" ><?php echo $this->lang->line('home_seemore'); ?></a>
 						</div>
 						
 						<div class="liner"></div>
 					</div>
 					
 					<div class="news-wrapper" style="margin-top: 35px;">
-						<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
-							<div class="row">
-								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="<?php echo base_url();?>assets/img/default.jpg" />
-        							</div>
-        							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
-        							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
-        							<a class="news-read-more favorite-font" href="#"><?php echo $this->lang->line('home_readmore'); ?></a>
-								</div>								
+						
+						<div id="news_display">
+						
+							<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
+								<div class="row">
+									<div class="gap-divider">
+										<div class="">
+											<img src="<?php echo base_url();?>assets/img/load_stuck_1.png" />
+	        							</div>
+	        							
+									</div>								
+								</div>
 							</div>
-						</div>
-						
-						<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
-							<div class="row">
-								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="<?php echo base_url();?>assets/img/default.jpg" />
-        							</div>
-        							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
-        							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
-        							<a class="news-read-more favorite-font" href="#">read more...</a>
-								</div>								
+							<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
+								<div class="row">
+									<div class="gap-divider">
+										<div class="">
+											<img src="<?php echo base_url();?>assets/img/load_stuck_1.png" />
+	        							</div>
+	        							
+									</div>								
+								</div>
 							</div>
-						</div>
-						
-						<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
-							<div class="row">
-								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="<?php echo base_url();?>assets/img/default.jpg" />
-        							</div>
-        							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
-        							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
-        							<a class="news-read-more favorite-font" href="#">read more...</a>
-								</div>								
+							<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
+								<div class="row">
+									<div class="gap-divider">
+										<div class="">
+											<img src="<?php echo base_url();?>assets/img/load_stuck_1.png" />
+	        							</div>
+	        							
+									</div>								
+								</div>
 							</div>
-						</div>
-						
-						<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
-							<div class="row">
-								<div class="gap-divider">
-									<div class="image-thumbnail">
-										<img src="<?php echo base_url();?>assets/img/default.jpg" />
-        							</div>
-        							<p class="news-title favorite-font">MI MIX 2S បំពាក់ដោយកាមេរ៉ា SONY បិទកម្មវិធី</p>
-        							<p class="news-des favorite-font">វីដេអូ Mi Mix 2S បិទកម្មវិធី​ដោយ​ប្រើ​កាយ​វិការ និង....</p>
-        							<a class="news-read-more favorite-font" href="#">read more...</a>
-								</div>								
+							<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
+								<div class="row">
+									<div class="gap-divider">
+										<div class="">
+											<img src="<?php echo base_url();?>assets/img/load_stuck_1.png" />
+	        							</div>
+	        							
+									</div>								
+								</div>
 							</div>
+						
 						</div>
-						
-						
 						
 						
 					</div>
@@ -280,16 +272,92 @@
 				<div class="row">
 					<div class="my-box-header">
 						<div class="text-header-wrapper">
-							<p class="favorite-font" ><?php echo $this->lang->line('home_ourportfolio'); ?></p>
-							<a class="see-more favorite-font" ><?php echo $this->lang->line('home_seemore'); ?></a>
+							<p class="favorite-font" style="font-size: 18px;"><?php echo $this->lang->line('home_ourportfolio'); ?></p>
+							<a href="<?php echo base_url(); ?>list_portfolio" class="see-more favorite-font" ><?php echo $this->lang->line('home_seemore'); ?></a>
 						</div>
 						
 						<div class="liner"></div>
 					</div>
 					
 					<div class="portfolio-wrapper" style="margin-top: 35px;">
+						 
+						<div id="portfolio_display">
 						
-						<div id="portfolio_display"></div>
+							<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+								<div class="row">
+									<div class="gap-divider">
+										<div class="image-thumbnail" >
+											
+        								</div>
+									</div>								
+								</div>
+							 </div>     
+							 <div class="col-md-3 col-sm-6 col-xs-12 box-item">
+								<div class="row">
+									<div class="gap-divider">
+										<div class="image-thumbnail" >
+											
+        								</div>
+									</div>								
+								</div>
+							 </div>     
+							 <div class="col-md-3 col-sm-6 col-xs-12 box-item">
+								<div class="row">
+									<div class="gap-divider">
+										<div class="image-thumbnail" >
+											
+        								</div>
+									</div>								
+								</div>
+							 </div>     
+							 <div class="col-md-3 col-sm-6 col-xs-12 box-item">
+								<div class="row">
+									<div class="gap-divider">
+										<div class="image-thumbnail" >
+											
+        								</div>
+									</div>								
+								</div>
+							 </div>
+							 <div class="col-md-3 col-sm-6 col-xs-12 box-item">
+								<div class="row">
+									<div class="gap-divider">
+										<div class="image-thumbnail" >
+											
+        								</div>
+									</div>								
+								</div>
+							 </div>
+							 <div class="col-md-3 col-sm-6 col-xs-12 box-item">
+								<div class="row">
+									<div class="gap-divider">
+										<div class="image-thumbnail" >
+											
+        								</div>
+									</div>								
+								</div>
+							 </div>
+							 <div class="col-md-3 col-sm-6 col-xs-12 box-item">
+								<div class="row">
+									<div class="gap-divider">
+										<div class="image-thumbnail" >
+											
+        								</div>
+									</div>								
+								</div>
+							 </div>
+							 <div class="col-md-3 col-sm-6 col-xs-12 box-item">
+								<div class="row">
+									<div class="gap-divider">
+										<div class="image-thumbnail" >
+											
+        								</div>
+									</div>								
+								</div>
+							 </div>     
+							 
+							 
+						</div>
 						
 					</div>
 					
@@ -313,7 +381,7 @@
 			</div>
 		</section><!-- block area end -->
 		
-		<section class="section-padding"  style="padding-top: 0px;background:#7f7f7f;min-height: 450px" >
+		<section class="section-padding"  style="padding-top: 0px;background:#7f7f7f;min-height: 450px;display:none;" >
 			<div class="container">
 				<div class="row">
 					<div class="header-text">
@@ -326,55 +394,82 @@
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="assets/img/default.jpg" class="img-circle" />
+									<img src="assets/img/team/CHHoun.jpg" class="img-circle" />
 								</div>
-								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
-								<p class="favorite-font member-des">Founder of The Fashion</p>
+								<p class="favorite-font member-name">Mr. Chhoun</p>
+								<!-- <p class="favorite-font member-des">Founder of The Fashion</p> -->
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="assets/img/default.jpg" class="img-circle" />
+									<img src="assets/img/team/Bobo.jpg" class="img-circle" />
 								</div>
-								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
-								<p class="favorite-font member-des">Founder of The Fashion</p>
+								<p class="favorite-font member-name">Mr. Bobo</p>
+								<!-- <p class="favorite-font member-des">Founder of The Fashion</p> -->
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="assets/img/default.jpg" class="img-circle" />
+									<img src="assets/img/team/Eim.jpg" class="img-circle" />
 								</div>
-								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
-								<p class="favorite-font member-des">Founder of The Fashion</p>
+								<p class="favorite-font member-name">Ms. Eim</p>
+								<!-- <p class="favorite-font member-des">Founder of The Fashion</p> -->
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="assets/img/default.jpg" class="img-circle" />
+									<img src="assets/img/team/Chanra.jpg" class="img-circle" />
 								</div>
-								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
-								<p class="favorite-font member-des">Founder of The Fashion</p>
+								<p class="favorite-font member-name">Ms. Chanra</p>
+								<!-- <p class="favorite-font member-des">Founder of The Fashion</p> -->
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="assets/img/default.jpg" class="img-circle" />
+									<img src="assets/img/team/Mary.jpg" class="img-circle" />
 								</div>
-								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
-								<p class="favorite-font member-des">Founder of The Fashion</p>
+								<p class="favorite-font member-name">Ms. Mary</p>
+								<!-- <p class="favorite-font member-des">Founder of The Fashion</p> -->
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-4 col-xs-6">
 							<div class="box-wrapper-member">
 								<div class="box-member">
-									<img src="assets/img/default.jpg" class="img-circle" />
+									<img src="assets/img/team/Smey.jpg" class="img-circle" />
 								</div>
-								<p class="favorite-font member-name">Mr. Oeng Chhoun</p>
-								<p class="favorite-font member-des">Founder of The Fashion</p>
+								<p class="favorite-font member-name">Mr. Smey</p>
+								<!-- <p class="favorite-font member-des">Founder of The Fashion</p> -->
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<div class="box-wrapper-member">
+								<div class="box-member">
+									<img src="assets/img/team/Sopheamen.jpg" class="img-circle" />
+								</div>
+								<p class="favorite-font member-name">Mr. men</p>
+								<!-- <p class="favorite-font member-des">Founder of The Fashion</p> -->
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<div class="box-wrapper-member">
+								<div class="box-member">
+									<img src="assets/img/team/Mengky.jpg" class="img-circle" />
+								</div>
+								<p class="favorite-font member-name">Mr. Mengky</p>
+								<!-- <p class="favorite-font member-des">Founder of The Fashion</p> -->
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-6">
+							<div class="box-wrapper-member">
+								<div class="box-member">
+									<img src="assets/img/team/Sundy.jpg" class="img-circle" />
+								</div>
+								<p class="favorite-font member-name">Mr. Sundy</p>
+								<!-- <p class="favorite-font member-des">Founder of The Fashion</p> -->
 							</div>
 						</div>
 					</div>
@@ -401,44 +496,57 @@
           <script src="<?php echo base_url();?>assets/plugin/superfish/superfish.min.js"></script>
           <script src="<?php echo base_url();?>assets/plugin/magnific-popup/magnific-popup.min.js"></script>
           <script src="<?php echo base_url();?>assets/plugin/sticky/sticky.js"></script>
-		
+		  <script src="<?php echo base_url();?>assets/plugin/blazy/blazy.min.js"></script>
 		
 		<script>
-		// Porfolio - uses the magnific popup jQuery plugin
-		  $('.portfolio-popup').magnificPopup({
-		    type: 'image',
-		    removalDelay: 300,
-		    mainClass: 'mfp-fade',
-		    gallery: {
-		      enabled: true
-		    },
-		    zoom: {
-		      enabled: true,
-		      duration: 300,
-		      easing: 'ease-in-out',
-		      opener: function(openerElement) {
-		        return openerElement.is('img') ? openerElement : openerElement.find('img');
-		      }
-		    }
-		  });
+		
 		/*$(document).on('click', '[data-toggle="lightbox"]', function(event) {
             event.preventDefault();
             $(this).ekkoLightbox();
         });*/
 		</script>
 		<script id="portfolio_result" type="text/x-jQuery-tmpl">
-						    <div class="col-md-3 col-sm-6 col-xs-12 box-item">
-								<div class="row">
-									<div class="gap-divider">
-										<div class="image-thumbnail" >
-											<a href="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
-												<img src="https://myfashion2017.s3.amazonaws.com/productimage/Thefashion_20171121111043-717399.JPG"/>
-											</a>
+			<div class="col-md-3 col-sm-6 col-xs-12 box-item">
+				<div class="row">
+					<div class="gap-divider">
+						<div class="image-thumbnail" >
+							<a href="<?php echo FILE_PATH; ?>taobao/portfolio/big/{{= potf_img_name }}" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
+								<img  class="b-lazy"
+									 src="<?php echo base_url();?>assets/img/load_stuck.png"
+									 data-src="<?php echo FILE_PATH; ?>taobao/portfolio/big/{{= potf_img_name }}"/>
+							</a>
 										
-        								</div>
-									</div>								
-								</div>
-							</div>      	
-   						</script>		
+        				</div>
+					</div>								
+				</div>
+			</div>      	
+   		</script>	
+   		
+   		<script id="news_result" type="text/x-jQuery-tmpl">
+			<div class="col-md-3 col-sm-6 col-xs-12  news-box"  >
+				<div class="row">
+					<div class="gap-divider">
+						<div class="image-thumbnail" onclick="location.href='news_detail?news_id={{= news_id}}'" style="position:relative;cursor:pointer;">
+							<img class="b-lazy"
+									 src="<?php echo base_url();?>assets/img/load_stuck.png"
+									 data-src="<?php echo FILE_PATH; ?>taobao/news/small/{{= thum_photo }}" />
+							
+							{{if news_format == "1"}}
+							<div class="news-format" style="position:absolute;top:0;left:0;width:100%;height: 100%;background:black;opacity:0.1;"></div>
+							<div class="news-format" style="position:absolute;top:0;left:0;width:100%;height: 100%;text-align:center;">
+								<img src="<?php echo base_url();?>assets/img/play.png" style="width: 60px;height:60px;margin-top: 50px;" />
+							</div>
+        					{{/if}}
+						</div>
+						<div style="height: 140px;overflow:hidden">
+							<p class="news-title favorite-font " style=" word-wrap: break-word;" >{{= title }}</p>
+        					<p class="news-des favorite-font" style=" word-wrap: break-word;">{{= subString(content, 100)}}</p>
+						</div>
+        				
+        				<a class="news-read-more favorite-font" href="news_detail?news_id={{= news_id}}">read more...</a>
+					</div>								
+				</div>
+			</div>
+   		</script>	
 	</body>
 </html>

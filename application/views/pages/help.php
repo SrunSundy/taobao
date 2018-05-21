@@ -30,7 +30,7 @@
 				
 					<div class="col-md-12" style="margin-bottom: 20px;">	
 						
-						<p class="favorite-font" style="font-size: 32px;  font-weight: 400;color:#333;padding-bottom: 5px;line-height: 20px; ">Frequently Asked Questions</p>
+						<p class="favorite-font" style="font-size: 32px;  font-weight: 400;color:#333;padding-bottom: 5px;line-height: 40px; ">Frequently Asked Questions</p>
 						<p class="favorite-font" style="color: #616161;font-size: 14px;"> Do you have any question? You will find the answers here. Or contact us if you to ask anything.</p>						
 									   								
     				</div>
