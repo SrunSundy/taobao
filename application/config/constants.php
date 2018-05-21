@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+define('FILE_PATH', 'https://myfashion2017.s3.amazonaws.com/');
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace

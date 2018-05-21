@@ -26,7 +26,27 @@ class AddToCartController extends REST_Controller
         }else{
             $myRecentCart = array();
             $myRecentCart = $this->session->userdata['my_cart'];
-            array_push( $myRecentCart , $reqt_data);
+            
+            $haveData = false;
+            $dataIndex = 0;
+            for($i=0; $i< count($myRecentCart); $i++){
+            	if($myRecentCart[$i]["item_id"] == $reqt_data["item_id"]
+                   && $myRecentCart[$i]["item_size"] == $reqt_data["item_size"]
+            	   && $myRecentCart[$i]["item_color"] == $reqt_data["item_color"]){
+            		$haveData = true;
+            		$dataIndex = $i;
+            	}
+            }
+            
+            if($haveData){
+ 				
+            	$myRecentCart[$dataIndex]["item_qty"] = (int)$myRecentCart[$dataIndex]["item_qty"] + (int)$reqt_data["item_qty"];
+            	/*$newItemInfo = array_merge($myRecentCart[$dataIndex]["item_info"],  $reqt_data["item_info"]);           	
+            	$myRecentCart[$dataIndex]["item_info"] = $newItemInfo;*/
+            }else{
+            	array_push( $myRecentCart , $reqt_data);
+            }
+        
             $this->session->set_userdata('my_cart', $myRecentCart);
         }
         

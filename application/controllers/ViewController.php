@@ -21,7 +21,7 @@ class ViewController extends CI_Controller {
     function __construct()
     {
         parent::__construct();
-        
+        $this->load->model('UserOrderDetail');
         //$this->lang->load('message',$this->session->userdata('site_lang'));
         
         
@@ -49,21 +49,27 @@ class ViewController extends CI_Controller {
 	public function my_order(){
 	    
 	   // $param = $this->uri->segment(1);
-	    $this->load->view('pages/myorder');
+	    $data['sumaryOrder']=$this->UserOrderDetail->summaryOrder('010959905');
+	    $this->load->view('pages/myorder',$data);
 	   
 	 /*   if($param == "/"){
 	        $this->load->view('pages/myorder');
 	    }
 	    else if($param){
 	        $this->load->view('pages/'.$param);
-	    }*/
+	    }*/ 
 	    
 	}
 	
 	public function my_cart(){
+		//$cart=@$this->session->userdata['my_cart'];
 	    $this->load->view('pages/mycart');
 	}
-	
+	public function empty_cart(){
+		$this->load->helper('url');
+		$this->session->userdata['my_cart']=null;
+		redirect('my_cart', 'refresh');
+	}
 	public function scrape(){
 	    
 	    $url = $this->input->get('input_url');
@@ -87,6 +93,28 @@ class ViewController extends CI_Controller {
 	    $this->load->view('pages/help');
 	}
 	
+	public function list_news(){
+		$this->load->view('pages/listnews');
+	}
+	
+	public function list_portfolio(){
+		$this->load->view('pages/listportfolio');
+	}
+	
+	public function news_detail(){
+		
+		$newsId = $this->input->get('news_id');
+		
+		if(!isset($newsId) || $newsId == null ){
+		//	$this->load->view('pages/listnews');
+			redirect('list_news');
+		}else{
+			
+			$resp["news_id"] = $newsId;
+			$this->load->view('pages/newsdetail', $resp);
+		}
+		
+	}
 	
 	
 }

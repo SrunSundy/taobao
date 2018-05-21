@@ -59,14 +59,15 @@ class ScrapeDataController extends REST_Controller
     		
     		if(isset($itemInfo["desc"])){
     			$doc = new DOMDocument();
-    			$doc->loadHTML($itemInfo["desc"]);
-    			$imageTags = $doc->getElementsByTagName('img');
     			
-    			foreach($imageTags as $tag) {
-    			
-    				$myDesc[]=$tag->getAttribute('src');
+    			if(@$doc->loadHTML($itemInfo["desc"])){
+    				$imageTags = $doc->getElementsByTagName('img');
+    				 
+    				foreach($imageTags as $tag) {
+    					 
+    					$myDesc[]=$tag->getAttribute('src');
+    				}
     			}
-    			 
     			
     		}
     		
@@ -140,12 +141,14 @@ class ScrapeDataController extends REST_Controller
     		
     		 foreach($dv as $dkk=>$value){
     		
-	    			if($dvv['name']=='尺寸' || $dvv['name']=='尺码'){
+	    			if($dvv['name']=='尺寸' || $dvv['name']=='尺码' || $dvv['name']=='具体规格' || $dvv['name']=='高度'
+    					|| $dvv['name']=='容量' || $dvv['name']=='大小' ){
 	    				$sizearryName[]=$value['value'];
 	    			}
 	    			if($dvv['name']=='颜色分类' || $dvv['name']=='主要颜色' ||  $dvv['name']=='颜色'){
 	    			   $colorArray[]=$value['value'];
-	    			   $colorImageArray[]=$value['pic_url'];
+	    			   if(isset($value['pic_url']) && $value['pic_url'] != "")
+	    			   		$colorImageArray[]=$value['pic_url'];
 	    			 }
     		   }
     		
