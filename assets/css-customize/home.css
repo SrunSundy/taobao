@@ -4,8 +4,12 @@
 
 @media( max-width:480px){
 .how-it-work{
-	font-size: 22px;
+	font-size: 18px;
 }
+}
+
+input#input_url:focus {
+  outline: none;
 }
 
 tr.service-fee{
@@ -113,7 +117,7 @@ div.news-box{
 div.image-thumbnail{
 	
 	height: 160px;
-	background: grey;
+	background: #e2e2e2;
 }
 
 div.image-thumbnail img{
@@ -181,10 +185,12 @@ div.icon-wrapper a:hover{
 div.box-member img{
 	width: 120px;
 	height: 120px;
+	object-fit: cover;
 }
 
 div.box-wrapper-member{
 	text-align: center;
+	margin-top: 20px;
 }
 
 div.member-image{

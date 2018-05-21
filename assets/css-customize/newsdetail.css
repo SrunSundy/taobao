@@ -1,0 +1,141 @@
+@media( max-width:360px){
+	.thumnail-image{
+		width: 87px !important;
+		height: 67px !important;
+		
+	}
+	
+	.news-format img{
+		width: 20px !important;
+		height: 20px !important; 
+		margin-top: 22px !important;
+	}
+	
+	.news_title_small{
+		    font-size: 14px !important;
+	}
+	
+	.news_info {
+    	font-size: 11px !important;
+	}
+	
+	.news_created_date{
+		font-size: 11px !important;
+    	margin-top: 0px !important; 
+	}
+}
+
+.td_social_info{
+	color: white;
+}
+
+.td-social-box{
+	height: 32px;
+	margin-top: 5px;	
+}
+
+.td-social-box:hover .txt{
+	text-decoration: underline;
+}
+
+div.social-logo{
+	display: inline-block;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: 4px;
+    padding-left: 12px;
+    margin-right: 12px;
+}
+
+div.social-logo{
+	padding-right: 10px;
+	border-right: 1px solid #ababab;	
+}
+
+.news_title{
+	font-size: 30px;
+	color:#313131;
+	line-height: 40px;
+	font-weight: bold;
+}
+
+.news_info{
+	margin-top: 20px;	
+	color:#313131;
+	font-size: 12px;
+}
+
+span#creator_name{
+	font-weight: bold;
+}
+
+.news_content{
+	word-wrap: break-word;
+	color:#313131;
+	margin-top: 20px;
+}
+
+.news_detail{
+	color:#313131;
+	font-size: 12px;
+}
+
+div.my-box-header{
+	position: relative;
+}
+
+div.my-box-header p{
+	font-size: 20px;
+    color: #313131;
+    background: #C23000;
+    display: inline-block;
+    padding: 0 10px 10px 10px; 
+    color: white;
+    padding-top: 10px;
+	
+}
+
+div.text-header-wrapper a{
+	float: right;
+	color: white;
+	background: #990F0E;
+	text-decoration: none;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 15px 0 15px;
+	margin-right: 15px;
+	
+}
+
+div.liner{
+	margin-top: -11px;
+	border-bottom: 2px solid #C23000;
+}
+
+
+
+div.news-wrapper{
+	
+	margin-top: 10px;
+	
+}
+
+div.thumnail-image{
+	background: #e2e2e2;
+	height: 80px;
+	width: 110px;
+}
+
+.news_title_small{
+	font-size: 16px;
+	font-weight: bold;
+	color:#313131;
+	height: 47px;
+	overflow:hidden;
+	margin: 0;
+}
+
+.news_title_small:hover{
+	text-decoration: underline;
+}

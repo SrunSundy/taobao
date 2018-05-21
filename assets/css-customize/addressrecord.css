@@ -16,7 +16,25 @@
 		
 }
 
+.delete-address{
+	opacity: 0.3;
+}
 
+div.address-item-wrapper{
+	overflow:hidden;
+}
+
+.default-address{
+	border : 3px solid gray;	
+}
+
+.invalid-data{
+	border : 1px solid #e6594e;
+}
+
+.invalid-data:focus{
+	border : 1px solid #e6594e;
+}
 
 p.ps-shipping-address{
 	font-weight: bold;
