@@ -35,7 +35,13 @@
 		<section class="accordian-section section-padding" style="padding-top: 30px;">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 ">
+					
+					<div class="col-md-12" style="text-align:center;display:none" id="my_loader">
+						<p class="favorite-font" style="z-index:10">Please wait. Loading...</p>
+						<img src="<?php echo base_url()?>assets/img/loading.gif" style="    margin-top: -25px;" />
+					</div>
+					
+					<div class="col-md-12 " id="display_content" style="display:none;">
 						<div class="title-path" style="margin-bottom: 25px;">
 							<p style="color: #464646;font-weight:bold;" class="favorite-font"><span class="path-1"><?php echo $this->lang->line('menu_home'); ?></span>
 							   <span class="path-split" style="margin: 0 10px 0 10px;font-size: 21px;">></span>
@@ -71,11 +77,11 @@
 																						    padding-right: 15px;
 																						    padding-bottom: 15px;border-right: 1px solid #e1e1e1;">
 		    																															
-		    															<img src="<?php echo base_url();?>assets/img/default.jpg" class="item-photo profile-photo" />															
+		    															<img class="item-photo profile-photo" src="https://graph.facebook.com/<?php echo $this->session->userdata['user_sess']["user_id"]; ?>/picture?width=100&height=100" />															
 		    															
 		    															
 		    															<div class="profile-info">
-		    																<p class="favorite-font user-name"><strong>Hi, Oeng Chhoun</strong></p>
+		    																<p class="favorite-font user-name"><strong>Hi, <?php echo $this->session->userdata['user_sess']["user_name"]; ?></strong></p>
 		    																<div class="vip-div">
 		    																
 		    																	<p class="favorite-font " style="font-size: 12px;color: #333;float:left;margin-right:10px;"><strong>VIP</strong></p>
@@ -95,13 +101,13 @@
 		    																</div>
 		    																
 		    																<div style="float:left;margin-right: 20px;">
-			    																<p class="favorite-font profile-desc" > My Balance: <span>0 </span><span> USD</span></p>
+			    																<p class="favorite-font profile-desc" > My Balance: <span id="my_balance_amount">0 </span><span> USD</span></p>
 			    																<p class="favorite-font profile-desc" > My Points: <span>0 </span><span> USD</span></p>
 			    																<p class="favorite-font profile-desc" > My Privilleges: <span>0 </span><span> USD</span></p>
 		    																</div>
 		    																<div style="float:left">
-		    																	<p class="favorite-font profile-desc" > Awaiting Payment: <span>0 </span><span> USD</span></p>
-		    																	<p class="favorite-font awaiting-amount" > 0 USD</p>
+		    																	<p class="favorite-font profile-desc" > Awaiting Payment: <span id="awaiting_payment_amount">0 </span><span> USD</span></p>
+		    																	<p class="favorite-font awaiting-amount" ><span id="total_amount" >0</span>  USD</p>
 		    																</div>
 		    																<div style="clear:both;"></div>
 		    															</div>
@@ -146,18 +152,23 @@
 		    																	
 		    																<ul class="list-order-menu">
 		    																	<li>
-		    																		<a class="favorite-font">My Items</a>
+		    																		<a class="favorite-font my_order_active" id="my_order_cnt" data-cnt="0" >My Orders</a>
 		    																	</li>
 		    																	<li>
-		    																		<a class="favorite-font">Order Items</a>
+		    																		<a class="favorite-font" id="awaiting_delivery_cnt" data-cnt="0">Awaiting Delivery</a>
 		    																	</li>
 		    																	<li>
-		    																		<a class="favorite-font">Awaiting Delivery</a>
+		    																		<a class="favorite-font" id="out_stock_cnt" data-cnt="0">Out Stock</a>
 		    																	</li>
 		    																	<li>
-		    																		<a class="favorite-font">Delivered</a>
+		    																		<a class="favorite-font" id="delivered_cnt" data-cnt="0">Delivered</a>
 		    																	</li>
 		    																</ul>
+		    																
+		    																<div id="my-order-count" class="my-order-count favorite-font">0</div>
+		    																<div id="my-order-count-loading" class="my-order-count favorite-font" style="display:none;padding:0">
+		    																	<img src="<?php echo base_url()?>assets/img/loading.gif" style="width: 40px;" />
+		    																</div>
 		    																	
 		    															</div>
 		    														</div>

@@ -1,0 +1,26 @@
+table.my-table thead tr{
+	height: 50px;
+}
+
+table.my-table tbody tr{
+	height: 40px;
+	
+}
+
+table.my-table tbody tr td{
+	text-align:center;
+	font-size: 14px;
+	
+}
+
+.pagination>li>a, .pagination>li>span {
+   
+    color: #a30900;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+   
+    background-color: #a30900 !important;
+    border-color: #a30900 !important;
+    
+}

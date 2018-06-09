@@ -1,0 +1,72 @@
+div.top-up-item{
+	margin: 5px 5px 0 0;
+    border: 2px solid #e8e8e8;
+    padding: 5px;
+    cursor:pointer;
+}
+
+span.error-message_box{
+	padding:20px 30px 20px 30px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 20px gray;
+	background: #b13030;
+	text-align: center;
+	color: white;
+	z-index: 100;
+}
+
+span.message_box{
+	
+	padding:20px 30px 20px 30px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 20px gray;
+	background: #333;
+	text-align: center;
+	color: white;
+	z-index: 101;
+}
+
+div.loading-bg{
+	position:fixed;
+	top: 0;
+	left: 0;
+	background: black;
+	opacity: 0.2;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+}
+
+div.image-loading{
+	position:fixed;
+	top: 40%;
+	left: 0;
+	z-index: 1001;
+	width: 100%;
+	height: 100%;
+	text-align:center;
+	
+}
+
+input.radio-input, .radio-img , .radio-text{
+	float:left;
+	margin-left: 5px;
+}
+
+.radio-img{
+	width: 155px;	
+}
+
+input.radio-input{
+	margin-top: 35px;
+}
+
+label.favorite-font{
+	font-size: 14px;
+}

@@ -38,8 +38,8 @@
  <link rel="stylesheet" href="<?php echo base_url();?>assets/plugin/select2/select2.min.css">
  
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/<?php if($this->session->userdata('site_lang') == 'khmer') echo 'khmerfont.css'; else echo 'englishfont.css' ?>"  />
-
- 	
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet"/>
+ <link href="https://cdn.jsdelivr.net/sweetalert2/4.2.4/sweetalert2.min.css" rel="stylesheet"/>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>

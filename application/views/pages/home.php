@@ -39,7 +39,7 @@
                                                  
                                                       <input type="text" name="input_url" id="input_url" class="form-control" placeholder="https://item.taobao.com/item.htm?id=541239586337" style="border-radius: 0; border-top: 3px solid #c23000;border-left: 3px solid #c23000;border-bottom: 3px solid #c23000;">
                                                       <span class="input-group-btn" style="z-index:10">
-                                                        <button id="scrape_data" class="btn btn-secondary favorite-font" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;    letter-spacing: 0;" type="button"><?php echo $this->lang->line('home_search'); ?></button>
+                                                        <button id="scrape_data" data-has_sess="<?php if(isset($this->session->userdata['user_sess'])){ echo "1"; }else{ echo "";} ?>" class="btn btn-secondary favorite-font" style="color: #212121;background: #ffffff; border: 3px solid #c23000; max-height: 50px;    letter-spacing: 0;" type="button"><?php echo $this->lang->line('home_search'); ?></button>
                                                       </span>
                                                 
                                                 </div>
@@ -486,6 +486,30 @@
 		<footer>
 			<?php include 'include/footer.php' ?>
 		</footer>
+		
+		<!-- Modal -->
+		<button type="button" class="btn btn-primary" style="display:none" id="callModalAlert" data-toggle="modal" data-target="#exampleModal">
+		  Launch demo modal
+		</button>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 
 		
 
@@ -511,9 +535,8 @@
 					<div class="gap-divider">
 						<div class="image-thumbnail" >
 							<a href="<?php echo FILE_PATH; ?>taobao/portfolio/big/{{= potf_img_name }}" class="portfolio-popup" data-toggle="lightbox" data-gallery="example-gallery">
-								<img  class="b-lazy"
-									 src="<?php echo base_url();?>assets/img/load_stuck.png"
-									 data-src="<?php echo FILE_PATH; ?>taobao/portfolio/big/{{= potf_img_name }}"/>
+								<img  
+									 src="<?php echo FILE_PATH; ?>taobao/portfolio/big/{{= potf_img_name }}"/>
 							</a>
 										
         				</div>
@@ -527,9 +550,8 @@
 				<div class="row">
 					<div class="gap-divider">
 						<div class="image-thumbnail" onclick="location.href='news_detail?news_id={{= news_id}}'" style="position:relative;cursor:pointer;">
-							<img class="b-lazy"
-									 src="<?php echo base_url();?>assets/img/load_stuck.png"
-									 data-src="<?php echo FILE_PATH; ?>taobao/news/small/{{= thum_photo }}" />
+							<img 
+									 src="<?php echo base_url();?>assets/img/load_stuck.png" />
 							
 							{{if news_format == "1"}}
 							<div class="news-format" style="position:absolute;top:0;left:0;width:100%;height: 100%;background:black;opacity:0.1;"></div>

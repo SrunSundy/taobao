@@ -3,6 +3,21 @@
 </style>
 <!-- start top bar -->
 
+<?php 
+	require_once $_SERVER['DOCUMENT_ROOT'].'chhoun/taobao/application/libraries/Facebook/autoload.php';
+	$facebook = new Facebook\Facebook([
+				'app_id' => fb_appId,
+				'app_secret' => fb_appSecret,
+				'default_graph_version' => 'v2.10',
+				]);
+	$helper = $facebook->getRedirectLoginHelper();
+	$login_url = fb_login_redirect;
+	
+	echo "<a href=".$helper->getReRequestUrl($login_url)."   class='btn' id='loginWithFacebook' style='display:none;margin-top:20px; padding: 10px 20px;letter-spacing:0;text-transform:none;background:#4267b2;' id='moreappdiv'><i class='fa fa-facebook' style='padding-right: 10px;'></i>Login with facebook</a>";
+?>											
+	 
+	 
+
 <!-- Start Navigation -->
 <div class="header-top-fake">
 	<div class="header-top-area" style="position:fixed; width: 100%;z-index:101;">
@@ -41,16 +56,30 @@
     								<i class="fa fa-phone"></i>
     							</a>
     						</li>
+    						
+    						<?php if(isset($this->session->userdata['user_sess'])){ ?>
+    						
+    						<li class="header-font padded" style="border-right: 1px solid #d8d8d8;" >
+    							<span class="hover favorite-font" style="text-transform: uppercase;" onclick="location.href='dashboard'">
+    								<img style="width:30px;height:30px;border-radius:100%;margin-right: 5px;    margin-top: -3px;" src="https://graph.facebook.com/<?php echo $this->session->userdata['user_sess']["user_id"]; ?>/picture?width=50&height=50"/>
+    								<?php echo $this->session->userdata['user_sess']["user_name"]; ?> 
+    							</span>
+    						</li>
     						<li class="header-font padded" style="border-right: 1px solid #d8d8d8;">
-    							<span class="hover favorite-font" style=""><?php echo $this->lang->line('home_signin'); ?> </span>
+    							<span class="hover favorite-font" onclick="location.href='<?php echo base_url()."action/FacebookController/logout";?>'" style="">SIGN OUT </span>
+    						</li>
+    						<?php }else{?>
+    						<li class="header-font padded" style="border-right: 1px solid #d8d8d8;">
+    							<span class="hover favorite-font" onclick="location.href='<?php echo base_url();?>/login'" style=""><?php echo $this->lang->line('home_signin'); ?> </span>
     						</li>
     						<li  class="header-font padded" style="border-right: 1px solid #d8d8d8;">
     							<span class="hover favorite-font" ><?php echo $this->lang->line('home_register'); ?></span>
     						
     						</li>
+    						<?php }?>
     					
-    						<li class=" header-font padded" id="goto_cart">
-    							<span class="hover favorite-font" style="text-transform: uppercase"> <?php echo $this->lang->line('home_cart'); ?><span style="font-weight:bold;">(<span id="my_cart_num" ><?php if(isset($this->session->userdata['my_cart']))echo count($this->session->userdata['my_cart']); else echo "0";?></span>)</span></span>
+    						<li class=" header-font padded" id="goto_cart" data-has_sess="<?php if(isset($this->session->userdata['user_sess'])){ echo "1"; }else{ echo "";} ?>">
+    							<span class="hover favorite-font" style="text-transform: uppercase"> <?php echo $this->lang->line('home_cart'); ?><span style="font-weight:bold;"><span id="my_cart_num" ><?php if(isset($this->session->userdata['my_cart']) && count($this->session->userdata['my_cart']) > 0)echo "(".count($this->session->userdata['my_cart']).")"; else echo "";?></span></span></span>
     						</li>
     						
     						<li class="header-font" style="text-align: center;   ">
@@ -115,7 +144,7 @@
 				data-target="#navbar-menu">
 				<i class="fa fa-bars"></i>
 			</button>
-			<a class="navbar-brand display-logo" href="home"
+			<a class="navbar-brand display-logo" href="/"
 				style="margin-top: 0 !important; width: 150px"><img
 				src="<?php echo base_url();?>assets/img/logo/logo.png" class="logo logo-scrolled"
 				style="margin-top: -10px;" alt=""></a>
@@ -125,11 +154,11 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="navbar-menu">
 			<ul class="nav navbar-nav navbar-right" data-in="" data-out="">
-				<li class="active header-menu my-menu"><a href="home" class="favorite-font"><?php echo $this->lang->line('menu_home'); ?></a></li>
+				<li class="active header-menu my-menu"><a href="/" class="favorite-font"><?php echo $this->lang->line('menu_home'); ?></a></li>
 				<li class="header-menu my-menu" ><a href="about_us" class="favorite-font"><?php echo $this->lang->line('menu_aboutus'); ?></a></li>
 				<li class="header-menu my-menu"><a href="how_to_order" class="favorite-font"><?php echo $this->lang->line('menu_howtoorder'); ?></a></li>
 				<li class="header-menu my-menu"><a href="cost_calculator" class="favorite-font"><?php echo $this->lang->line('menu_costcalculator'); ?></a></li>
-				<li class="header-menu my-menu"><a href="my_order" class="favorite-font"><?php echo $this->lang->line('menu_myorder'); ?></a></li>
+				<li class="header-menu my-menu" id="goto_myorder"><a  data-has_sess="<?php if(isset($this->session->userdata['user_sess'])){ echo "1"; }else{ echo "";} ?>" href="javascript:;"  class="favorite-font"><?php echo $this->lang->line('menu_myorder'); ?></a></li>
 				<!-- <li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Works</a>
 					<ul class="dropdown-menu">

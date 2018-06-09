@@ -149,7 +149,7 @@
 					    															 <div class="form-group row">
 																					    
 																					    <div class="col-md-12 row">
-																					       <label class="checkbox-inline title-input favorite-font"><input id="add_is_default" type="checkbox" value="">set as default address</label>
+																					       <label class="checkbox-inline title-input favorite-font"><input id="add_is_default" checked type="checkbox" value="">set as default address</label>
 																					    </div>
 																					   
 																					  </div>

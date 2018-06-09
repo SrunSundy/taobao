@@ -1,0 +1,30 @@
+div.bg-on{
+	background: black;
+	position:absolute;
+	top:0;
+	left: 0;
+	opacity: 0.3;
+	width: 100%;
+	height: 100%;
+}
+
+div.login-wrapper{
+	
+	background: white;   
+	 height: 450px;
+	padding: 30px 20px;
+	margin: 60px 0px 0 0px;
+	border-radius: 5px;
+	
+}
+
+span.login-header{
+	font-size: 30px;
+	font-weight: bold;
+	color: #990F0E;
+}
+
+p.login-header-detail{
+	color: gray;
+	font-size: 13px;
+}

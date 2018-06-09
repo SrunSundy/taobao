@@ -29,10 +29,10 @@
 				</a>
 			</div>
 			<div class="item-title-child">
-				<a class="item-title-child-text favorite-font"> Add Money</a>
+				<a  href="<?php echo base_url();?>list_topup" class="item-title-child-text favorite-font"> Add Money</a>
 			</div>
 			<div class="item-title-child">
-				<a class="item-title-child-text favorite-font"> Withdraw Money</a>
+				<a   href="<?php echo base_url();?>list_withdraw" class="item-title-child-text favorite-font"> Withdraw Money</a>
 			</div>
 			<div class="item-title-child">
 				<a class="item-title-child-text favorite-font"> My Coupons</a>

@@ -30,6 +30,12 @@ $lang['home_call_us'] = "CALL US";
  $lang['scrape_quantity'] = "Quantity";
  $lang['scrape_no_size'] = "No Size!";
  $lang['scrape_no_color'] = "No Color!";
+
+ $lang['order_more']= "Order More";
+ $lang['goto_myorder'] = "Check My Order";
+ $lang['order_success_title']= "Order Successfully";
+ $lang['order_failed_msg'] = "We are sorry! Your balance is insufficient now. <a href='topup' class='go-to-topup'>Click here</a> to recharge it!";
+ $lang['order_success_msg'] = "Your order has processed into our system successfully. You will receive SMS or Call when your stuff is arrived.";
  
  $lang['my_cart_go_home'] = 'Go Home';
  $lang['my_cart_empty'] = 'Your cart is empty!';

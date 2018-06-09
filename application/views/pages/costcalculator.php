@@ -183,7 +183,7 @@
     							<!-- display image -->
     							<div class="image-wrapper col-md-12">
     								<div class="row" >
-    									<img src="https://myfashion2017.s3.amazonaws.com/other/Thefashion_20161129153847-819564.JPG" style="width: 100%;object-fit:cover;height:470px;"/>
+    									<img src="<?php echo base_url()?>assets/img/calculator.png" style="width: 100%;object-fit:cover;height:470px;"/>
     								</div>
     							</div>
     							<!-- display image -->

@@ -14,6 +14,7 @@
 	<body>
 		<?php include 'include/loader.php' ?>
 		<input type="hidden" value="<?php echo $url; ?>"  id="scrape_url" />
+		<input type="hidden" value="" id="scrape_item_id" />
 		<input type="hidden" value="<?php echo base_url();  ?>" id="base_url" />
 		<input type="hidden" value="<?php echo $this->lang->line('scrape_no_size'); ?>" id="no_size" />
 		<input type="hidden" value="<?php echo $this->lang->line('scrape_no_color'); ?>" id="no_color" />
@@ -62,8 +63,9 @@
     								<input style="padding-left: 45px;height: 40px;width: 120px;" type="text" class="favorite-font item_price_input"   value="0" />
     							</div>
     							<a class="favorite-font my-price-show edit-input-price" style="text-decoration:none;color:#337ab7;font-size:15px;margin-top: 18px; margin-left: 16px;">Edit</a>
-    							<img class="my-price-show" />
+    							
     							<p class="favorite-font my-price-show " style="padding: 2px 10px 2px 10px;background:#f96c80;color:white;margin-top: 15px; margin-left: 16px;">$<span class="dollar-product-price">0.0</span></p>
+    							<img class="my-price-show" src="<?php echo base_url()?>assets/img/question.png" style="width:25px;height:25px;margin-top:16px;margin-left:18px;cursor:pointer;"/>
     							<div style="clear:both;"></div>
     						</div>
 						</div>
@@ -128,8 +130,9 @@
     								<input style="padding-left: 45px;height: 40px;width: 120px;" type="text" class="favorite-font item_price_input" id="item_price_input"  value="0" />
     							</div>
     							<a class="favorite-font my-price-show edit-input-price" style="text-decoration:none;color:#337ab7;font-size:15px;margin-top: 18px; margin-left: 16px;">Edit</a>
-    							<img class="my-price-show" />
+    							
     							<p class="favorite-font my-price-show " style="padding: 2px 10px 2px 10px;background:#f96c80;color:white;margin-top: 15px; margin-left: 16px;">$<span class="dollar-product-price" id="dollar-product-price">0.0</span></p>
+    							<img class="my-price-show" src="<?php echo base_url()?>assets/img/question.png" style="width:25px;height:25px;margin-top:16px;margin-left:18px;cursor:pointer;"/>
     							<div style="clear:both;"></div>
     						</div>
 						</div>
@@ -212,11 +215,11 @@
 								</p>
 								<i class="fa fa-spinner fa-spin" style="    font-size: 25px;visibility:hidden;color:white;"></i>
 							</button>
-							<button class="btn event-btn " type="button" style="letter-spacing: 0;">
+							<!-- <button class="btn event-btn " type="button" style="letter-spacing: 0;">
 								<img src="<?php echo base_url();?>assets/img/icon/buy-now.png" style="width: 40px;height:40px;margin-top: -10px;float:left;margin-right: 7px;" />
 								<p class="favorite-font"  style="float:left;color:white;"><?php echo $this->lang->line('scrape_buy_btn'); ?></p>
 								 <i class="fa fa-spinner fa-spin" style="    font-size: 35px;visibility:hidden;color:white;"></i>
-							</button>
+							</button> -->
 						</div>
 						
 					</div>
