@@ -6,7 +6,11 @@ require APPPATH . '/libraries/REST_Controller.php';
 class ScrapeDataController extends REST_Controller
 {
     public function __construct() {
-        parent::__construct();     
+        parent::__construct();
+        $user_sess = $this->session->userdata('user_sess');
+        if(empty($user_sess)){
+        	redirect('/login', 'refresh');
+        }     
     }
 
     public function index_get(){
@@ -17,9 +21,31 @@ class ScrapeDataController extends REST_Controller
         
     	$url = urldecode($this->input->get('url'));
     	$query_str = parse_url($url, PHP_URL_QUERY);
+    	$sourceUrl = parse_url($url);
     	parse_str($query_str, $query_params);
-    	$id= $query_params['id'];
-    	$api_server = 'http://api.onebound.cn/taobao/api_call.php';
+    	
+    	$domainNameToScrap = "taobao";
+    	$domainName = $sourceUrl['host'];
+    	
+    	$id= (isset($query_params['id'])) ? $query_params['id'] : "";
+    	
+    	
+    	if(isset($domainName)){
+    		
+    		$domain = explode(".",$domainName);
+    		if($domain[1] == "1688"){
+    			$domainNameToScrap = "1688";
+    			$getId = explode('/',$url);
+    			$getLastSeg = $getId[count($getId)-1];
+    			if(!empty($getLastSeg)){
+    				$id = explode('.',$getLastSeg);
+    				$id = $id[0];
+    			}
+    			
+    		}
+    	}
+    	
+    	$api_server = 'http://api.onebound.cn/'.$domainNameToScrap.'/api_call.php';
     	$url = $api_server.'?api_name=item_get&key=cambodg.com&is_promotion=1&num_iid='.$id;
     	
     	$data['size'] = '';
@@ -36,12 +62,16 @@ class ScrapeDataController extends REST_Controller
     	$colorArray = array();
     	$colorImageArray = array();
     	$sizearryName = array();
+    	$expressFee = "";
     	
     	$myDesc = array();
 
     	if(isset($obj['item'])){
     		
     		$itemInfo = $obj['item'];
+    		
+    		if(isset($obj['item']['express_fee']))
+    			$expressFee = $obj['item']['express_fee'];
     		
     		if(isset($obj['item']['price']))
     			$price= $obj['item']['price'];
@@ -169,6 +199,7 @@ class ScrapeDataController extends REST_Controller
 			$myData["status"] = "200";
 		}
         
+		$myData['id'] = $id;
         $myData['title'] = $data_title;
         $myData['color'] = $colorArray;
         $myData['colorImage'] = $colorImageArray;
@@ -176,6 +207,7 @@ class ScrapeDataController extends REST_Controller
         $myData['size'] = (empty($sizearryName) ? '':$sizearryName);
         $myData['price'] = $price;
         $myData["image_detail"] = $myDesc;
+        $myData["express_fee"] = $expressFee;
     	
         $this->response( $myData ,200);
         

@@ -8,6 +8,10 @@ class AddressController extends REST_Controller
     public function __construct() {
         parent::__construct();     
         $this->load->model("AddressModel");
+        $user_sess = $this->session->userdata('user_sess');
+        if(empty($user_sess)){
+        	redirect('/login', 'refresh');
+        }
     }
 
     public function index_get(){
@@ -21,6 +25,9 @@ class AddressController extends REST_Controller
     	$userId = $this->input->get('user_id');
     	$userId = (isset($userId)) ? $userId : 0;
     	
+    	$user_sess = $this->session->userdata['user_sess'];
+    	$userId = $user_sess["user_id"];
+    	
     	$data = $this->AddressModel->listAddress($userId);
     	
     	$response["response_code"] = "200";
@@ -31,7 +38,9 @@ class AddressController extends REST_Controller
     
     public function add_address_post(){
     	
-    	$request["user_id"] = $this->input->post('user_id');
+    	$user_sess = $this->session->userdata['user_sess'];
+    	$userId = $user_sess["user_id"];
+    	$request["user_id"] = $userId;
     	$request["rept_name"] = $this->input->post('rept_name');
     	$request["rept_tel"] = $this->input->post('rept_tel');
     	$request["rept_country"] = $this->input->post('rept_country');
@@ -69,6 +78,9 @@ class AddressController extends REST_Controller
     
     public function update_address_post(){
     	
+    	
+    	$user_sess = $this->session->userdata['user_sess'];
+    	$userId = $user_sess["user_id"];
     	$request["rept_name"] = $this->input->post('rept_name');
     	$request["rept_tel"] = $this->input->post('rept_tel');
     	$request["rept_country"] = $this->input->post('rept_country');
@@ -77,7 +89,7 @@ class AddressController extends REST_Controller
     	$request["rept_addr"] = $this->input->post('rept_addr');
     	$request["is_default"] = $this->input->post('is_default');
     	$request["addr_id"] = $this->input->post('addr_id');
-    	$request["user_id"] = $this->input->post('user_id');
+    	$request["user_id"] = $userId;
     	
     	if($this->AddressModel->removeDefaultAddressByUserId($request["user_id"])){
     		$data = $this->AddressModel->updateAddress($request);
@@ -103,8 +115,10 @@ class AddressController extends REST_Controller
     
     public function update_default_address_post(){
     	
+    	$user_sess = $this->session->userdata['user_sess'];
+    	
+    	$userId = $user_sess["user_id"]; 	
     	$addrId = $this->input->post('addr_id');
-    	$userId = $this->input->post('user_id');
     	
     	if($this->AddressModel->removeDefaultAddressByUserId($userId)){
     		if($this->AddressModel->updateDefaultAddress($addrId)){
