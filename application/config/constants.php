@@ -1,6 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 define('FILE_PATH', 'https://myfashion2017.s3.amazonaws.com/');
+define('fb_appId', '387925565009224');
+define('fb_appSecret', '32ca27c044947a53ccf4f3331e530b6a');
+define('fb_login_redirect', 'https://taobaooutlets.com/action/FacebookController/fb_login');
+define('UPLOAD_FILE_PATH', '.');
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace

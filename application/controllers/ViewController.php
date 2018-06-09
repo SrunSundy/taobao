@@ -22,6 +22,20 @@ class ViewController extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('UserOrderDetail');
+        $this->load->model('BalanceModel');
+        $this->load->library('session');
+        
+        $user_sess = $this->session->userdata('user_sess');
+        if(!empty($user_sess)){
+        	$this->load->model("CartModel");
+	        $myRecentCart = $this->CartModel->listCartByUserId($user_sess["user_id"]);
+	        $allData = json_decode(json_encode($myRecentCart["response_data"]), true);
+	        
+	        $this->session->set_userdata('my_cart', $allData);
+        }
+        
+        
+        
         //$this->lang->load('message',$this->session->userdata('site_lang'));
         
         
@@ -47,9 +61,16 @@ class ViewController extends CI_Controller {
 	}
 	
 	public function my_order(){
-	    
+		
+		$user_sess = $this->session->userdata('user_sess');
+		if(empty($user_sess)){
+			redirect('/login', 'refresh');
+		}
+	  $userphone=$user_sess['user_phone'];
 	   // $param = $this->uri->segment(1);
-	    $data['sumaryOrder']=$this->UserOrderDetail->summaryOrder('010959905');
+      $data['sumaryOrder'] = $this->UserOrderDetail->summaryOrder($userphone);
+      $data['awaitingPayment'] = $this->BalanceModel->awaitingPayment($userphone);
+      $data['sumDeposit'] = $this->BalanceModel->sumDeposit($userphone);
 	    $this->load->view('pages/myorder',$data);
 	   
 	 /*   if($param == "/"){
@@ -63,7 +84,16 @@ class ViewController extends CI_Controller {
 	
 	public function my_cart(){
 		//$cart=@$this->session->userdata['my_cart'];
-	    $this->load->view('pages/mycart');
+		$user_sess = $this->session->userdata('user_sess');
+		if(empty($user_sess)){
+			redirect('/login', 'refresh');
+		}
+		
+		
+		$data['awaiting_payment'] = $this->BalanceModel->awaitingPayment($user_sess['user_phone']);
+		$data['my_balance'] = $this->BalanceModel->sumDeposit($user_sess['user_phone']);
+		
+	    $this->load->view('pages/mycart', $data);
 	}
 	public function empty_cart(){
 		$this->load->helper('url');
@@ -71,6 +101,11 @@ class ViewController extends CI_Controller {
 		redirect('my_cart', 'refresh');
 	}
 	public function scrape(){
+		
+		$user_sess = $this->session->userdata('user_sess');
+		if(empty($user_sess)){
+			redirect('/login', 'refresh');
+		}
 	    
 	    $url = $this->input->get('input_url');
 	    $resp["url"] = $url;
@@ -78,10 +113,22 @@ class ViewController extends CI_Controller {
 	}
 	
 	public function dashboard(){
+		
+		$user_sess = $this->session->userdata('user_sess');
+		if(empty($user_sess)){
+			redirect('/login', 'refresh');
+		}
+		
 	    $this->load->view('pages/dashboard');
 	}
 	
 	public function address_record(){
+		
+		$user_sess = $this->session->userdata('user_sess');
+		if(empty($user_sess)){
+			redirect('/login', 'refresh');
+		}
+		
 		$this->load->view('pages/addressrecord');
 	}
 	
@@ -99,6 +146,53 @@ class ViewController extends CI_Controller {
 	
 	public function list_portfolio(){
 		$this->load->view('pages/listportfolio');
+	}
+	
+	public function login(){
+		$this->load->view('pages/login');
+	}
+	
+	public function list_topup(){
+		
+		$user_sess = $this->session->userdata('user_sess');
+		if(empty($user_sess)){
+			redirect('/login', 'refresh');
+		}
+		
+		$myBalance = $this->BalanceModel->sumDeposit($user_sess['user_phone']);
+		$msg = $this->input->post('msg');
+		if(isset($msg)){
+			$resp["msg"] = $msg;
+			$resp["my_balance"] = $myBalance;
+			$this->load->view('pages/listtopup', $resp);
+		}else{
+			$resp["msg"] = "";
+			$resp["my_balance"] = $myBalance;
+			$this->load->view('pages/listtopup', $resp);
+		}
+		
+	}
+	
+	public function list_withdraw(){
+		$this->load->view('pages/listwithdraw');
+	}
+	
+	public function order_success(){
+		$msg = $this->input->post('msg');
+		if(isset($msg)){
+			$this->load->view('pages/ordersuccess');
+		}else{
+			redirect('/my_cart', 'refresh');
+		}
+		
+	}
+	
+	public function topup(){
+		$this->load->view('pages/topup');
+	}
+	
+	public function withdraw(){
+		$this->load->view('pages/withdraw');
 	}
 	
 	public function news_detail(){
